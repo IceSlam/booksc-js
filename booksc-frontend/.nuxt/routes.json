@@ -1,5 +1,17 @@
 [
   {
+    "name": "services",
+    "path": "/services",
+    "component": "C:\\\\Users\\\\IceSlam\\\\Documents\\\\GitHub\\\\booksc-js\\\\booksc-frontend\\\\pages\\\\services\\\\index.vue",
+    "chunkName": "pages/services/index"
+  },
+  {
+    "name": "services-id",
+    "path": "/services/:id",
+    "component": "C:\\\\Users\\\\IceSlam\\\\Documents\\\\GitHub\\\\booksc-js\\\\booksc-frontend\\\\pages\\\\services\\\\_id.vue",
+    "chunkName": "pages/services/_id"
+  },
+  {
     "name": "index",
     "path": "/",
     "component": "C:\\\\Users\\\\IceSlam\\\\Documents\\\\GitHub\\\\booksc-js\\\\booksc-frontend\\\\pages\\\\index.vue",

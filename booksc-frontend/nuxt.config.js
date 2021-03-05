@@ -8,12 +8,13 @@ export default {
       { hid: 'description', name: 'description', content: '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: './assets/img/logotype.png' }
     ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    "~/assets/css/bootstrap.min.css",
     "~/assets/css/main.css"
   ],
 

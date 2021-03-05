@@ -1,4 +1,5 @@
-/* System */
+@import url(https://use.fontawesome.com/releases/v5.15.2/css/all.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.12.0/css/mdb.min.css);/* System */
 
 .bs-bg {
   background-color: #a8312d;
@@ -100,8 +101,9 @@
   transition: 1.25s;
   color: #fff !important;
 }
-.is_main-navbar-menu > li.active > a {
+.is_main-navbar-menu > li > a.nuxt-link-active {
   color: white !important;
+  background-color: rgba(255,255,255,.1);
 }
 
 .is_main-navbar-menu > .dropdown-menu > a.active {
@@ -190,7 +192,7 @@ h2.is_main-whywe-h2::after {
 }
 
 .is_main-brand-left {
-  background: url(../img/brands_bg.jpg);
+  background: url(../../static/img/brands_bg.jpg);
   background-repeat: no-repeat no-repeat;
   background-position: center center;
   -webkit-background-size: cover;
@@ -279,7 +281,7 @@ h2.is_main-whywe-h2::after {
 }
 
 .is_main-reviews {
-  background: url(../img/reviews_bg.png);
+  background: url(../../static/img/reviews_bg.png);
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
@@ -420,7 +422,7 @@ h2.is_main-whywe-h2::after {
 }
 
 .is_main-social {
-  background: url(../img/social_bg.jpg);
+  background: url(../../static/img/social_bg.jpg);
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
