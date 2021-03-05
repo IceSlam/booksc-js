@@ -1,3 +1,5 @@
 .idea
 /booksc-api/.env
 /booksc-api/node_modules
+/booksc-frontend/node_modules
+/booksc-frontend/.env
