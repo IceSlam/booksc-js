@@ -3,18 +3,21 @@
     "name": "services",
     "path": "/services",
     "component": "C:\\\\Users\\\\IceSlam\\\\Documents\\\\GitHub\\\\booksc-js\\\\booksc-frontend\\\\pages\\\\services\\\\index.vue",
-    "chunkName": "pages/services/index"
+    "chunkName": "pages/services/index",
+    "_name": "_475bd8d2"
   },
   {
     "name": "services-id",
     "path": "/services/:id",
     "component": "C:\\\\Users\\\\IceSlam\\\\Documents\\\\GitHub\\\\booksc-js\\\\booksc-frontend\\\\pages\\\\services\\\\_id.vue",
-    "chunkName": "pages/services/_id"
+    "chunkName": "pages/services/_id",
+    "_name": "_40a3e082"
   },
   {
     "name": "index",
     "path": "/",
     "component": "C:\\\\Users\\\\IceSlam\\\\Documents\\\\GitHub\\\\booksc-js\\\\booksc-frontend\\\\pages\\\\index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_68ea9016"
   }
 ]

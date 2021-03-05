@@ -11,8 +11,9 @@ import '..\\assets\\css\\bootstrap.min.css'
 import '..\\assets\\css\\main.css'
 
 import _6f6c098b from '..\\layouts\\default.vue'
+import _ac397358 from '..\\layouts\\services.vue'
 
-const layouts = { "_default": sanitizeComponent(_6f6c098b) }
+const layouts = { "_default": sanitizeComponent(_6f6c098b),"_services": sanitizeComponent(_ac397358) }
 
 export default {
   render (h, props) {

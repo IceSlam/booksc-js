@@ -2,10 +2,16 @@
   "Logo": {
     "description": "Auto imported from components/Logo.vue"
   },
+  "MainFooter": {
+    "description": "Auto imported from components/main/Footer.vue"
+  },
   "MainHeader": {
     "description": "Auto imported from components/main/Header.vue"
   },
   "MainNavbar": {
     "description": "Auto imported from components/main/Navbar.vue"
+  },
+  "ServicesHeading": {
+    "description": "Auto imported from components/services/Heading.vue"
   }
 }
