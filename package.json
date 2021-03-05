@@ -1,0 +1,19 @@
+{
+  "name": "book-service-js",
+  "version": "1.0.0",
+  "description": "Official websites of Book-Service Repair Service Centers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iceslam/booksc-js.git"
+  },
+  "author": "IceSlam",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iceslam/booksc-js/issues"
+  },
+  "homepage": "https://github.com/iceslam/booksc-js#readme"
+}
