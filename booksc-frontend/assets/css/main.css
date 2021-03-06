@@ -1,5 +1,7 @@
-/*@import url(https://use.fontawesome.com/releases/v5.15.2/css/all.css);*/
-/*@import url(https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.12.0/css/mdb.min.css);!* System *!*/
+
+a {
+  text-decoration: none !important;
+}
 
 .bs-bg {
   background-color: #a8312d;
@@ -79,12 +81,20 @@
   box-shadow: none;
 }
 
+.navbar-dark .navbar-toggler {
+  border: none;
+}
+
 .is_main-navbar-brand {
   text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  color: #ffffff !important;
 }
 
 .is_main-navbar-logo {
   width: 32px;
+  margin-right: .5rem;
 }
 
 .is_main-navbar-menu {
@@ -650,4 +660,23 @@ h2.is_main-whywe-h2::after {
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
+}
+
+@media screen and (max-width: 575px) {
+  #navbar {
+    position: fixed;
+    width: 100%;
+  }
+
+  .navbar-brand {
+    padding-left: 12px;
+  }
+
+  .navbar-collapse {
+    margin-top: 1rem;
+  }
+
+  .is_main-navbar-menu.social .nav-item {
+    text-align: center;
+  }
 }

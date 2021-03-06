@@ -60,15 +60,19 @@ export default {
   pwa: {
     manifest: {
       lang: 'ru',
-      name: 'Book-Service',
+      name: 'Сеть сервисных центров Book-Service',
+      short_name: 'Book-Service',
       display: 'standalone',
+      orientation: 'portrait',
       theme_color: '#a8312d'
     },
     meta: {
       mobileApp: 'true',
-      name: 'Book-Service',
+      name: 'Сеть сервисных центров Book-Service',
+      short_name: 'Book-Service',
       author: 'IceSlam',
-      theme_color: '#a8312d'
+      theme_color: '#a8312d',
+      description: 'Сервисный центр по ремонту цифровой техники, техники Apple и IQOS, телефонов, смартфонов, планшетов, ноутбуков и персональных компьютеров, мониторов и LED-телевизоров и многое другое, а также продажа аксессуаров и запчастей для цифровой техники'
     }
   },
 

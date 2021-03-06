@@ -512,7 +512,7 @@ export default {
   },
   head () {
     return {
-      title: this.PageTitle + ' Сеть сервисных центров Book-Service',
+      title: 'Сеть сервисных центров Book-Service',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },

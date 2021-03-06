@@ -1,5 +1,5 @@
 {
-  "title": "Book-Service",
+  "title": "Сеть сервисных центров Book-Service",
   "meta": [
     {
       "hid": "charset",
@@ -18,7 +18,7 @@
     {
       "hid": "apple-mobile-web-app-title",
       "name": "apple-mobile-web-app-title",
-      "content": "Book-Service"
+      "content": "Сеть сервисных центров Book-Service"
     },
     {
       "hid": "author",
@@ -28,7 +28,7 @@
     {
       "hid": "description",
       "name": "description",
-      "content": "## Build Setup"
+      "content": "Сервисный центр по ремонту цифровой техники, техники Apple и IQOS, телефонов, смартфонов, планшетов, ноутбуков и персональных компьютеров, мониторов и LED-телевизоров и многое другое, а также продажа аксессуаров и запчастей для цифровой техники"
     },
     {
       "hid": "theme-color",
@@ -45,36 +45,36 @@
       "hid": "og:title",
       "name": "og:title",
       "property": "og:title",
-      "content": "Book-Service"
+      "content": "Сеть сервисных центров Book-Service"
     },
     {
       "hid": "og:site_name",
       "name": "og:site_name",
       "property": "og:site_name",
-      "content": "Book-Service"
+      "content": "Сеть сервисных центров Book-Service"
     },
     {
       "hid": "og:description",
       "name": "og:description",
       "property": "og:description",
-      "content": "## Build Setup"
+      "content": "Сервисный центр по ремонту цифровой техники, техники Apple и IQOS, телефонов, смартфонов, планшетов, ноутбуков и персональных компьютеров, мониторов и LED-телевизоров и многое другое, а также продажа аксессуаров и запчастей для цифровой техники"
     }
   ],
   "link": [
     {
       "hid": "shortcut-icon",
       "rel": "shortcut icon",
-      "href": "/_nuxt/icons/icon_64x64.5f6a36.png"
+      "href": "/_nuxt/icons/icon_64x64.27b12f.png"
     },
     {
       "hid": "apple-touch-icon",
       "rel": "apple-touch-icon",
-      "href": "/_nuxt/icons/icon_512x512.5f6a36.png",
+      "href": "/_nuxt/icons/icon_512x512.27b12f.png",
       "sizes": "512x512"
     },
     {
       "rel": "manifest",
-      "href": "/_nuxt/manifest.44cf6cea.json",
+      "href": "/_nuxt/manifest.6eaa5685.json",
       "hid": "manifest"
     }
   ],
