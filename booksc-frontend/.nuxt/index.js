@@ -13,6 +13,7 @@ import { setContext, getLocation, getRouteData, normalizeError } from './utils'
 /* Plugins */
 
 import nuxt_plugin_plugin_44b8a244 from 'nuxt_plugin_plugin_44b8a244' // Source: .\\components\\plugin.js (mode: 'all')
+import nuxt_plugin_bootstrapvue_4b7838d4 from 'nuxt_plugin_bootstrapvue_4b7838d4' // Source: .\\bootstrap-vue.js (mode: 'all')
 import nuxt_plugin_workbox_862d587a from 'nuxt_plugin_workbox_862d587a' // Source: .\\workbox.js (mode: 'client')
 import nuxt_plugin_metaplugin_70f1d543 from 'nuxt_plugin_metaplugin_70f1d543' // Source: .\\pwa\\meta.plugin.js (mode: 'all')
 import nuxt_plugin_iconplugin_75997ab7 from 'nuxt_plugin_iconplugin_75997ab7' // Source: .\\pwa\\icon.plugin.js (mode: 'all')
@@ -62,7 +63,7 @@ async function createApp(ssrContext, config = {}) {
   // here we inject the router and store to all child components,
   // making them available everywhere as `this.$router` and `this.$store`.
   const app = {
-    head: {"title":"Сеть сервисных центров Book-Service","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":""},{"hid":"charset","charset":"utf-8"},{"hid":"mobile-web-app-capable","name":"mobile-web-app-capable","content":"yes"},{"hid":"apple-mobile-web-app-title","name":"apple-mobile-web-app-title","content":"booksc-frontend"},{"hid":"author","name":"author","content":"IceSlam"},{"hid":"og:type","name":"og:type","property":"og:type","content":"website"},{"hid":"og:title","name":"og:title","property":"og:title","content":"booksc-frontend"},{"hid":"og:site_name","name":"og:site_name","property":"og:site_name","content":"booksc-frontend"},{"hid":"og:description","name":"og:description","property":"og:description","content":"## Build Setup"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":".\u002Fassets\u002Fimg\u002Flogotype.png"},{"hid":"shortcut-icon","rel":"shortcut icon","href":"\u002F_nuxt\u002Ficons\u002Ficon_64x64.5f6a36.png"},{"hid":"apple-touch-icon","rel":"apple-touch-icon","href":"\u002F_nuxt\u002Ficons\u002Ficon_512x512.5f6a36.png","sizes":"512x512"},{"rel":"manifest","href":"\u002F_nuxt\u002Fmanifest.082b701a.json","hid":"manifest"}],"style":[],"script":[],"htmlAttrs":{"lang":"ru"}},
+    head: {"title":"Сеть сервисных центров Book-Service","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":""}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":".\u002Fassets\u002Fimg\u002Flogotype.png"}],"style":[],"script":[]},
 
     router,
     nuxt: {
@@ -178,6 +179,10 @@ async function createApp(ssrContext, config = {}) {
 
   if (typeof nuxt_plugin_plugin_44b8a244 === 'function') {
     await nuxt_plugin_plugin_44b8a244(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_bootstrapvue_4b7838d4 === 'function') {
+    await nuxt_plugin_bootstrapvue_4b7838d4(app.context, inject)
   }
 
   if (process.client && typeof nuxt_plugin_workbox_862d587a === 'function') {

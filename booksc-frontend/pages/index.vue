@@ -507,12 +507,12 @@ export default {
   name: 'index',
   data () {
     return {
-      title: ''
+      PageTitle: ''
     }
   },
   head () {
     return {
-      title: this.title + ' Сеть сервисных центров Book-Service',
+      title: this.PageTitle + ' Сеть сервисных центров Book-Service',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },

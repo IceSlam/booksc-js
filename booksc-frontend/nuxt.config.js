@@ -14,7 +14,7 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    "~/assets/css/bootstrap.min.css",
+    '~/assets/css/fontawesome.min.css',
     "~/assets/css/main.css"
   ],
 
@@ -37,6 +37,8 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    // Bootstrap-Vue for Nuxt
+    'bootstrap-vue/nuxt',
     // NuxtJS Yandex Metrika
     [
       '@naumstory/nuxtjs-yandex-metrika',

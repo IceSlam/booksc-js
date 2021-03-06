@@ -1,37 +1,62 @@
 <template>
-  <footer class="page-footer font-small bs-bg wow fadeIn" data-wow-duration="1s">
-    <div class="container text-center text-md-left">
-      <div class="row">
-        <div class="col-md-3 mx-auto">
-          <h5 class="font-weight-bold text-uppercase mt-3 mb-4 wow slideInUp" data-wow-duration="2s">
-            Book-Service Электроника
+  <footer class="page-footer font-small bs-bg">
+    <b-container class="text-center text-md-left">
+      <b-row>
+        <b-col
+          md="3"
+          class="mx-auto"
+        >
+          <h5
+            class="font-weight-bold text-uppercase mt-3 mb-4 text-white"
+          >
+            Book-Service Красноармейская
           </h5>
-          <p class="is_contacts-item wow slideInUp" data-wow-duration="2s">
-            <i class="fas fa-map-marked" aria-hidden="true"></i>
+          <p class="is-contacts-item">
+            <i class="fas fa-map-marked" aria-hidden="true" />
             <span class="d-none" itemprop="postalCode">241037</span>
-            <span itemprop="addressLocality">Брянск</span>, <span itemprop="streetAddress">Красноармейская ул., 174</span>, ост. Электроника
-          <p class="is_contacts-item wow slideInUp" data-wow-duration="2s">
+            <span itemprop="addressLocality">Брянск</span>,
+            <span itemprop="streetAddress">Красноармейская ул., 170</span>,
+            ост. Памятник летчикам
+          </p>
+          <p class="is-contacts-item">
             <i class="fas fa-phone" aria-hidden="true"></i>
             тел.:
-            <a href="tel:+79003736000" class="is_contacts-item-link">
+            <a href="tel:+79003736000" class="is-contacts-item-link">
                 <span itemprop="telephone">
                     +7-900-373-6000
                 </span>
             </a>
           </p>
-          <p class="is_contacts-item wow slideInUp" data-wow-duration="2s">
+          <p class="is-contacts-item">
             <i class="fas fa-envelope" aria-hidden="true"></i>
             email:
-            <a href="mailto:help@booksc.ru" class="is_contacts-item-link">
+            <a href="mailto:help@booksc.ru" class="is-contacts-item-link">
               <span itemprop="email">help@booksc.ru</span>
             </a>
           </p>
-          <p class="is_contacts-item wow slideInUp" data-wow-duration="2s">
+          <p class="is-contacts-item">
             <i class="far fa-calendar-alt"></i>
             ПН-СБ: 10:00 - 19:00 / ВС: 10:00 - 18:00
           </p>
-        </div>
+        </b-col>
         <hr class="clearfix w-100 d-md-none">
+        <b-col
+          md="3"
+          class="mx-auto"
+        ></b-col>
+        <hr class="clearfix w-100 d-md-none">
+        <b-col
+          md="3"
+          class="mx-auto"
+        ></b-col>
+        <b-col
+          md="3"
+          class="mx-auto"
+        ></b-col>
+      </b-row>
+    </b-container>
+    <div class="container text-center text-md-left">
+      <div class="row">
         <div class="col-md-3 mx-auto">
           <h5 class="font-weight-bold text-uppercase mt-3 mb-4 wow slideInUp" data-wow-duration="2s">
             Book-Service <br>ТД Весна
@@ -63,8 +88,7 @@
           </p>
         </div>
         <hr class="clearfix w-100 d-md-none">
-        <div class="col-md-3 mx-auto">
-        </div>
+        <div class="col-md-3 mx-auto" />
         <div class="col-md-3 mx-auto text-right wow slideInRight" data-wow-duration="2s" style="line-height:2;">
           <h5 class="font-weight-bold text-uppercase mt-3 mb-4">
             Ссылки
@@ -137,6 +161,16 @@ export default {
 }
 </script>
 
-<style scoped>
-
+<style type="scss" scoped>
+.bs-bg {
+  background-color: #a8312d;
+  border-radius: 0 !important;
+  border: none !important;
+}
+.is-contacts-item {
+  color: #ffffff;
+}
+.is-contacts-item-link {
+  color: #ffffff;
+}
 </style>
