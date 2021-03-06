@@ -2,6 +2,9 @@
   "Logo": {
     "description": "Auto imported from components/Logo.vue"
   },
+  "HomeSocial": {
+    "description": "Auto imported from components/home/social.vue"
+  },
   "MainFooter": {
     "description": "Auto imported from components/main/Footer.vue"
   },

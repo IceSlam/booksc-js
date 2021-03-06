@@ -3,26 +3,24 @@
     <Header />
     <Navbar />
     <nuxt />
+    <Footer />
   </div>
 </template>
 
 <script>
 import Header from '@/components/main/Header.vue'
 import Navbar from '@/components/main/Navbar'
+import Footer from '@/components/main/Footer'
 
 export default {
   components: {
     Header,
-    Navbar
-  },
-  data () {
-    return {
-      title: 'Услуги и цены'
-    }
+    Navbar,
+    Footer
   },
   head () {
     return {
-      title: this.title + ' - Сеть сервисных центров Book-Service',
+      title: 'Сеть сервисных центров Book-Service',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },

@@ -1,10 +1,10 @@
 <template>
   <nav id="navbar" class="navbar navbar-expand-lg sticky-top navbar-dark bs-bg animated fadeIn">
     <div class="container">
-      <a class="navbar-brand is_main-navbar-brand" href="./">
+      <nuxt-link class="navbar-brand is_main-navbar-brand" to="/" exact>
         <img class="is_main-navbar-logo" src="@/assets/img/logotype.png" alt="Book-Service">
         Book-Service
-      </a>
+      </nuxt-link>
       <button
         class="navbar-toggler"
         type="button"
