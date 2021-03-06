@@ -16,5 +16,8 @@
   },
   "ServicesHeading": {
     "description": "Auto imported from components/services/Heading.vue"
+  },
+  "ServicesHeadingCategory": {
+    "description": "Auto imported from components/services/HeadingCategory.vue"
   }
 }

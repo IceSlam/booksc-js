@@ -24,29 +24,17 @@
             </nuxt-link>
           </li>
           <li class="nav-item">
-            <nuxt-link class="nav-link" to="/services" exact>
+            <nuxt-link class="nav-link" to="/services">
               Услуги и цены
             </nuxt-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Магазин</a>
+            <a class="nav-link" href="https://bookparts.ru" target="_blank">Магазин</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" data-toggle="modal" data-target="#exampleModalCenter">Статус ремонта</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              id="navbarDropdownMenuLink-333"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >О нас
-            </a>
-            <div class="dropdown-menu bs-bg text-center" aria-labelledby="navbarDropdownMenuLink-333">
-              <a class="dropdown-item" href="#">О компании</a>
-              <a class="dropdown-item" href="#">Контакты</a>
-            </div>
+            <nuxt-link class="nav-link" to="/contacts">
+              Контакты
+            </nuxt-link>
           </li>
         </menu>
         <menu style="justify-content:center;" class="navbar-nav ml-auto nav-flex-icons  is_main-navbar-menu">

@@ -6,7 +6,8 @@ const components = {
   MainFooter: () => import('../..\\components\\main\\Footer.vue' /* webpackChunkName: "components/main-footer" */).then(c => c.default || c),
   MainHeader: () => import('../..\\components\\main\\Header.vue' /* webpackChunkName: "components/main-header" */).then(c => c.default || c),
   MainNavbar: () => import('../..\\components\\main\\Navbar.vue' /* webpackChunkName: "components/main-navbar" */).then(c => c.default || c),
-  ServicesHeading: () => import('../..\\components\\services\\Heading.vue' /* webpackChunkName: "components/services-heading" */).then(c => c.default || c)
+  ServicesHeading: () => import('../..\\components\\services\\Heading.vue' /* webpackChunkName: "components/services-heading" */).then(c => c.default || c),
+  ServicesHeadingCategory: () => import('../..\\components\\services\\HeadingCategory.vue' /* webpackChunkName: "components/services-heading-category" */).then(c => c.default || c)
 }
 
 for (const name in components) {

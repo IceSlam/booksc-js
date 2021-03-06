@@ -35,11 +35,11 @@
             </div>
             <div class="card-body">
               <h4 class="card-title">
-                <a href="./services/apple">
+                <nuxt-link class="nav-link" to="/services/apple">
                   <i class="fab fa-apple"></i>
                   Apple
                   <i class="fas fa-arrow-right text-right is_arrow"></i>
-                </a>
+                </nuxt-link>
               </h4>
             </div>
           </div>
@@ -72,11 +72,11 @@
             </div>
             <div class="card-body">
               <h4 class="card-title">
-                <a href="./services/apple">
+                <nuxt-link class="nav-link" to="/services/smartphone">
                   <i class="fas fa-mobile-alt"></i>
                   Телефоны
                   <i class="fas fa-arrow-right text-right is_arrow"></i>
-                </a>
+                </nuxt-link>
               </h4>
             </div>
           </div>
@@ -109,11 +109,11 @@
             </div>
             <div class="card-body">
               <h4 class="card-title">
-                <a href="./services/apple">
+                <nuxt-link class="nav-link" to="/services/tablet">
                   <i class="fas fa-tablet-alt"></i>
                   Планшеты
                   <i class="fas fa-arrow-right text-right is_arrow"></i>
-                </a>
+                </nuxt-link>
               </h4>
             </div>
           </div>
@@ -146,11 +146,11 @@
             </div>
             <div class="card-body">
               <h4 class="card-title">
-                <a href="./services/apple">
+                <nuxt-link class="nav-link" to="/services/laptop">
                   <i class="fas fa-laptop"></i>
                   Ноутбуки
                   <i class="fas fa-arrow-right text-right is_arrow"></i>
-                </a>
+                </nuxt-link>
               </h4>
             </div>
           </div>
@@ -183,11 +183,11 @@
             </div>
             <div class="card-body">
               <h4 class="card-title">
-                <a href="./services/apple">
+                <nuxt-link class="nav-link" to="/services/desktop">
                   <i class="fas fa-desktop"></i>
                   Настольные ПК
                   <i class="fas fa-arrow-right text-right is_arrow"></i>
-                </a>
+                </nuxt-link>
               </h4>
             </div>
           </div>
@@ -220,11 +220,11 @@
             </div>
             <div class="card-body">
               <h4 class="card-title">
-                <a href="./services/apple">
+                <nuxt-link class="nav-link" to="/services/iqos">
                   <img style="margin-left: .1em;" src="/img/iqos.ico" alt="IQOS">
                   IQOS
                   <i class="fas fa-arrow-right text-right is_arrow"></i>
-                </a>
+                </nuxt-link>
               </h4>
             </div>
           </div>
@@ -257,11 +257,11 @@
             </div>
             <div class="card-body">
               <h4 class="card-title">
-                <a href="./services/apple">
+                <nuxt-link class="nav-link" to="/services/tvs">
                   <i class="fas fa-tv"></i>
                   LED-телевизоры
                   <i class="fas fa-arrow-right text-right is_arrow"></i>
-                </a>
+                </nuxt-link>
               </h4>
             </div>
           </div>
@@ -294,11 +294,11 @@
             </div>
             <div class="card-body">
               <h4 class="card-title">
-                <a href="./services/apple">
+                <nuxt-link class="nav-link" to="/services/monitor">
                   <i class="fas fa-tv"></i>
                   Мониторы
                   <i class="fas fa-arrow-right text-right is_arrow"></i>
-                </a>
+                </nuxt-link>
               </h4>
             </div>
           </div>
@@ -331,11 +331,11 @@
             </div>
             <div class="card-body">
               <h4 class="card-title">
-                <a href="./services/apple">
+                <nuxt-link class="nav-link" to="/services/other">
                   <i class="fas fa-headphones"></i>
                   Прочее
                   <i class="fas fa-arrow-right text-right is_arrow"></i>
-                </a>
+                </nuxt-link>
               </h4>
             </div>
           </div>
@@ -355,12 +355,12 @@ export default {
   name: 'Services',
   data () {
     return {
-      title: 'Услуги и Цены'
+      PageTitle: 'Услуги и цены'
     }
   },
   head () {
     return {
-      title: this.title + ' - Сеть сервисных центров Book-Service',
+      title: this.PageTitle + ' - Сеть сервисных центров Book-Service',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },

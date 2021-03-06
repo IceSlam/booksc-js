@@ -1,5 +1,12 @@
 [
   {
+    "name": "contacts",
+    "path": "/contacts",
+    "component": "C:\\\\Users\\\\IceSlam\\\\Documents\\\\GitHub\\\\booksc-js\\\\booksc-frontend\\\\pages\\\\contacts.vue",
+    "chunkName": "pages/contacts",
+    "_name": "_bf79a800"
+  },
+  {
     "name": "services",
     "path": "/services",
     "component": "C:\\\\Users\\\\IceSlam\\\\Documents\\\\GitHub\\\\booksc-js\\\\booksc-frontend\\\\pages\\\\services\\\\index.vue",
@@ -7,11 +14,130 @@
     "_name": "_475bd8d2"
   },
   {
-    "name": "services-id",
-    "path": "/services/:id",
-    "component": "C:\\\\Users\\\\IceSlam\\\\Documents\\\\GitHub\\\\booksc-js\\\\booksc-frontend\\\\pages\\\\services\\\\_id.vue",
-    "chunkName": "pages/services/_id",
-    "_name": "_40a3e082"
+    "name": "services-apple",
+    "path": "/services/apple",
+    "component": "C:\\\\Users\\\\IceSlam\\\\Documents\\\\GitHub\\\\booksc-js\\\\booksc-frontend\\\\pages\\\\services\\\\apple\\\\index.vue",
+    "chunkName": "pages/services/apple/index",
+    "_name": "_32d99983"
+  },
+  {
+    "name": "services-desktop",
+    "path": "/services/desktop",
+    "component": "C:\\\\Users\\\\IceSlam\\\\Documents\\\\GitHub\\\\booksc-js\\\\booksc-frontend\\\\pages\\\\services\\\\desktop\\\\index.vue",
+    "chunkName": "pages/services/desktop/index",
+    "_name": "_cdecc27e"
+  },
+  {
+    "name": "services-iqos",
+    "path": "/services/iqos",
+    "component": "C:\\\\Users\\\\IceSlam\\\\Documents\\\\GitHub\\\\booksc-js\\\\booksc-frontend\\\\pages\\\\services\\\\iqos\\\\index.vue",
+    "chunkName": "pages/services/iqos/index",
+    "_name": "_2da851cb"
+  },
+  {
+    "name": "services-laptop",
+    "path": "/services/laptop",
+    "component": "C:\\\\Users\\\\IceSlam\\\\Documents\\\\GitHub\\\\booksc-js\\\\booksc-frontend\\\\pages\\\\services\\\\laptop\\\\index.vue",
+    "chunkName": "pages/services/laptop/index",
+    "_name": "_5b3b8e06"
+  },
+  {
+    "name": "services-monitor",
+    "path": "/services/monitor",
+    "component": "C:\\\\Users\\\\IceSlam\\\\Documents\\\\GitHub\\\\booksc-js\\\\booksc-frontend\\\\pages\\\\services\\\\monitor\\\\index.vue",
+    "chunkName": "pages/services/monitor/index",
+    "_name": "_c6bf427a"
+  },
+  {
+    "name": "services-other",
+    "path": "/services/other",
+    "component": "C:\\\\Users\\\\IceSlam\\\\Documents\\\\GitHub\\\\booksc-js\\\\booksc-frontend\\\\pages\\\\services\\\\other\\\\index.vue",
+    "chunkName": "pages/services/other/index",
+    "_name": "_80795fe6"
+  },
+  {
+    "name": "services-smartphone",
+    "path": "/services/smartphone",
+    "component": "C:\\\\Users\\\\IceSlam\\\\Documents\\\\GitHub\\\\booksc-js\\\\booksc-frontend\\\\pages\\\\services\\\\smartphone\\\\index.vue",
+    "chunkName": "pages/services/smartphone/index",
+    "_name": "_8aa79b9c"
+  },
+  {
+    "name": "services-tablet",
+    "path": "/services/tablet",
+    "component": "C:\\\\Users\\\\IceSlam\\\\Documents\\\\GitHub\\\\booksc-js\\\\booksc-frontend\\\\pages\\\\services\\\\tablet\\\\index.vue",
+    "chunkName": "pages/services/tablet/index",
+    "_name": "_2c6b60f1"
+  },
+  {
+    "name": "services-tvs",
+    "path": "/services/tvs",
+    "component": "C:\\\\Users\\\\IceSlam\\\\Documents\\\\GitHub\\\\booksc-js\\\\booksc-frontend\\\\pages\\\\services\\\\tvs\\\\index.vue",
+    "chunkName": "pages/services/tvs/index",
+    "_name": "_e67121e8"
+  },
+  {
+    "name": "services-apple-id",
+    "path": "/services/apple/:id",
+    "component": "C:\\\\Users\\\\IceSlam\\\\Documents\\\\GitHub\\\\booksc-js\\\\booksc-frontend\\\\pages\\\\services\\\\apple\\\\_id.vue",
+    "chunkName": "pages/services/apple/_id",
+    "_name": "_27f620ab"
+  },
+  {
+    "name": "services-desktop-id",
+    "path": "/services/desktop/:id",
+    "component": "C:\\\\Users\\\\IceSlam\\\\Documents\\\\GitHub\\\\booksc-js\\\\booksc-frontend\\\\pages\\\\services\\\\desktop\\\\_id.vue",
+    "chunkName": "pages/services/desktop/_id",
+    "_name": "_70425d69"
+  },
+  {
+    "name": "services-iqos-id",
+    "path": "/services/iqos/:id",
+    "component": "C:\\\\Users\\\\IceSlam\\\\Documents\\\\GitHub\\\\booksc-js\\\\booksc-frontend\\\\pages\\\\services\\\\iqos\\\\_id.vue",
+    "chunkName": "pages/services/iqos/_id",
+    "_name": "_23b36a1a"
+  },
+  {
+    "name": "services-laptop-id",
+    "path": "/services/laptop/:id",
+    "component": "C:\\\\Users\\\\IceSlam\\\\Documents\\\\GitHub\\\\booksc-js\\\\booksc-frontend\\\\pages\\\\services\\\\laptop\\\\_id.vue",
+    "chunkName": "pages/services/laptop/_id",
+    "_name": "_5e3456a5"
+  },
+  {
+    "name": "services-monitor-id",
+    "path": "/services/monitor/:id",
+    "component": "C:\\\\Users\\\\IceSlam\\\\Documents\\\\GitHub\\\\booksc-js\\\\booksc-frontend\\\\pages\\\\services\\\\monitor\\\\_id.vue",
+    "chunkName": "pages/services/monitor/_id",
+    "_name": "_f9a5942a"
+  },
+  {
+    "name": "services-other-id",
+    "path": "/services/other/:id",
+    "component": "C:\\\\Users\\\\IceSlam\\\\Documents\\\\GitHub\\\\booksc-js\\\\booksc-frontend\\\\pages\\\\services\\\\other\\\\_id.vue",
+    "chunkName": "pages/services/other/_id",
+    "_name": "_540ff1b5"
+  },
+  {
+    "name": "services-smartphone-id",
+    "path": "/services/smartphone/:id",
+    "component": "C:\\\\Users\\\\IceSlam\\\\Documents\\\\GitHub\\\\booksc-js\\\\booksc-frontend\\\\pages\\\\services\\\\smartphone\\\\_id.vue",
+    "chunkName": "pages/services/smartphone/_id",
+    "_name": "_40b5cdcc"
+  },
+  {
+    "name": "services-tablet-id",
+    "path": "/services/tablet/:id",
+    "component": "C:\\\\Users\\\\IceSlam\\\\Documents\\\\GitHub\\\\booksc-js\\\\booksc-frontend\\\\pages\\\\services\\\\tablet\\\\_id.vue",
+    "chunkName": "pages/services/tablet/_id",
+    "_name": "_36e228ce"
+  },
+  {
+    "name": "services-tvs-id",
+    "path": "/services/tvs/:id",
+    "component": "C:\\\\Users\\\\IceSlam\\\\Documents\\\\GitHub\\\\booksc-js\\\\booksc-frontend\\\\pages\\\\services\\\\tvs\\\\_id.vue",
+    "chunkName": "pages/services/tvs/_id",
+    "_name": "_95847718"
   },
   {
     "name": "index",

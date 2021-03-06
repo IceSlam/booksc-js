@@ -12,3 +12,4 @@ You can directly use them in pages and other components without the need to impo
 - `<MainHeader>` | `<main-header>` (components/main/Header.vue)
 - `<MainNavbar>` | `<main-navbar>` (components/main/Navbar.vue)
 - `<ServicesHeading>` | `<services-heading>` (components/services/Heading.vue)
+- `<ServicesHeadingCategory>` | `<services-heading-category>` (components/services/HeadingCategory.vue)

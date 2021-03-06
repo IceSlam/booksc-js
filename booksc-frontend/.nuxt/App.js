@@ -10,10 +10,13 @@ import '..\\assets\\css\\bootstrap.min.css'
 
 import '..\\assets\\css\\main.css'
 
+import _5ab0f2f4 from '..\\layouts\\category.vue'
+import _35db9649 from '..\\layouts\\contacts.vue'
 import _6f6c098b from '..\\layouts\\default.vue'
+import _77d86d8e from '..\\layouts\\pages.vue'
 import _ac397358 from '..\\layouts\\services.vue'
 
-const layouts = { "_default": sanitizeComponent(_6f6c098b),"_services": sanitizeComponent(_ac397358) }
+const layouts = { "_category": sanitizeComponent(_5ab0f2f4),"_contacts": sanitizeComponent(_35db9649),"_default": sanitizeComponent(_6f6c098b),"_pages": sanitizeComponent(_77d86d8e),"_services": sanitizeComponent(_ac397358) }
 
 export default {
   render (h, props) {

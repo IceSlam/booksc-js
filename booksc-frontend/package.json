@@ -12,9 +12,11 @@
     "lint": "npm run lint:js"
   },
   "dependencies": {
+    "@naumstory/nuxtjs-yandex-metrika": "^1.0.5",
     "@nuxtjs/axios": "^5.12.5",
     "@nuxtjs/pwa": "^3.3.5",
     "core-js": "^3.8.3",
+    "jquery": "^3.6.0",
     "nuxt": "^2.14.12"
   },
   "devDependencies": {
