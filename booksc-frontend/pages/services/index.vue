@@ -380,6 +380,5 @@ export default {
 }
 </script>
 
-<style type="scss">
-
+<style type="scss" scoped>
 </style>

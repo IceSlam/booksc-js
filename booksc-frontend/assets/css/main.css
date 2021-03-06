@@ -538,6 +538,7 @@ h2.is_main-whywe-h2::after {
 .is_main-services-list-card-img-box {
   position: relative;
   box-sizing: content-box;
+  overflow: hidden;
 }
 
 .is_main-services-list-card-box > .card {
