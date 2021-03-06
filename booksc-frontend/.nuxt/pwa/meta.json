@@ -1,5 +1,5 @@
 {
-  "title": "booksc-frontend",
+  "title": "Book-Service",
   "meta": [
     {
       "hid": "charset",
@@ -18,7 +18,7 @@
     {
       "hid": "apple-mobile-web-app-title",
       "name": "apple-mobile-web-app-title",
-      "content": "booksc-frontend"
+      "content": "Book-Service"
     },
     {
       "hid": "author",
@@ -31,6 +31,11 @@
       "content": "## Build Setup"
     },
     {
+      "hid": "theme-color",
+      "name": "theme-color",
+      "content": "#a8312d"
+    },
+    {
       "hid": "og:type",
       "name": "og:type",
       "property": "og:type",
@@ -40,13 +45,13 @@
       "hid": "og:title",
       "name": "og:title",
       "property": "og:title",
-      "content": "booksc-frontend"
+      "content": "Book-Service"
     },
     {
       "hid": "og:site_name",
       "name": "og:site_name",
       "property": "og:site_name",
-      "content": "booksc-frontend"
+      "content": "Book-Service"
     },
     {
       "hid": "og:description",
@@ -69,7 +74,7 @@
     },
     {
       "rel": "manifest",
-      "href": "/_nuxt/manifest.082b701a.json",
+      "href": "/_nuxt/manifest.44cf6cea.json",
       "hid": "manifest"
     }
   ],

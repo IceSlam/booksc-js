@@ -1,5 +1,5 @@
 {
-  "name": "booksc-frontend",
+  "name": "Book-Service",
   "short_name": "booksc-frontend",
   "description": "## Build Setup",
   "icons": [
@@ -49,5 +49,6 @@
   "start_url": "/?standalone=true",
   "display": "standalone",
   "background_color": "#ffffff",
+  "theme_color": "#a8312d",
   "lang": "ru"
 }

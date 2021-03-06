@@ -59,7 +59,16 @@ export default {
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {
-      lang: 'ru'
+      lang: 'ru',
+      name: 'Book-Service',
+      display: 'standalone',
+      theme_color: '#a8312d'
+    },
+    meta: {
+      mobileApp: 'true',
+      name: 'Book-Service',
+      author: 'IceSlam',
+      theme_color: '#a8312d'
     }
   },
 
