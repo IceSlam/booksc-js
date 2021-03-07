@@ -9,7 +9,7 @@
         >
 
           <h5
-            class="font-weight-bold text-uppercase mt-3 mb-4 text-white"
+            class="font-weight-bold text-uppercase is-footer-contact-title mt-3 mb-4 text-white"
           >
             {{ item.name }}
           </h5>
@@ -47,7 +47,7 @@
           class="offset-md-3 text-right"
           style="line-height:2;"
         >
-          <h5 class="font-weight-bold text-uppercase mt-3 mb-4 text-white">
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4 text-white" style="font-size: 1.25rem;">
             Ссылки
           </h5>
           <ul class="list-unstyled">
@@ -157,8 +157,12 @@ export default {
   border-radius: 0 !important;
   border: none !important;
 }
+.is-footer-contact-title {
+  font-size: 1.25rem;
+}
 .is-contacts-item {
   color: #ffffff;
+  font-size: .9rem;
 }
 .is-contacts-item-link {
   color: #ffffff;
