@@ -24,7 +24,7 @@
             <!-- VK Widget -->
             <div id="vk_groups"></div>
             <script type="text/javascript">
-              VK.Widgets.Group("vk_groups", {mode: 3, color1: 'A8312D', color2: 'FFF', color3: 'FFF'}, 77717062);
+              VK.Widgets.Group('vk_groups', {mode: 3, color1: 'A8312D', color2: 'FFF', color3: 'FFF'}, 77717062);
             </script>
           </center>
           <br>

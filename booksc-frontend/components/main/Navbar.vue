@@ -19,7 +19,75 @@
           Book-Service
         </NLink>
       </b-navbar-brand>
-      <b-navbar-toggle target="navbar-menu"></b-navbar-toggle>
+      <button class="uk-button is-menu-mobile-toggle" type="button" uk-toggle="target: #mobile-sidebar-overlay">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div id="mobile-sidebar-overlay" class="is-mobile-sidebar-overlay" uk-offcanvas="overlay: true">
+        <div class="uk-offcanvas-bar is-mobile-sidebar">
+          <button class="uk-offcanvas-close" type="button" uk-close></button>
+          <img
+            src="/img/logotype.png"
+            alt="Book-Service"
+            style="max-width: 50%;"
+          />
+          <h3 class="is-mobile-sidebar-title">
+            Book-Service
+          </h3>
+          <h4 class="is-mobile-sidebar-subtitle">
+            Сеть сервисных центров
+          </h4>
+          <b-navbar-nav
+            class="mr-auto is_main-navbar-menu mobile text-left mt-4"
+          >
+            <b-nav-item
+              to="/"
+              exact
+            >
+              Главная
+            </b-nav-item>
+            <b-nav-item
+              to="/services"
+            >
+              Услуги и цены
+            </b-nav-item>
+            <b-nav-item
+              href="https://bookparts.ru/"
+              target="_blank"
+            >
+              Магазин
+            </b-nav-item>
+            <b-nav-item
+              to="/contacts"
+            >
+              Контакты
+            </b-nav-item>
+          </b-navbar-nav>
+          <hr class="clearfix w-100 d-md-none">
+          <div class="d-flex justify-content-around">
+            <a
+              class="item"
+              href="https://vk.com/bookservice"
+              target="_blank"
+            >
+              <i class="fab fa-vk"></i>
+            </a>
+            <a
+              class="item"
+              href="https://instagram.com/bookservice32"
+              target="_blank"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a
+              class="item"
+              href="https://yandex.ru/profile/224999423360"
+              target="_blank"
+            >
+              <i class="fab fa-yandex"></i>
+            </a>
+          </div>
+        </div>
+      </div>
       <b-collapse
         id="navbar-menu"
         is-nav
@@ -84,5 +152,42 @@ export default {
 </script>
 
 <style scoped>
-
+.is-menu-mobile-toggle {
+  padding: 0 .75rem;
+  border: none;
+  background: transparent;
+  color: rgba(255,255,255,.75);
+  font-size: 1.5rem;
+  transition: all .5s;
+}
+.is-menu-mobile-toggle:hover {
+  color: #ffffff;
+  transition: all .5s;
+}
+.is-mobile-sidebar-overlay {
+  background: rgba(0,0,0,.25);
+}
+.is-mobile-sidebar {
+  background: #a8312d;
+}
+.is-mobile-sidebar-title {
+  margin-top: .5rem;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+.is-mobile-sidebar-subtitle {
+  font-weight: 200;
+  margin-top: 0;
+  font-size: 1.125rem;
+}
+.is_main-navbar-menu.mobile li a {
+  padding-left: 1rem;
+}
+@media screen and (min-width: 992px) {
+  .is-menu-mobile-toggle {
+    display: none;
+  }
+}
 </style>
