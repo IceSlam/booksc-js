@@ -4,82 +4,47 @@
       <b-row>
         <b-col
           md="3"
-          class="mx-auto"
+          v-for="item in ContactsData"
+          :key="item.id"
         >
+
           <h5
             class="font-weight-bold text-uppercase mt-3 mb-4 text-white"
           >
-            Book-Service Красноармейская
+            {{ item.name }}
           </h5>
           <p class="is-contacts-item">
             <i class="fas fa-map-marked" aria-hidden="true" />
-            <span class="d-none" itemprop="postalCode">241037</span>
-            <span itemprop="addressLocality">Брянск</span>,
-            <span itemprop="streetAddress">Красноармейская ул., 170</span>,
-            ост. Памятник летчикам
+            <span class="d-none" itemprop="postalCode">{{ item.address_postal }}</span>
+            <span itemprop="addressLocality">{{ item.address_city }}</span>,
+            <span itemprop="streetAddress">{{ item.address_street }}</span>,
+            {{ item.address_station }}
           </p>
           <p class="is-contacts-item">
             <i class="fas fa-phone" aria-hidden="true"></i>
             тел.:
-            <a href="tel:+79003736000" class="is-contacts-item-link">
+            <a :href="'tel:' + item.phone" class="is-contacts-item-link">
                 <span itemprop="telephone">
-                    +7-900-373-6000
+                    {{ item.phone }}
                 </span>
             </a>
           </p>
           <p class="is-contacts-item">
             <i class="fas fa-envelope" aria-hidden="true"></i>
             email:
-            <a href="mailto:help@booksc.ru" class="is-contacts-item-link">
-              <span itemprop="email">help@booksc.ru</span>
+            <a :href="'mailto:' + item.email" class="is-contacts-item-link">
+              <span itemprop="email">{{ item.email }}</span>
             </a>
           </p>
           <p class="is-contacts-item">
             <i class="far fa-calendar-alt"></i>
-            ПН-СБ: 10:00 - 19:00 / ВС: 10:00 - 18:00
+            {{ item.work_graphic }}
           </p>
+          <hr class="clearfix w-100 d-md-none">
         </b-col>
-        <hr class="clearfix w-100 d-md-none">
         <b-col
           md="3"
-          class="mx-auto"
-        >
-          <h5
-            class="font-weight-bold text-uppercase mt-3 mb-4 text-white">
-            Book-Service <br> ТД Весна
-          </h5>
-          <p class="is-contacts-item">
-            <i class="fas fa-map-marked" aria-hidden="true" />
-            <span class="d-none" itemprop="postalCode">241037</span>
-            <span itemprop="addressLocality">Брянск</span>,
-            <span itemprop="streetAddress">III Интернационала ул., 17А</span>,
-            ост. Почта, ТД Весна, 4 этаж
-          </p>
-          <p class="is-contacts-item">
-            <i class="fas fa-phone" aria-hidden="true" />
-            тел.:
-            <a href="tel:+79307202222" class="is-contacts-item-link">
-                <span itemprop="telephone">
-                    +7-930-720-2222
-                </span>
-            </a>
-          </p>
-          <p class="is-contacts-item">
-            <i class="fas fa-envelope" aria-hidden="true"></i>
-            email:
-            <a href="mailto:help@booksc.ru" class="is-contacts-item-link">
-              <span itemprop="email">help@booksc.ru</span>
-            </a>
-          </p>
-          <p class="is-contacts-item">
-            <i class="far fa-calendar-alt"></i>
-            ПН-СБ: 10:00 - 19:00 / ВС: 10:00 - 18:00
-          </p>
-        </b-col>
-        <hr class="clearfix w-100 d-md-none">
-        <b-col
-          md="3"
-          class="mx-auto offset-md-3 text-right"
+          class="offset-md-3 text-right"
           style="line-height:2;"
         >
           <h5 class="font-weight-bold text-uppercase mt-3 mb-4 text-white">
@@ -154,7 +119,35 @@
 
 <script>
 export default {
-  name: 'Footer'
+  name: 'Footer',
+  data () {
+    return {
+      ContactsData: [
+        {
+          id: 1,
+          name: 'Book-Service Красноармейская',
+          address_postal: '241037',
+          address_city: 'Брянск',
+          address_street: 'Красноармейская ул., 170',
+          address_station: 'ост. Памятник летчикам',
+          phone: '+7-900-373-6000',
+          email: 'help@booksc.ru',
+          work_graphic: 'ПН-СБ: 10:00 - 19:00 / ВС: 10:00 - 18:00'
+        },
+        {
+          id: 2,
+          name: 'Book-Service ТД Весна',
+          address_postal: '241035',
+          address_city: 'Брянск',
+          address_street: 'III Интернационала ул., 17А',
+          address_station: 'ТД Весна',
+          phone: '+7-930-720-2222',
+          email: 'help@booksc.ru',
+          work_graphic: 'ПН-СБ: 10:00 - 19:00 / ВС: 10:00 - 18:00'
+        }
+      ]
+    }
+  }
 }
 </script>
 

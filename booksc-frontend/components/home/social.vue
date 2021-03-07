@@ -24,7 +24,7 @@
             VK.Widgets.Group('vk_groups', {mode: 3, color1: 'A8312D', color2: 'FFF', color3: 'FFF'}, 77717062);
           </script>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 d-flex align-items-center justify-content-center mt-3">
           <iframe src="https://averin.pro/widget.php?l=bookservice32&style=2&width=250&gallery=0&s=80&icc=3&icr=3&t=1&tt=Мы в Инстаграм&h=1&ttcolor=FFFFFF&th=c3c3c3&bw=ffffff&bscolor=FFFFFF&bs=a8312d&ts=Подписаться&ch=utf8" allowtransparency="true" frameborder="0" scrolling="no" style="background:rgba(255,255,255,.01);border:none;overflow:hidden;width:350px;height:300px;" ></iframe>
         </div>
       </div>
