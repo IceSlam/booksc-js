@@ -12,6 +12,8 @@ import '..\\node_modules\\bootstrap-vue\\dist\\bootstrap-vue.css'
 
 import '..\\assets\\css\\fontawesome.min.css'
 
+import '..\\node_modules\\uikit\\dist\\css\\uikit.min.css'
+
 import '..\\assets\\css\\main.css'
 
 import _5ab0f2f4 from '..\\layouts\\category.vue'

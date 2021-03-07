@@ -1,5 +1,5 @@
 {
-  "name": "booksc-frontend",
+  "name": "book-service",
   "version": "1.0.0",
   "private": true,
   "author": "IceSlam",
@@ -18,7 +18,8 @@
     "bootstrap-vue": "^2.21.2",
     "core-js": "^3.8.3",
     "jquery": "^3.6.0",
-    "nuxt": "^2.14.12"
+    "nuxt": "^2.14.12",
+    "uikit": "^3.6.17"
   },
   "devDependencies": {
     "@nuxt/types": "^2.15.2",
