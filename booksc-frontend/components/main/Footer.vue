@@ -3,11 +3,10 @@
     <b-container class="text-center text-md-left">
       <b-row>
         <b-col
-          md="3"
           v-for="item in ContactsData"
           :key="item.id"
+          md="3"
         >
-
           <h5
             class="font-weight-bold text-uppercase is-footer-contact-title mt-3 mb-4 text-white"
           >
@@ -21,23 +20,23 @@
             {{ item.address_station }}
           </p>
           <p class="is-contacts-item">
-            <i class="fas fa-phone" aria-hidden="true"></i>
+            <i class="fas fa-phone" aria-hidden="true" />
             тел.:
             <a :href="'tel:' + item.phone" class="is-contacts-item-link">
-                <span itemprop="telephone">
-                    {{ item.phone }}
-                </span>
+              <span itemprop="telephone">
+                {{ item.phone }}
+              </span>
             </a>
           </p>
           <p class="is-contacts-item">
-            <i class="fas fa-envelope" aria-hidden="true"></i>
+            <i class="fas fa-envelope" aria-hidden="true" />
             email:
             <a :href="'mailto:' + item.email" class="is-contacts-item-link">
               <span itemprop="email">{{ item.email }}</span>
             </a>
           </p>
           <p class="is-contacts-item">
-            <i class="far fa-calendar-alt"></i>
+            <i class="far fa-calendar-alt" />
             {{ item.work_graphic }}
           </p>
           <hr class="clearfix w-100 d-md-none">
@@ -92,7 +91,7 @@
         style="background-color: transparent; border: none;"
       >
         <b-collapse id="collapsed-ya-map">
-          <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A76ea0ff14f25dccb0001d250726fa6efa283b055a34a618a96877072ceef3fd7&amp;width=100%25&amp;height=450&amp;lang=ru_RU&amp;scroll=true"></script>
+          <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A76ea0ff14f25dccb0001d250726fa6efa283b055a34a618a96877072ceef3fd7&amp;width=100%25&amp;height=450&amp;lang=ru_RU&amp;scroll=true" />
         </b-collapse>
       </b-card>
     </div>

@@ -432,7 +432,7 @@ h2.is_main-whywe-h2::after {
 }
 
 .is_main-social {
-  background: url(../../static/img/social_bg.jpg);
+  background: url(../../static/img/social_bg.webp);
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
