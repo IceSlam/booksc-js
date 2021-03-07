@@ -8,6 +8,9 @@
   "HomeSocial": {
     "description": "Auto imported from components/home/social.vue"
   },
+  "HomeTopServices": {
+    "description": "Auto imported from components/home/TopServices.vue"
+  },
   "HomeWhyWe": {
     "description": "Auto imported from components/home/WhyWe.vue"
   },

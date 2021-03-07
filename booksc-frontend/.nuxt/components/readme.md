@@ -9,6 +9,7 @@ You can directly use them in pages and other components without the need to impo
 - `<Logo>` | `<logo>` (components/Logo.vue)
 - `<HomeBrands>` | `<home-brands>` (components/home/Brands.vue)
 - `<HomeSocial>` | `<home-social>` (components/home/social.vue)
+- `<HomeTopServices>` | `<home-top-services>` (components/home/TopServices.vue)
 - `<HomeWhyWe>` | `<home-why-we>` (components/home/WhyWe.vue)
 - `<MainFooter>` | `<main-footer>` (components/main/Footer.vue)
 - `<MainHeader>` | `<main-header>` (components/main/Header.vue)

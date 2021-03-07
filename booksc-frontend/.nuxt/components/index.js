@@ -1,6 +1,7 @@
 export { default as Logo } from '../..\\components\\Logo.vue'
 export { default as HomeBrands } from '../..\\components\\home\\Brands.vue'
 export { default as HomeSocial } from '../..\\components\\home\\social.vue'
+export { default as HomeTopServices } from '../..\\components\\home\\TopServices.vue'
 export { default as HomeWhyWe } from '../..\\components\\home\\WhyWe.vue'
 export { default as MainFooter } from '../..\\components\\main\\Footer.vue'
 export { default as MainHeader } from '../..\\components\\main\\Header.vue'
@@ -11,6 +12,7 @@ export { default as ServicesHeadingCategory } from '../..\\components\\services\
 export const LazyLogo = import('../..\\components\\Logo.vue' /* webpackChunkName: "components/logo" */).then(c => c.default || c)
 export const LazyHomeBrands = import('../..\\components\\home\\Brands.vue' /* webpackChunkName: "components/home-brands" */).then(c => c.default || c)
 export const LazyHomeSocial = import('../..\\components\\home\\social.vue' /* webpackChunkName: "components/home-social" */).then(c => c.default || c)
+export const LazyHomeTopServices = import('../..\\components\\home\\TopServices.vue' /* webpackChunkName: "components/home-top-services" */).then(c => c.default || c)
 export const LazyHomeWhyWe = import('../..\\components\\home\\WhyWe.vue' /* webpackChunkName: "components/home-why-we" */).then(c => c.default || c)
 export const LazyMainFooter = import('../..\\components\\main\\Footer.vue' /* webpackChunkName: "components/main-footer" */).then(c => c.default || c)
 export const LazyMainHeader = import('../..\\components\\main\\Header.vue' /* webpackChunkName: "components/main-header" */).then(c => c.default || c)

@@ -3,191 +3,7 @@
     <article id="content" class="is_main-content wow fadeIn " data-wow-duration="1s">
       <WhyWe />
       <Brands />
-      <section id="top" class="is_main-top container animated fadeIn slow">
-        <h2 class="is_main-top-title text-center text-uppercase">
-          Наши услуги
-        </h2>
-        <br><br>
-        <div class="row">
-          <div style="margin-bottom: 1em;" class="col-md-4 col-sm-6">
-            <div class="card card-image view" style="background-image: url(/img/apple.png);background-repeat: no-repeat;-webkit-background-size: cover; background-size: cover; background-position: center;">
-              <div class="d-flex align-items-center rgba-stylish-light py-5 px-4">
-                <div>
-                  <h5 class="bs-text">
-                    <i class="fab fa-apple" />
-                    Apple
-                  </h5>
-                  <h3 class="card-title pt-2 text-white text-center text-uppercase">
-                    <strong>
-                      Замена экрана на iPhone
-                    </strong>
-                  </h3>
-                  <p class="text-center text-white">
-                    Замена экрана (дисплейного модуля) на смартфонах Apple iPhone различных поколений на экрана качества Оригинал, а также на дисплеи с идеальным соотношением цена-качество
-                  </p>
-                  <center>
-                    <NLink to="/services/apple" class="text-center text-white">
-                      от
-                      <span style="font-size: 3em;">
-                        699
-                      </span>
-                      руб.
-                    </NLink>
-                  </center>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div style="margin-bottom: 1em;" class="col-md-4 col-sm-6">
-            <div class="card card-image view wow slideInUp" data-wow-duration="1.5s" style="background-image: url(/img/smartphone.webp);background-repeat: no-repeat;-webkit-background-size: cover; background-size: cover; background-position: center;">
-              <div class="d-flex align-items-center rgba-stylish-light py-5 px-4">
-                <div>
-                  <h5 style="" class="bs-text">
-                    <i class="fas fa-mobile-alt" />
-                    Смартфоны
-                  </h5>
-                  <h3 class="card-title pt-2 text-white text-center text-uppercase">
-                    <strong>
-                      Удаление Google FRP
-                    </strong>
-                  </h3>
-                  <p class="text-center text-white">
-                    Удаление блокировки телефона Google-аккаунтом (FRP) в следствие неправильного сброса устройства к заводским настройкам, либо ошибкам в работе ОС Android / неполадкам в работе телефона
-                  </p>
-                  <center>
-                    <NLink to="/services/smartphone" class="text-center text-white">
-                      от
-                      <span style="font-size: 3em;">
-                        399
-                      </span>
-                      руб.
-                    </NLink>
-                  </center>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div style="margin-bottom: 1em;" class="col-md-4 col-sm-6">
-            <div class="card card-image view wow slideInRight" data-wow-duration="1.5s" style="background-image: url(/img/tablet.webp);background-repeat: no-repeat;-webkit-background-size: cover; background-size: cover; background-position: center;">
-              <div class="d-flex align-items-center rgba-stylish-light py-5 px-4">
-                <div>
-                  <h5 class="bs-text ">
-                    <i class="fas fa-tablet-alt" />
-                    Планшеты
-                  </h5>
-                  <h3 class="card-title pt-2 text-white text-center text-uppercase">
-                    <strong>
-                      Замена разъема на планшете
-                    </strong>
-                  </h3>
-                  <p class="text-center text-white">
-                    Замена системных разъемов microUSB, аудио- и видеоразъемов на планшетных ПК марок Acer, DEXP, DNS, Irbis, Samsung, Digma, Xiaomi и других производителей в кратчайшие сроки с гарантией на выполненные работы
-                  </p>
-                  <center>
-                    <NLink to="/services/tablet" class="text-center text-white">
-                      от
-                      <span style="font-size: 3em;">
-                        299
-                      </span>
-                      руб.
-                    </NLink>
-                  </center>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div style="margin-bottom: 1em;" class="col-md-4 col-sm-6">
-            <div class="card card-image view wow slideInRight" data-wow-duration="1.5s" style="background-image: url(/img/laptop.png);background-repeat: no-repeat;-webkit-background-size: cover; background-size: cover; background-position: center;">
-              <div class="d-flex align-items-center rgba-stylish-light py-5 px-4">
-                <div>
-                  <h5 class="bs-text ">
-                    <i class="fas fa-laptop" />
-                    Ноутбуки
-                  </h5>
-                  <h3 class="card-title pt-2 text-white text-center text-uppercase">
-                    <strong>
-                      Ремонт корпуса ноутбука
-                    </strong>
-                  </h3>
-                  <p class="text-center text-white">
-                    Ремонт корпуса или его замена на новый на ноутбуках, марок Samsung, Dell, Lenovo, Acer, Asus, MSI и многих других с гарантией на выполненные работы от 1 месяца!
-                  </p>
-                  <center>
-                    <NLink to="/services/laptop" class="text-center text-white">
-                      от
-                      <span style="font-size: 3em;">
-                        999
-                      </span>
-                      руб.
-                    </NLink>
-                  </center>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div style="margin-bottom: 1em;" class="col-md-4 col-sm-6">
-            <div class="card card-image view wow slideInDown" data-wow-duration="1.5s" style="background-image: url(/img/desktop.png);background-repeat: no-repeat;-webkit-background-size: cover; background-size: cover; background-position: center;">
-              <div class="d-flex align-items-center rgba-stylish-light py-5 px-4">
-                <div>
-                  <h5 class="bs-text ">
-                    <i class="fas fa-desktop" />
-                    Настольные ПК
-                  </h5>
-                  <h3 class="card-title pt-2 text-white text-center text-uppercase">
-                    <strong>
-                      Замена комплектующих
-                    </strong>
-                  </h3>
-                  <p class="text-center text-white">
-                    Замена комплектующих настольного персонального компьютера на новые вместо неисправных, так и на более мощные(апгрейд) комплектующие с гарантией от СЦ, так и от вендоров
-                  </p>
-                  <center>
-                    <NLink to="/services/desktop" class="text-center text-white">
-                      от
-                      <span style="font-size: 3em;">
-                        299
-                      </span>
-                      руб.
-                    </NLink>
-                  </center>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div style="margin-bottom: 1em;" class="col-md-4 col-sm-6">
-            <div class="card card-image view" style="background-image: url(/img/iqos.png);background-repeat: no-repeat;-webkit-background-size: cover; background-size: cover; background-position: center;">
-              <div class="d-flex align-items-center rgba-stylish-light py-5 px-4">
-                <div>
-                  <h5 class="bs-text">
-                    <center>
-                      <span style="justify-content:center !important;padding-top:0;padding-bottom:0" class="navbar-brand d-flex">
-                        <img src="/img/iqos.ico" alt="IQOS">
-                        IQOS
-                      </span>
-                    </center>
-                  </h5>
-                  <h3 class="card-title pt-2 text-white text-center text-uppercase">
-                    <strong>
-                      Ремонт нагревателя IQOS
-                    </strong>
-                  </h3>
-                  <p class="text-center text-white">
-                    Профессиональная замена нагревательного элемента (лезвия) на специальном оборудовании. В стоимость входит стоимость работы + запчасть + чистка
-                  </p>
-                  <center>
-                    <NLink to="/services/iqos" class="text-center text-white">
-                      от
-                      <span style="font-size: 3em;">
-                        299
-                      </span> руб.
-                    </NLink>
-                  </center>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <TopServices />
       <section id="reviews" class="is_main-reviews wow fadeIn slow view" data-wow-duration="2s">
         <div class="mask rgba-stylish-strong" />
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
@@ -480,13 +296,15 @@
 import WhyWe from '@/components/home/WhyWe'
 import SocialWidgets from '@/components/home/social'
 import Brands from '@/components/home/Brands'
+import TopServices from '@/components/home/TopServices'
 
 export default {
   name: 'IndexPage',
   components: {
     WhyWe,
     SocialWidgets,
-    Brands
+    Brands,
+    TopServices
   },
   data () {
     return {
