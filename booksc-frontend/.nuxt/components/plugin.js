@@ -2,6 +2,7 @@ import Vue from 'vue'
 
 const components = {
   Logo: () => import('../..\\components\\Logo.vue' /* webpackChunkName: "components/logo" */).then(c => c.default || c),
+  HomeBrands: () => import('../..\\components\\home\\Brands.vue' /* webpackChunkName: "components/home-brands" */).then(c => c.default || c),
   HomeSocial: () => import('../..\\components\\home\\social.vue' /* webpackChunkName: "components/home-social" */).then(c => c.default || c),
   HomeWhyWe: () => import('../..\\components\\home\\WhyWe.vue' /* webpackChunkName: "components/home-why-we" */).then(c => c.default || c),
   MainFooter: () => import('../..\\components\\main\\Footer.vue' /* webpackChunkName: "components/main-footer" */).then(c => c.default || c),

@@ -2,71 +2,15 @@
   <div>
     <article id="content" class="is_main-content wow fadeIn " data-wow-duration="1s">
       <WhyWe />
-      <section id="brands" class="is_main-brands">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6 is_main-brand-left wow slideInLeft view" data-wow-duration="1.5s">
-              <div class="mask flex-center rgba-stylish-light" />
-            </div>
-            <div class="col-md-6 is_main-brand-right wow slideInRight" data-wow-duration="1.5s">
-              <h2 class="is_main-brands-title text-center wow slideInDown" data-wow-duration="1.5s">
-                Бренды
-              </h2>
-              <p class="is_main-brands-items text-center">
-                <span class="btn btn-sm wow fadeInLeft" data-wow-duration=".5s">Asus</span>
-                <span class="btn btn-sm wow fadeInLeft" data-wow-duration=".5s">Apple</span>
-                <span class="btn btn-sm wow fadeInLeft" data-wow-duration=".5s">Archos</span>
-                <span class="btn btn-sm wow fadeInLeft" data-wow-duration=".5s">BQ</span>
-                <span class="btn btn-sm wow fadeInLeft" data-wow-duration=".5s">Acer</span>
-                <span class="btn btn-sm wow fadeInLeft" data-wow-duration=".5s">Blackview</span>
-                <span class="btn btn-sm wow fadeInLeft" data-wow-duration=".5s">DEXP</span>
-                <span class="btn btn-sm wow fadeInLeft" data-wow-duration=".5s">DNS</span>
-                <span class="btn btn-sm wow fadeInLeft" data-wow-duration=".5s">Digma</span>
-                <span class="btn btn-sm wow fadeInLeft" data-wow-duration=".5s">Doogee</span>
-                <span class="btn btn-sm wow fadeInLeft" data-wow-duration=".5s">Finepower</span>
-                <span class="btn btn-sm wow fadeInLeft" data-wow-duration=".5s">Heier</span>
-                <span class="btn btn-sm wow fadeInLeft" data-wow-duration=".5s">Honor</span>
-                <span class="btn btn-sm wow fadeInLeft" data-wow-duration=".5s">Huawei</span>
-                <span class="btn btn-sm wow fadeInLeft" data-wow-duration=".5s">HTC</span>
-                <span class="btn btn-sm wow fadeInLeft" data-wow-duration=".5s">Highsreen</span>
-                <span class="btn btn-sm wow fadeInLeft" data-wow-duration=".5s">Irbis</span>
-                <span class="btn btn-sm wow fadeInLeft" data-wow-duration=".5s">Lenovo</span>
-                <span class="btn btn-sm wow fadeInLeft" data-wow-duration=".5s">Meizu</span>
-                <span class="btn btn-sm wow fadeInLeft" data-wow-duration=".5s">Micromax</span>
-                <span class="btn btn-sm wow fadeInLeft" data-wow-duration=".5s">Motorola</span>
-                <span class="btn btn-sm wow fadeInLeft" data-wow-duration=".5s">Nokia</span>
-                <span class="btn btn-sm wow fadeInLeft" data-wow-duration=".5s">One+</span>
-                <span class="btn btn-sm wow fadeInLeft" data-wow-duration=".5s">Philips</span>
-                <span class="btn btn-sm wow fadeInLeft" data-wow-duration=".5s">Oukitel</span>
-                <span class="btn btn-sm wow fadeInLeft" data-wow-duration=".5s">Prestigio</span>
-                <span class="btn btn-sm wow fadeInLeft" data-wow-duration=".5s">Samsung</span>
-                <span class="btn btn-sm wow fadeInLeft" data-wow-duration=".5s">Sony</span>
-                <span class="btn btn-sm wow fadeInLeft" data-wow-duration=".5s">Turbo</span>
-                <span class="btn btn-sm wow fadeInLeft" data-wow-duration=".5s">Virtex</span>
-                <span class="btn btn-sm wow fadeInLeft" data-wow-duration=".5s">Vivo</span>
-                <span class="btn btn-sm wow fadeInLeft" data-wow-duration=".5s">realme</span>
-                <span class="btn btn-sm wow fadeInLeft" data-wow-duration=".5s">texet</span>
-                <span class="btn btn-sm wow fadeInLeft" data-wow-duration=".5s">HP</span>
-                <span class="btn btn-sm wow fadeInLeft" data-wow-duration=".5s">AOC</span>
-                <span class="btn btn-sm wow fadeInLeft" data-wow-duration=".5s">PackardBell</span>
-                <span class="btn btn-sm wow fadeInLeft" data-wow-duration=".5s">eMachines</span>
-                <span class="btn btn-sm wow fadeInLeft" data-wow-duration=".5s">Xiaomi</span>
-                <span class="btn btn-sm wow fadeInLeft" data-wow-duration=".5s">MSI</span>
-                <span class="btn btn-sm wow fadeInLeft" data-wow-duration=".5s">Dell</span>
-                <span class="btn btn-sm wow fadeInLeft" data-wow-duration=".5s">AlinWare</span>
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Brands />
       <section id="top" class="is_main-top container animated fadeIn slow">
-        <h2 class="is_main-top-title text-center text-uppercase wow fadeInDown" data-wow-duration="1.5s">
+        <h2 class="is_main-top-title text-center text-uppercase">
           Наши услуги
         </h2>
         <br><br>
         <div class="row">
           <div style="margin-bottom: 1em;" class="col-md-4 col-sm-6">
-            <div class="card card-image view wow slideInLeft" data-wow-duration="1.5s" style="background-image: url(/img/apple.png);background-repeat: no-repeat;-webkit-background-size: cover; background-size: cover; background-position: center;">
+            <div class="card card-image view" style="background-image: url(/img/apple.png);background-repeat: no-repeat;-webkit-background-size: cover; background-size: cover; background-position: center;">
               <div class="d-flex align-items-center rgba-stylish-light py-5 px-4">
                 <div>
                   <h5 class="bs-text">
@@ -211,7 +155,7 @@
             </div>
           </div>
           <div style="margin-bottom: 1em;" class="col-md-4 col-sm-6">
-            <div class="card card-image view wow slideInLeft" data-wow-duration="1.5s" style="background-image: url(/img/iqos.png);background-repeat: no-repeat;-webkit-background-size: cover; background-size: cover; background-position: center;">
+            <div class="card card-image view" style="background-image: url(/img/iqos.png);background-repeat: no-repeat;-webkit-background-size: cover; background-size: cover; background-position: center;">
               <div class="d-flex align-items-center rgba-stylish-light py-5 px-4">
                 <div>
                   <h5 class="bs-text">
@@ -329,13 +273,13 @@
             <div class="card is_main-goods-card wow slideInUp" data-wow-duration="2s">
               <div class="is_main-goods-card-img view overlay">
                 <img class="card-img-top" src="https://booksc.ru/assets/cache_image/products/38/169.970-1_390x0_09a.png" alt="Card image cap">
-                <div style="" class="is_main-goods-card-badge-new wow slideInLeft" data-wow-duration="1.5s">
+                <div style="" class="is_main-goods-card-badge-new">
                   Новинка
                 </div>
-                <div class="is_main-goods-card-badge-top wow slideInLeft" data-wow-duration="1.5s">
+                <div class="is_main-goods-card-badge-top">
                   <i class="fab fa-hotjar" aria-hidden="true" />
                 </div>
-                <div class="is_main-goods-card-badge-rec wow slideInLeft" data-wow-duration="1.5s">
+                <div class="is_main-goods-card-badge-rec">
                   <i class="fas fa-thumbs-up" aria-hidden="true" />
                 </div>
                 <a href="#!">
@@ -379,13 +323,13 @@
             <div class="card is_main-goods-card">
               <div class="is_main-goods-card-img view overlay">
                 <img class="card-img-top" src="https://booksc.ru/assets/cache_image/products/38/169.970-1_390x0_09a.png" alt="Card image cap">
-                <div style="" class="is_main-goods-card-badge-new wow slideInLeft" data-wow-duration="1.5s">
+                <div style="" class="is_main-goods-card-badge-new">
                   Новинка
                 </div>
-                <div class="is_main-goods-card-badge-top wow slideInLeft" data-wow-duration="1.5s">
+                <div class="is_main-goods-card-badge-top">
                   <i class="fab fa-hotjar" aria-hidden="true" />
                 </div>
-                <div class="is_main-goods-card-badge-rec wow slideInLeft" data-wow-duration="1.5s">
+                <div class="is_main-goods-card-badge-rec">
                   <i class="fas fa-thumbs-up" aria-hidden="true" />
                 </div>
                 <a href="#!">
@@ -429,13 +373,13 @@
             <div class="card is_main-goods-card wow slideInUp" data-wow-duration="2s">
               <div class="is_main-goods-card-img view overlay">
                 <img class="card-img-top" src="https://booksc.ru/assets/cache_image/products/38/169.970-1_390x0_09a.png" alt="Card image cap">
-                <div style="" class="is_main-goods-card-badge-new wow slideInLeft" data-wow-duration="1.5s">
+                <div style="" class="is_main-goods-card-badge-new">
                   Новинка
                 </div>
-                <div class="is_main-goods-card-badge-top wow slideInLeft" data-wow-duration="1.5s">
+                <div class="is_main-goods-card-badge-top">
                   <i class="fab fa-hotjar" aria-hidden="true" />
                 </div>
-                <div class="is_main-goods-card-badge-rec wow slideInLeft" data-wow-duration="1.5s">
+                <div class="is_main-goods-card-badge-rec">
                   <i class="fas fa-thumbs-up" aria-hidden="true" />
                 </div>
                 <a href="#!">
@@ -479,13 +423,13 @@
             <div class="card is_main-goods-card wow slideInUp" data-wow-duration="2s">
               <div class="is_main-goods-card-img view overlay">
                 <img class="card-img-top" src="https://booksc.ru/assets/cache_image/products/38/169.970-1_390x0_09a.png" alt="Card image cap">
-                <div style="" class="is_main-goods-card-badge-new wow slideInLeft" data-wow-duration="1.5s">
+                <div style="" class="is_main-goods-card-badge-new">
                   Новинка
                 </div>
-                <div class="is_main-goods-card-badge-top wow slideInLeft" data-wow-duration="1.5s">
+                <div class="is_main-goods-card-badge-top">
                   <i class="fab fa-hotjar" aria-hidden="true" />
                 </div>
-                <div class="is_main-goods-card-badge-rec wow slideInLeft" data-wow-duration="1.5s">
+                <div class="is_main-goods-card-badge-rec">
                   <i class="fas fa-thumbs-up" aria-hidden="true" />
                 </div>
                 <a href="#!">
@@ -535,11 +479,14 @@
 <script>
 import WhyWe from '@/components/home/WhyWe'
 import SocialWidgets from '@/components/home/social'
+import Brands from '@/components/home/Brands'
+
 export default {
   name: 'IndexPage',
   components: {
     WhyWe,
-    SocialWidgets
+    SocialWidgets,
+    Brands
   },
   data () {
     return {

@@ -1,8 +1,8 @@
 <template>
   <b-navbar
+    id="navbar"
     toggleable="lg"
     type="dark"
-    id="navbar"
     class="sticky-top bs-bg"
   >
     <b-container>
@@ -15,25 +15,26 @@
           <img
             class="is_main-navbar-logo"
             src="@/assets/img/logotype.png"
-            alt="Book-Service">
+            alt="Book-Service"
+          >
           Book-Service
         </NLink>
       </b-navbar-brand>
       <button class="uk-button is-menu-mobile-toggle" type="button" uk-toggle="target: #mobile-sidebar-overlay">
-        <i class="fas fa-bars"></i>
+        <i class="fas fa-bars" />
       </button>
       <div id="mobile-sidebar-overlay" class="is-mobile-sidebar-overlay" uk-offcanvas="overlay: true">
         <div class="uk-offcanvas-bar is-mobile-sidebar">
-          <button class="uk-offcanvas-close" type="button" uk-close></button>
+          <button class="uk-offcanvas-close" type="button" uk-close />
           <img
             src="/img/logotype.png"
             alt="Book-Service"
             style="max-width: 50%;"
-          />
+          >
           <h3 class="is-mobile-sidebar-title">
             Book-Service
           </h3>
-          <h4 class="is-mobile-sidebar-subtitle">
+          <h4 class="is-mobile-sidebar-subtitle text-uppercase">
             Сеть сервисных центров
           </h4>
           <b-navbar-nav
@@ -69,21 +70,21 @@
               href="https://vk.com/bookservice"
               target="_blank"
             >
-              <i class="fab fa-vk"></i>
+              <i class="fab fa-vk" />
             </a>
             <a
               class="item"
               href="https://instagram.com/bookservice32"
               target="_blank"
             >
-              <i class="fab fa-instagram"></i>
+              <i class="fab fa-instagram" />
             </a>
             <a
               class="item"
               href="https://yandex.ru/profile/224999423360"
               target="_blank"
             >
-              <i class="fab fa-yandex"></i>
+              <i class="fab fa-yandex" />
             </a>
           </div>
         </div>
@@ -125,19 +126,19 @@
             href="https://vk.com/bookservice"
             target="_blank"
           >
-            <i class="fab fa-vk"></i>
+            <i class="fab fa-vk" />
           </b-nav-item>
           <b-nav-item
             href="https://instagram.com/bookservice32"
             target="_blank"
           >
-            <i class="fab fa-instagram"></i>
+            <i class="fab fa-instagram" />
           </b-nav-item>
           <b-nav-item
             href="https://yandex.ru/profile/224999423360"
             target="_blank"
           >
-            <i class="fab fa-yandex"></i>
+            <i class="fab fa-yandex" />
           </b-nav-item>
         </b-navbar-nav>
       </b-collapse>
@@ -180,7 +181,7 @@ export default {
 .is-mobile-sidebar-subtitle {
   font-weight: 200;
   margin-top: 0;
-  font-size: 1.125rem;
+  font-size: 1rem;
 }
 .is_main-navbar-menu.mobile li a {
   padding-left: 1rem;
@@ -188,6 +189,11 @@ export default {
 @media screen and (min-width: 992px) {
   .is-menu-mobile-toggle {
     display: none;
+  }
+}
+@media screen and (max-width: 991px) {
+  .is_main-navbar-brand {
+    font-weight: bold;
   }
 }
 </style>
