@@ -1,64 +1,7 @@
 <template>
   <div>
     <article id="content" class="is_main-content wow fadeIn " data-wow-duration="1s">
-      <section id="whywe" class="is_main-whywe container">
-        <h2 class="h2-resposive is_main-whywe-h2 text-center text-uppercase wow slideInUp" data-wow-duration="2.1s" >
-          Почему нас выбирают?
-        </h2>
-        <center>
-          <p class="is_main-whywe-title-caption wow slideInUp" data-wow-duration="2.2s">
-            Сеть сервисных центров Book-Service осуществляет постгарантийный ремонт цифровой техники, а именно телефонов, смартфонов, планшетов, ноутбуков и персональных компьютеров, телевизоров и мониторов, техники Apple и систем нагревания табака IQOS
-          </p>
-        </center>
-        <br>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="card wow slideInLeft is_main-whywe-card" data-wow-duration="1.5s">
-              <div class="card-body">
-                <h3 class="is_main-whywe-card-ititle">
-                  7<sup>+</sup>
-                </h3>
-                <h4 class="card-title">
-                  лет опыта
-                </h4>
-                <p class="card-text">
-                  Мы на рынке уже более 7 лет и имеем за плечами огромный профессиональный опыт
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card wow slideInUp is_main-whywe-card" data-wow-duration="1.5s">
-              <div class="card-body">
-                <h3 class="is_main-whywe-card-ititle">
-                  1000<sup>+</sup>
-                </h3>
-                <h4 class="card-title">
-                  довольных клиентов
-                </h4>
-                <p class="card-text">
-                  Уже более тысячи клиентов довольны нашим обслуживанием и рекомендуют нас своим друзьям и знакомым
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card wow slideInRight is_main-whywe-card" data-wow-duration="1.5s">
-              <div class="card-body">
-                <h3 class="is_main-whywe-card-ititle">
-                  100<sup>+</sup>
-                </h3>
-                <h4 class="card-title">
-                  постоянных клиентов
-                </h4>
-                <p class="card-text">
-                  С нами сотрудничают уже более ста постоянных клиентов и других сервисных центров
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <WhyWe />
       <section id="brands" class="is_main-brands">
         <div class="container">
           <div class="row">
@@ -502,6 +445,7 @@
 </template>
 
 <script>
+import WhyWe from '@/components/home/WhyWe'
 import SocialWidgets from '@/components/home/social'
 export default {
   name: 'index',
@@ -526,6 +470,7 @@ export default {
     }
   },
   components: {
+    WhyWe,
     SocialWidgets
   }
 }

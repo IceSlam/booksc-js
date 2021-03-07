@@ -8,6 +8,7 @@ You can directly use them in pages and other components without the need to impo
 
 - `<Logo>` | `<logo>` (components/Logo.vue)
 - `<HomeSocial>` | `<home-social>` (components/home/social.vue)
+- `<HomeWhyWe>` | `<home-why-we>` (components/home/WhyWe.vue)
 - `<MainFooter>` | `<main-footer>` (components/main/Footer.vue)
 - `<MainHeader>` | `<main-header>` (components/main/Header.vue)
 - `<MainNavbar>` | `<main-navbar>` (components/main/Navbar.vue)

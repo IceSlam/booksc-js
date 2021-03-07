@@ -5,6 +5,9 @@
   "HomeSocial": {
     "description": "Auto imported from components/home/social.vue"
   },
+  "HomeWhyWe": {
+    "description": "Auto imported from components/home/WhyWe.vue"
+  },
   "MainFooter": {
     "description": "Auto imported from components/main/Footer.vue"
   },
