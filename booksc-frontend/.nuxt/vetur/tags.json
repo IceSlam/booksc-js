@@ -5,6 +5,12 @@
   "HomeBrands": {
     "description": "Auto imported from components/home/Brands.vue"
   },
+  "HomeNewGoods": {
+    "description": "Auto imported from components/home/NewGoods.vue"
+  },
+  "HomeNewGoodsCard": {
+    "description": "Auto imported from components/home/newGoodsCard.vue"
+  },
   "HomeSocial": {
     "description": "Auto imported from components/home/social.vue"
   },

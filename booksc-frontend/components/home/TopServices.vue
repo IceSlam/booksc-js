@@ -41,7 +41,8 @@
               </p>
               <NLink
                 :to="item.category_link"
-                class="text-center text-white d-block mx-auto">
+                class="text-center text-white d-block mx-auto"
+              >
                 от
                 <span style="font-size: 3em;">
                   {{ item.min_price }}

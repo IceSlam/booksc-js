@@ -74,229 +74,21 @@
           </div>
         </div>
       </section>
-      <section id="goods" class="is_main-goods container">
-        <h2 class="h2-resposive is_main-whywe-h2 text-center text-uppercase">
-          У нас покупают
-        </h2>
-        <center>
-          <p class="is_main-whywe-title-caption wow slideInUp" data-wow-duration="2.2s">
-            На базе сети сервисных центров открыт магазин запчастей и аксессуаров для телефонов, планшетов, ноутбуков и другой цифровой техники - магазин BSMarket. Низкие цены как для розничных покупателей так и для оптовиков
-          </p>
-        </center>
-        <br>
-        <div class="row">
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            <div class="card is_main-goods-card wow slideInUp" data-wow-duration="2s">
-              <div class="is_main-goods-card-img view overlay">
-                <img class="card-img-top" src="https://booksc.ru/assets/cache_image/products/38/169.970-1_390x0_09a.png" alt="Card image cap">
-                <div style="" class="is_main-goods-card-badge-new">
-                  Новинка
-                </div>
-                <div class="is_main-goods-card-badge-top">
-                  <i class="fab fa-hotjar" aria-hidden="true" />
-                </div>
-                <div class="is_main-goods-card-badge-rec">
-                  <i class="fas fa-thumbs-up" aria-hidden="true" />
-                </div>
-                <a href="#!">
-                  <div class="mask rgba-white-slight" />
-                </a>
-              </div>
-              <div class="card-body">
-                <h4 class="card-title is_main-goods-card-title">
-                  <a class="btn bs-btn is_main-goods-card-cat-name waves-effect waves-light wow fadeIn" data-wow-duration="1.5s" href="market/catalog/apple/lcd/iphone/">
-                    Дисплеи для iPhone
-                  </a>
-                  <a href="#" class="is_main-goods-card-title-link">
-                    Дисплей Apple iPhone 6s в сборе…
-                  </a>
-                </h4>
-                <center>
-                  <span class="badge bs-bg" style="border-radius:0px;text-align:center !important;font-size:.55em;color:rgba(255,255,255,.85);font-weight:400;text-transform:uppercase;padding:5px;box-shadow:none;">
-                    Артикул: 2000000002484
-                  </span>
-                </center>
-                <div class="card-text">
-                  <p class="mt-2 text-center">
-                    <small>
-                      Дисплейный модуль для Apple iPhone 6S в сборе с тачскрином…
-                    </small>
-                  </p>
-                </div>
-                <p class="card-price text-center" style="font-size:3em;font-weight:200;">
-                  399
-                  <span style="font-size:.5em;text-decoration:line-through;font-weight:300;">
-                    <i class="fas fa-ruble-sign fa-1x" aria-hidden="true" />
-                  </span>
-                </p>
-                <a href="#" class="btn btn-block btn-sm bs-btn">
-                  К товару <i class="fas fa-arrow-right" />
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            <div class="card is_main-goods-card">
-              <div class="is_main-goods-card-img view overlay">
-                <img class="card-img-top" src="https://booksc.ru/assets/cache_image/products/38/169.970-1_390x0_09a.png" alt="Card image cap">
-                <div style="" class="is_main-goods-card-badge-new">
-                  Новинка
-                </div>
-                <div class="is_main-goods-card-badge-top">
-                  <i class="fab fa-hotjar" aria-hidden="true" />
-                </div>
-                <div class="is_main-goods-card-badge-rec">
-                  <i class="fas fa-thumbs-up" aria-hidden="true" />
-                </div>
-                <a href="#!">
-                  <div class="mask rgba-white-slight" />
-                </a>
-              </div>
-              <div class="card-body">
-                <h4 class="card-title is_main-goods-card-title">
-                  <a class="btn bs-btn is_main-goods-card-cat-name waves-effect waves-light wow fadeIn" data-wow-duration="1.5s" href="market/catalog/apple/lcd/iphone/">
-                    Дисплеи для iPhone
-                  </a>
-                  <a href="#" class="is_main-goods-card-title-link">
-                    Дисплей Apple iPhone 6s в сборе…
-                  </a>
-                </h4>
-                <center>
-                  <span class="badge bs-bg" style="border-radius:0px;text-align:center !important;font-size:.55em;color:rgba(255,255,255,.85);font-weight:400;text-transform:uppercase;padding:5px;box-shadow:none;">
-                    Артикул: 2000000002484
-                  </span>
-                </center>
-                <div class="card-text">
-                  <p class="mt-2 text-center">
-                    <small>
-                      Дисплейный модуль для Apple iPhone 6S в сборе с тачскрином…
-                    </small>
-                  </p>
-                </div>
-                <p class="card-price text-center" style="font-size:3em;font-weight:200;">
-                  399
-                  <span style="font-size:.5em;text-decoration:line-through;font-weight:300;">
-                    <i class="fas fa-ruble-sign fa-1x" aria-hidden="true" />
-                  </span>
-                </p>
-                <a href="#" class="btn btn-block btn-sm bs-btn">
-                  К товару <i class="fas fa-arrow-right" />
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            <div class="card is_main-goods-card wow slideInUp" data-wow-duration="2s">
-              <div class="is_main-goods-card-img view overlay">
-                <img class="card-img-top" src="https://booksc.ru/assets/cache_image/products/38/169.970-1_390x0_09a.png" alt="Card image cap">
-                <div style="" class="is_main-goods-card-badge-new">
-                  Новинка
-                </div>
-                <div class="is_main-goods-card-badge-top">
-                  <i class="fab fa-hotjar" aria-hidden="true" />
-                </div>
-                <div class="is_main-goods-card-badge-rec">
-                  <i class="fas fa-thumbs-up" aria-hidden="true" />
-                </div>
-                <a href="#!">
-                  <div class="mask rgba-white-slight" />
-                </a>
-              </div>
-              <div class="card-body">
-                <h4 class="card-title is_main-goods-card-title">
-                  <a class="btn bs-btn is_main-goods-card-cat-name waves-effect waves-light wow fadeIn" data-wow-duration="1.5s" href="market/catalog/apple/lcd/iphone/">
-                    Дисплеи для iPhone
-                  </a>
-                  <a href="#" class="is_main-goods-card-title-link">
-                    Дисплей Apple iPhone 6s в сборе…
-                  </a>
-                </h4>
-                <center>
-                  <span class="badge bs-bg" style="border-radius:0px;text-align:center !important;font-size:.55em;color:rgba(255,255,255,.85);font-weight:400;text-transform:uppercase;padding:5px;box-shadow:none;">
-                    Артикул: 2000000002484
-                  </span>
-                </center>
-                <div class="card-text">
-                  <p class="mt-2 text-center">
-                    <small>
-                      Дисплейный модуль для Apple iPhone 6S в сборе с тачскрином…
-                    </small>
-                  </p>
-                </div>
-                <p class="card-price text-center" style="font-size:3em;font-weight:200;">
-                  399
-                  <span style="font-size:.5em;text-decoration:line-through;font-weight:300;">
-                    <i class="fas fa-ruble-sign fa-1x" aria-hidden="true" />
-                  </span>
-                </p>
-                <a href="#" class="btn btn-block btn-sm bs-btn">
-                  К товару <i class="fas fa-arrow-right" />
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            <div class="card is_main-goods-card wow slideInUp" data-wow-duration="2s">
-              <div class="is_main-goods-card-img view overlay">
-                <img class="card-img-top" src="https://booksc.ru/assets/cache_image/products/38/169.970-1_390x0_09a.png" alt="Card image cap">
-                <div style="" class="is_main-goods-card-badge-new">
-                  Новинка
-                </div>
-                <div class="is_main-goods-card-badge-top">
-                  <i class="fab fa-hotjar" aria-hidden="true" />
-                </div>
-                <div class="is_main-goods-card-badge-rec">
-                  <i class="fas fa-thumbs-up" aria-hidden="true" />
-                </div>
-                <a href="#!">
-                  <div class="mask rgba-white-slight" />
-                </a>
-              </div>
-              <div class="card-body">
-                <h4 class="card-title is_main-goods-card-title">
-                  <a class="btn bs-btn is_main-goods-card-cat-name waves-effect waves-light wow fadeIn" data-wow-duration="1.5s" href="market/catalog/apple/lcd/iphone/">
-                    Дисплеи для iPhone
-                  </a>
-                  <a href="#" class="is_main-goods-card-title-link">
-                    Дисплей Apple iPhone 6s в сборе…
-                  </a>
-                </h4>
-                <center>
-                  <span class="badge bs-bg" style="border-radius:0px;text-align:center !important;font-size:.55em;color:rgba(255,255,255,.85);font-weight:400;text-transform:uppercase;padding:5px;box-shadow:none;">
-                    Артикул: 2000000002484
-                  </span>
-                </center>
-                <div class="card-text">
-                  <p class="mt-2 text-center">
-                    <small>
-                      Дисплейный модуль для Apple iPhone 6S в сборе с тачскрином…
-                    </small>
-                  </p>
-                </div>
-                <p class="card-price text-center" style="font-size:3em;font-weight:200;">
-                  399
-                  <span style="font-size:.5em;text-decoration:line-through;font-weight:300;">
-                    <i class="fas fa-ruble-sign fa-1x" aria-hidden="true" />
-                  </span>
-                </p>
-                <a href="#" class="btn btn-block btn-sm bs-btn">
-                  К товару <i class="fas fa-arrow-right" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <NewGoods
+        :new-goods-data="NEW_GOODS"
+      />
       <SocialWidgets />
     </article>
   </div>
 </template>
 
 <script>
+import { mapActions, mapGetters } from 'vuex'
 import WhyWe from '@/components/home/WhyWe'
 import SocialWidgets from '@/components/home/social'
 import Brands from '@/components/home/Brands'
 import TopServices from '@/components/home/TopServices'
+import NewGoods from '@/components/home/NewGoods'
 
 export default {
   name: 'IndexPage',
@@ -304,7 +96,8 @@ export default {
     WhyWe,
     SocialWidgets,
     Brands,
-    TopServices
+    TopServices,
+    NewGoods
   },
   data () {
     return {
@@ -325,6 +118,19 @@ export default {
       ],
       link: [{ rel: 'icon', type: 'image/x-icon', href: './img/logotype.png' }]
     }
+  },
+  computed: {
+    ...mapGetters([
+      'NEW_GOODS'
+    ])
+  },
+  mounted () {
+    this.GET_NEW_GOODS_FROM_API()
+  },
+  methods: {
+    ...mapActions([
+      'GET_NEW_GOODS_FROM_API'
+    ])
   }
 }
 </script>

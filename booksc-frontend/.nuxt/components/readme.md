@@ -8,6 +8,8 @@ You can directly use them in pages and other components without the need to impo
 
 - `<Logo>` | `<logo>` (components/Logo.vue)
 - `<HomeBrands>` | `<home-brands>` (components/home/Brands.vue)
+- `<HomeNewGoods>` | `<home-new-goods>` (components/home/NewGoods.vue)
+- `<HomeNewGoodsCard>` | `<home-new-goods-card>` (components/home/newGoodsCard.vue)
 - `<HomeSocial>` | `<home-social>` (components/home/social.vue)
 - `<HomeTopServices>` | `<home-top-services>` (components/home/TopServices.vue)
 - `<HomeWhyWe>` | `<home-why-we>` (components/home/WhyWe.vue)

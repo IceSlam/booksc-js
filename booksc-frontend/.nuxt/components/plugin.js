@@ -3,6 +3,8 @@ import Vue from 'vue'
 const components = {
   Logo: () => import('../..\\components\\Logo.vue' /* webpackChunkName: "components/logo" */).then(c => c.default || c),
   HomeBrands: () => import('../..\\components\\home\\Brands.vue' /* webpackChunkName: "components/home-brands" */).then(c => c.default || c),
+  HomeNewGoods: () => import('../..\\components\\home\\NewGoods.vue' /* webpackChunkName: "components/home-new-goods" */).then(c => c.default || c),
+  HomeNewGoodsCard: () => import('../..\\components\\home\\newGoodsCard.vue' /* webpackChunkName: "components/home-new-goods-card" */).then(c => c.default || c),
   HomeSocial: () => import('../..\\components\\home\\social.vue' /* webpackChunkName: "components/home-social" */).then(c => c.default || c),
   HomeTopServices: () => import('../..\\components\\home\\TopServices.vue' /* webpackChunkName: "components/home-top-services" */).then(c => c.default || c),
   HomeWhyWe: () => import('../..\\components\\home\\WhyWe.vue' /* webpackChunkName: "components/home-why-we" */).then(c => c.default || c),
