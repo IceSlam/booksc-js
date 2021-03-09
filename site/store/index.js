@@ -15,7 +15,7 @@ const store = () => new Vuex.Store({
   },
   actions: {
     GET_NEW_GOODS_FROM_API ({ commit }) {
-      return axios('http://localhost:1894/new-goods', {
+      return axios('https://api.booksc.ru/new-goods', {
         method: 'GET'
       })
         .then((response) => {
