@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "services",
+  "info": {
+    "name": "Услуги ",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "services_title": {
+      "type": "string"
+    },
+    "services_description": {
+      "type": "text"
+    },
+    "services_min_price": {
+      "type": "integer"
+    },
+    "services_category": {
+      "via": "services",
+      "model": "services-categories"
+    }
+  }
+}

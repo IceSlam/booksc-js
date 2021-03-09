@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_homepage_brands_lists",
+  "info": {
+    "name": "Список брендов ",
+    "icon": "check",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "brand_title": {
+      "type": "string"
+    }
+  }
+}

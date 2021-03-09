@@ -1,0 +1,28 @@
+{
+  "kind": "singleType",
+  "collectionName": "home_pages",
+  "info": {
+    "name": "Главная страница ",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "page_title": {
+      "type": "string"
+    },
+    "advantages_list": {
+      "type": "component",
+      "repeatable": true,
+      "component": "homepage.advantages-list"
+    },
+    "brands_list": {
+      "type": "component",
+      "repeatable": true,
+      "component": "homepage.brands-list"
+    }
+  }
+}

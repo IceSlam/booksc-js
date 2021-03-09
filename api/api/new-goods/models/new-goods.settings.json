@@ -20,9 +20,6 @@
     "goods_article": {
       "type": "string"
     },
-    "goods_img": {
-      "type": "string"
-    },
     "goods_price": {
       "type": "integer"
     },
@@ -43,6 +40,15 @@
     },
     "is_goods_recommended": {
       "type": "boolean"
+    },
+    "goods_img": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
     }
   }
 }

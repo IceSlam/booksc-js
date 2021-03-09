@@ -8,8 +8,9 @@
       class="is_main-goods-card"
     >
       <img
+        v-if="newGoodsItemData.goods_img"
         class="card-img-top"
-        :src="newGoodsItemData.goods_img"
+        :src="'https://api.booksc.ru' + newGoodsItemData.goods_img.url"
         :alt="newGoodsItemData.goods_title"
       >
       <div
