@@ -10,7 +10,7 @@
       <img
         v-if="newGoodsItemData.goods_img"
         class="card-img-top"
-        :src="'https://api.booksc.ru' + newGoodsItemData.goods_img.url"
+        :src="newGoodsItemData.goods_img"
         :alt="newGoodsItemData.goods_title"
       >
       <div
@@ -21,7 +21,7 @@
         Новинка
       </div>
       <div
-        v-if="newGoodsItemData.is_goods_popular"
+        v-if="newGoodsItemData.is_goods_top"
         class="is_main-goods-card-badge-top"
       >
         <i class="fab fa-hotjar" aria-hidden="true" />

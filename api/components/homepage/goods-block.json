@@ -1,0 +1,54 @@
+{
+  "collectionName": "components_homepage_goods_blocks",
+  "info": {
+    "name": "Блок Новые товары",
+    "icon": "apple-alt",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "goods_link": {
+      "type": "string",
+      "required": true
+    },
+    "goods_title": {
+      "type": "string",
+      "required": true
+    },
+    "goods_article": {
+      "type": "string"
+    },
+    "goods_category": {
+      "type": "string",
+      "required": true
+    },
+    "goods_category_link": {
+      "type": "string",
+      "required": true
+    },
+    "goods_description": {
+      "type": "string",
+      "required": true,
+      "maxLength": 70
+    },
+    "goods_price": {
+      "type": "integer",
+      "required": true
+    },
+    "goods_img": {
+      "type": "string",
+      "required": true
+    },
+    "is_goods_new": {
+      "type": "boolean",
+      "default": true,
+      "required": false
+    },
+    "is_goods_top": {
+      "type": "boolean"
+    },
+    "is_goods_recommended": {
+      "type": "boolean"
+    }
+  }
+}
