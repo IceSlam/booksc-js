@@ -6,24 +6,24 @@ Vue.use(Vuex)
 
 const store = () => new Vuex.Store({
   state: {
-    newGoods: [],
+    homePage: [],
     contactPage: {}
   },
   mutations: {
-    SET_NEW_GOODS_TO_STORE: (state, newGoods) => {
-      state.newGoods = newGoods
+    SET_HOMEPAGE_TO_STORE: (state, homePage) => {
+      state.homePage = homePage
     },
     SET_CONTACTS_PAGE_TO_STORE: (state, contactsPage) => {
       state.contactPage = contactsPage
     }
   },
   actions: {
-    GET_NEW_GOODS_FROM_API ({ commit }) {
-      return axios('https://api.booksc.ru/new-goods', {
+    GET_HOMEPAGE_FROM_API ({ commit }) {
+      return axios('https://api.booksc.ru/homepage', {
         method: 'GET'
       })
         .then((response) => {
-          commit('SET_NEW_GOODS_TO_STORE', response.data)
+          commit('SET_HOMEPAGE_TO_STORE', response.data)
         })
     },
     GET_CONTACTS_PAGE_FROM_API ({ commit }) {
@@ -36,8 +36,8 @@ const store = () => new Vuex.Store({
     }
   },
   getters: {
-    NEW_GOODS (state) {
-      return state.newGoods
+    HOMEPAGE (state) {
+      return state.homePage
     },
     CONTACTS_PAGE (state) {
       return state.contactPage

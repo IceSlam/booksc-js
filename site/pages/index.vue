@@ -1,10 +1,14 @@
 <template>
   <div>
     <article id="content" class="is_main-content wow fadeIn " data-wow-duration="1s">
-      <WhyWe />
-      <Brands />
+      <WhyWe
+        :why-we-data="HOMEPAGE"
+      />
+      <Brands
+        :brands-data="HOMEPAGE"
+      />
       <TopServices />
-      <section id="reviews" class="is_main-reviews wow fadeIn slow view" data-wow-duration="2s">
+      <section id="reviews" class="is_main-reviews view">
         <div class="mask rgba-stylish-strong" />
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
@@ -75,7 +79,7 @@
         </div>
       </section>
       <NewGoods
-        :new-goods-data="NEW_GOODS"
+        :new-goods-data="HOMEPAGE"
       />
       <SocialWidgets />
     </article>
@@ -121,15 +125,15 @@ export default {
   },
   computed: {
     ...mapGetters([
-      'NEW_GOODS'
+      'HOMEPAGE'
     ])
   },
   mounted () {
-    this.GET_NEW_GOODS_FROM_API()
+    this.GET_HOMEPAGE_FROM_API()
   },
   methods: {
     ...mapActions([
-      'GET_NEW_GOODS_FROM_API'
+      'GET_HOMEPAGE_FROM_API'
     ])
   }
 }

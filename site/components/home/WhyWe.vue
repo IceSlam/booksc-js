@@ -1,30 +1,37 @@
 <template>
   <section id="whywe" class="is_main-whywe">
     <b-container>
-      <h2 class="h2-resposive is_main-whywe-h2 text-center text-uppercase" >
-        Почему нас выбирают?
-      </h2>
-      <p class="is_main-whywe-title-caption d-block mx-auto">
-        Сеть сервисных центров Book-Service осуществляет постгарантийный ремонт цифровой техники, а именно телефонов, смартфонов, планшетов, ноутбуков и персональных компьютеров, телевизоров и мониторов, техники Apple и систем нагревания табака IQOS
-      </p>
+      <b-row
+        v-if="whyWeData.homepage_why_we"
+        class="justify-content-center"
+      >
+        <h2 class="h2-resposive is_main-whywe-h2 text-center text-uppercase">
+          {{ whyWeData.homepage_why_we.block_title }}
+        </h2>
+        <p class="is_main-whywe-title-caption d-block mx-auto">
+          {{ whyWeData.homepage_why_we.block_description }}
+        </p>
+      </b-row>
       <br>
-      <b-row>
+      <b-row
+        v-if="whyWeData.homepage_advantages"
+      >
         <b-col
-          md="4"
-          v-for="item in WhyWeData"
+          v-for="item in whyWeData.homepage_advantages"
           :key="item.id"
+          md="4"
         >
           <b-card
             class="is_main-whywe-card"
           >
             <h3 class="is_main-whywe-card-ititle">
-              {{ item.count }}<sup>+</sup>
+              {{ item.advantage_count }}<sup>+</sup>
             </h3>
             <h4 class="card-title">
-              {{ item.title }}
+              {{ item.advantage_title }}
             </h4>
             <b-card-text>
-              {{ item.description }}
+              {{ item.advantage_description }}
             </b-card-text>
           </b-card>
         </b-col>
@@ -36,30 +43,16 @@
 <script>
 export default {
   name: 'WhyWe',
-  data () {
-    return {
-      WhyWeData: [
-        {
-          id: 1,
-          count: 7,
-          title: 'лет опыта',
-          description: 'Мы на рынке уже более 7 лет и имеем за плечами огромный профессиональный опыт'
-        },
-        {
-          id: 2,
-          count: 1000,
-          title: 'довольных клиентов',
-          description: 'Уже более тысячи клиентов довольны нашим обслуживанием и рекомендуют нас своим друзьям и знакомым'
-        },
-        {
-          id: 3,
-          count: 100,
-          title: 'постоянных клиентов',
-          description: 'С нами сотрудничают уже более ста постоянных клиентов и других сервисных центров'
-        }
-      ]
+  props: {
+    whyWeData: {
+      type: Array,
+      default: () => {
+        return []
+      }
     }
-  }
+  },
+  data: () => ({
+  })
 }
 </script>
 

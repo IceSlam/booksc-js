@@ -2,12 +2,6 @@
   "Logo": {
     "description": "Auto imported from components/Logo.vue"
   },
-  "ServicesHeading": {
-    "description": "Auto imported from components/services/Heading.vue"
-  },
-  "ServicesHeadingCategory": {
-    "description": "Auto imported from components/services/HeadingCategory.vue"
-  },
   "HomeBrands": {
     "description": "Auto imported from components/home/Brands.vue"
   },
@@ -34,5 +28,11 @@
   },
   "MainNavbar": {
     "description": "Auto imported from components/main/Navbar.vue"
+  },
+  "ServicesHeading": {
+    "description": "Auto imported from components/services/Heading.vue"
+  },
+  "ServicesHeadingCategory": {
+    "description": "Auto imported from components/services/HeadingCategory.vue"
   }
 }
