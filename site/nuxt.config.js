@@ -12,6 +12,11 @@ export default {
     ]
   },
 
+  server: {
+    host: '127.0.6.68',
+    port: 57946
+  },
+
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     '~/assets/css/fontawesome.min.css',
