@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_settings_settings_socials",
+  "info": {
+    "name": "Блок Социальные сети",
+    "icon": "wrench",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "social_title": {
+      "type": "string"
+    },
+    "social_icon": {
+      "type": "string",
+      "required": true
+    },
+    "social_link": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

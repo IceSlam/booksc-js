@@ -1,0 +1,39 @@
+{
+  "kind": "singleType",
+  "collectionName": "template_settings",
+  "info": {
+    "name": "Настройки оформления ",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "settings_title": {
+      "type": "string",
+      "required": true
+    },
+    "settings_subtitle": {
+      "type": "string",
+      "required": true
+    },
+    "settings_description": {
+      "type": "text",
+      "required": true
+    },
+    "settings_social": {
+      "type": "component",
+      "repeatable": true,
+      "required": true,
+      "component": "settings.settings-social"
+    },
+    "settings_contacts": {
+      "type": "component",
+      "repeatable": true,
+      "required": true,
+      "component": "settings.settings-contacts"
+    }
+  }
+}

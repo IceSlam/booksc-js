@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_settings_settings_contacts",
+  "info": {
+    "name": "Блок Контакты",
+    "icon": "address-book",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "contact_title": {
+      "type": "string",
+      "required": true
+    },
+    "contact_city": {
+      "type": "string",
+      "required": true
+    },
+    "contact_street": {
+      "type": "string",
+      "required": true
+    },
+    "contact_phone": {
+      "type": "string",
+      "required": true
+    },
+    "contact_email": {
+      "type": "string",
+      "required": true
+    },
+    "contact_time": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

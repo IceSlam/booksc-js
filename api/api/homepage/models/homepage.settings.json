@@ -1,0 +1,36 @@
+{
+  "kind": "singleType",
+  "collectionName": "homepages",
+  "info": {
+    "name": "Главная страница ",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "page_title": {
+      "type": "string",
+      "private": false,
+      "required": true
+    },
+    "homepage_why_we": {
+      "type": "component",
+      "repeatable": false,
+      "component": "homepage.why-we-block",
+      "required": true
+    },
+    "homepage_advantages": {
+      "type": "component",
+      "repeatable": true,
+      "component": "homepage.advantages-block"
+    },
+    "homepage_brands": {
+      "type": "component",
+      "repeatable": true,
+      "component": "homepage.brands-block"
+    }
+  }
+}

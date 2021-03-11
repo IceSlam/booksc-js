@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_contacts_contacts_offices",
+  "info": {
+    "name": "Филиалы",
+    "icon": "archway",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "contact_district": {
+      "type": "string",
+      "required": true
+    },
+    "contact_address": {
+      "type": "string",
+      "required": true
+    },
+    "contact_time": {
+      "type": "string",
+      "required": true
+    },
+    "contact_phone": {
+      "type": "string",
+      "required": true
+    },
+    "contact_email": {
+      "type": "string",
+      "required": true
+    },
+    "contact_map": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_homepage_why_we_blocks",
+  "info": {
+    "name": "Блок Почему мы?",
+    "icon": "align-left",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "block_title": {
+      "type": "string",
+      "required": true
+    },
+    "block_description": {
+      "type": "text",
+      "required": false
+    }
+  }
+}

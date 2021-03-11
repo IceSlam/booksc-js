@@ -1,11 +1,9 @@
 module.exports = ({ env }) => ({
-  host: env('HOST'),
-  port: env.int('PORT'),
+  host: env('HOST', '127.0.6.68'),
+  port: env.int('PORT', 50377),
   admin: {
     auth: {
-      secret: env('ADMIN_JWT_SECRET', 'a5ef6810b89043ccf719dfc82069f054'),
+      secret: env('ADMIN_JWT_SECRET', '7eeaea10008c974868ad170bf966e3ef'),
     },
-    url: '/admin',
-    serveAdminPanel: 'true'
   },
 });
