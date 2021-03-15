@@ -7,6 +7,7 @@ Vue.use(Vuex)
 const store = () => new Vuex.Store({
   state: {
     homePage: [],
+    reviewsList: [],
     contactPage: {},
     themeSettings: {}
   },
@@ -19,6 +20,9 @@ const store = () => new Vuex.Store({
     },
     SET_THEME_SETTINGS_TO_STORE: (state, themeSettings) => {
       state.themeSettings = themeSettings
+    },
+    SET_REVIEWS_TO_STORE: (state, reviewsList) => {
+      state.reviewsList = reviewsList
     }
   },
   actions: {
@@ -45,6 +49,14 @@ const store = () => new Vuex.Store({
         .then((response) => {
           commit('SET_THEME_SETTINGS_TO_STORE', response.data)
         })
+    },
+    GET_REVIEWS_FROM_API ({ commit }) {
+      return axios('https://api.booksc.ru/reviews?_sort=review_date:desc', {
+        method: 'GET'
+      })
+        .then((res) => {
+          commit('SET_REVIEWS_TO_STORE', res.data)
+        })
     }
   },
   getters: {
@@ -56,6 +68,9 @@ const store = () => new Vuex.Store({
     },
     THEME_SETTINGS (state) {
       return state.themeSettings
+    },
+    REVIEWS (state) {
+      return state.reviewsList
     }
   },
   modules: {
