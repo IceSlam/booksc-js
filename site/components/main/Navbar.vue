@@ -1,5 +1,6 @@
 <template>
   <b-navbar
+    v-if="navbarInfo"
     id="navbar"
     toggleable="lg"
     type="dark"
@@ -8,13 +9,14 @@
     <b-container>
       <b-navbar-brand>
         <NLink
+          v-if="navbarInfo.settings_logo"
           class="is_main-navbar-brand"
           to="/"
           exact
         >
           <img
             class="is_main-navbar-logo"
-            src="@/assets/img/logotype.png"
+            :src="'https://api.booksc.ru' + navbarInfo.settings_logo.url"
             alt="Book-Service"
           >
           Book-Service
@@ -147,8 +149,29 @@
 </template>
 
 <script>
+import { mapActions, mapGetters } from 'vuex'
+
 export default {
-  name: 'Navbar'
+  name: 'Navbar',
+  data () {
+    return {}
+  },
+  computed: {
+    ...mapGetters([
+      'THEME_SETTINGS'
+    ]),
+    navbarInfo () {
+      return this.$store.state.themeSettings
+    }
+  },
+  mounted () {
+    this.GET_THEME_SETTINGS_FROM_API()
+  },
+  methods: {
+    ...mapActions([
+      'GET_THEME_SETTINGS_FROM_API'
+    ])
+  }
 }
 </script>
 

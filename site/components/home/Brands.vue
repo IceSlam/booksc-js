@@ -5,10 +5,13 @@
     class="is_main-brands"
   >
     <b-container>
-      <b-row>
+      <b-row
+        v-if="brandsData.homepage_brands_bg"
+      >
         <b-col
           class="is_main-brand-left"
           md="6"
+          :style="'background:url(https://api.booksc.ru' + brandsData.homepage_brands_bg.url + ');background-position: center;-webkit-background-size: cover;background-size: cover;'"
         >
           <div class="mask flex-center rgba-stylish-light" />
         </b-col>
