@@ -1,4 +1,19 @@
 {
+  "ContactsOffices": {
+    "description": "Auto imported from components/contacts/Offices.vue"
+  },
+  "ContactsOfficesCard": {
+    "description": "Auto imported from components/contacts/OfficesCard.vue"
+  },
+  "MainFooter": {
+    "description": "Auto imported from components/main/Footer.vue"
+  },
+  "MainHeader": {
+    "description": "Auto imported from components/main/Header.vue"
+  },
+  "MainNavbar": {
+    "description": "Auto imported from components/main/Navbar.vue"
+  },
   "HomeBrands": {
     "description": "Auto imported from components/home/Brands.vue"
   },
@@ -16,15 +31,6 @@
   },
   "HomeWhyWe": {
     "description": "Auto imported from components/home/WhyWe.vue"
-  },
-  "MainFooter": {
-    "description": "Auto imported from components/main/Footer.vue"
-  },
-  "MainHeader": {
-    "description": "Auto imported from components/main/Header.vue"
-  },
-  "MainNavbar": {
-    "description": "Auto imported from components/main/Navbar.vue"
   },
   "ServicesHeading": {
     "description": "Auto imported from components/services/Heading.vue"

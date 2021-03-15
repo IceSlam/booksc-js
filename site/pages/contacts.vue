@@ -79,66 +79,9 @@
             </p>
           </b-col>
         </b-row>
-        <b-container
-          v-if="pageInfo.offices_info"
-        >
-          <b-row
-            v-for="office in pageInfo.offices_info"
-            :key="office.id"
-            style="margin-top: 1em;"
-          >
-            <b-col
-              md="6"
-            >
-              <h3
-                class="is_contacts-page-reg-title"
-              >
-                {{ office.contact_district }}
-              </h3>
-              <br>
-              <p
-                class="is_contacts-page-text"
-              >
-                {{ office.contact_address }}
-              </p>
-              <p
-                class="is_contacts-page-text"
-              >
-                График работы: {{ office.contact_time }}
-              </p>
-              <p
-                class="is_contacts-page-text"
-              >
-                тел.:
-                <a
-                  :href="'tel:' + office.contact_phone"
-                >
-                  {{ office.contact_phone }}
-                </a>
-              </p>
-              <p
-                class="is_contacts-page-text"
-              >
-                email:
-                <a
-                  :href="'mailto:' + office.contact_email"
-                >
-                  {{ office.contact_email }}
-                </a>
-              </p>
-            </b-col>
-            <b-col
-              md="6"
-            >
-              <script
-                type="text/javascript"
-                charset="utf-8"
-                async
-                :src="office.contact_map"
-              />
-            </b-col>
-          </b-row>
-        </b-container>
+        <Offices
+          :offices-data="CONTACTS_PAGE"
+        />
       </b-container>
     </section>
   </article>
@@ -146,9 +89,13 @@
 
 <script>
 import { mapActions, mapGetters } from 'vuex'
+import Offices from '../components/contacts/Offices'
 
 export default {
   name: 'ContactsPage',
+  components: {
+    Offices
+  },
   layout: 'contacts',
   data () {
     return {
