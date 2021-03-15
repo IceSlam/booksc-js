@@ -1,6 +1,6 @@
 <template>
   <header
-    v-if="headerInfo"
+    v-if="headerData"
     id="header"
     class="d-flex justify-content-center align-items-center"
   >
@@ -11,19 +11,19 @@
           class="text-white mb-4 text-center"
         >
           <img
-            v-if="headerInfo.settings_logo"
-            :src="'https://api.booksc.ru' + headerInfo.settings_logo.url"
+            v-if="headerData.settings_logo"
+            :src="'https://api.booksc.ru' + headerData.settings_logo.url"
             class="img-fluid is_main-header-img"
             alt=""
           >
           <h1 class="display-4 font-weight-bold text-uppercase text-white">
-            {{ headerInfo.settings_title }}
+            {{ headerData.settings_title }}
           </h1>
           <h2 class="h3-responsive text-uppercase is_main-header-h2 text-white">
-            {{ headerInfo.settings_subtitle }}
+            {{ headerData.settings_subtitle }}
           </h2>
           <h3 class="is_main-header-caption d-block mx-auto text-white">
-            {{ headerInfo.settings_description }}
+            {{ headerData.settings_description }}
           </h3>
         </b-col>
       </b-row>
@@ -32,29 +32,18 @@
 </template>
 
 <script>
-import { mapActions, mapGetters } from 'vuex'
-
 export default {
   name: 'Header',
-  data () {
-    return {}
-  },
-  computed: {
-    ...mapGetters([
-      'THEME_SETTINGS'
-    ]),
-    headerInfo () {
-      return this.$store.state.themeSettings
+  props: {
+    headerData: {
+      type: Object,
+      default: () => {
+        return {}
+      }
     }
   },
-  mounted () {
-    this.GET_THEME_SETTINGS_FROM_API()
-  },
-  methods: {
-    ...mapActions([
-      'GET_THEME_SETTINGS_FROM_API'
-    ])
-  }
+  data: () => ({
+  })
 }
 </script>
 

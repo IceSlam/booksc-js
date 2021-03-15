@@ -1,9 +1,15 @@
 <template>
   <div>
-    <Header />
-    <Navbar />
+    <Header
+      :header-data="THEME_SETTINGS"
+    />
+    <Navbar
+      :navbar-data="THEME_SETTINGS"
+    />
     <nuxt />
-    <Footer />
+    <Footer
+      :footer-data="THEME_SETTINGS"
+    />
   </div>
 </template>
 
@@ -11,6 +17,7 @@
 import Header from '@/components/main/Header.vue'
 import Navbar from '@/components/main/Navbar'
 import Footer from '@/components/main/Footer'
+import { mapActions, mapGetters } from 'vuex'
 
 export default {
   components: {
@@ -32,6 +39,19 @@ export default {
       ],
       link: [{ rel: 'icon', type: 'image/x-icon', href: './img/logotype.png' }]
     }
+  },
+  computed: {
+    ...mapGetters([
+      'THEME_SETTINGS'
+    ])
+  },
+  mounted () {
+    this.GET_THEME_SETTINGS_FROM_API()
+  },
+  methods: {
+    ...mapActions([
+      'GET_THEME_SETTINGS_FROM_API'
+    ])
   }
 }
 </script>

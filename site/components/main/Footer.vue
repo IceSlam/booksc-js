@@ -1,12 +1,12 @@
 <template>
   <footer
-    v-if="footerInfo"
+    v-if="footerData"
     class="page-footer font-small bs-bg"
   >
     <b-container class="text-center text-md-left">
-      <b-row v-if="footerInfo.settings_contacts">
+      <b-row v-if="footerData.settings_contacts">
         <b-col
-          v-for="contact in footerInfo.settings_contacts"
+          v-for="contact in footerData.settings_contacts"
           :key="contact.id"
           md="3"
         >
@@ -141,29 +141,18 @@
 </template>
 
 <script>
-import { mapActions, mapGetters } from 'vuex'
-
 export default {
   name: 'Footer',
-  data () {
-    return {}
-  },
-  computed: {
-    ...mapGetters([
-      'THEME_SETTINGS'
-    ]),
-    footerInfo () {
-      return this.$store.state.themeSettings
+  props: {
+    footerData: {
+      type: Object,
+      default: () => {
+        return {}
+      }
     }
   },
-  mounted () {
-    this.GET_THEME_SETTINGS_FROM_API()
-  },
-  methods: {
-    ...mapActions([
-      'GET_THEME_SETTINGS_FROM_API'
-    ])
-  }
+  data: () => ({
+  })
 }
 </script>
 
