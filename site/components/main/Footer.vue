@@ -1,43 +1,47 @@
 <template>
-  <footer class="page-footer font-small bs-bg">
+  <footer
+    v-if="footerInfo"
+    class="page-footer font-small bs-bg"
+  >
     <b-container class="text-center text-md-left">
-      <b-row>
+      <b-row v-if="footerInfo.settings_contacts">
         <b-col
-          v-for="item in ContactsData"
-          :key="item.id"
+          v-for="contact in footerInfo.settings_contacts"
+          :key="contact.id"
           md="3"
         >
           <h5
             class="font-weight-bold text-uppercase is-footer-contact-title mt-3 mb-4 text-white"
+            style="min-height: 56px;"
           >
-            {{ item.name }}
+            {{ contact.contact_title }}
           </h5>
-          <p class="is-contacts-item">
+          <p class="is-contacts-contact">
             <i class="fas fa-map-marked" aria-hidden="true" />
-            <span class="d-none" itemprop="postalCode">{{ item.address_postal }}</span>
-            <span itemprop="addressLocality">{{ item.address_city }}</span>,
-            <span itemprop="streetAddress">{{ item.address_street }}</span>,
-            {{ item.address_station }}
+            <span class="d-none" contactprop="postalCode">{{ contact.contact_postal }}</span>
+            <span contactprop="addressLocality">{{ contact.contact_city }}</span>,
+            <span contactprop="streetAddress">{{ contact.contact_street }}</span>,
+            {{ contact.contact_busstation }}
           </p>
-          <p class="is-contacts-item">
+          <p class="is-contacts-contact">
             <i class="fas fa-phone" aria-hidden="true" />
             тел.:
-            <a :href="'tel:' + item.phone" class="is-contacts-item-link">
-              <span itemprop="telephone">
-                {{ item.phone }}
+            <a :href="'tel:' + contact.contact_phone" class="is-contacts-contact-link">
+              <span contactprop="telephone">
+                {{ contact.contact_phone }}
               </span>
             </a>
           </p>
-          <p class="is-contacts-item">
+          <p class="is-contacts-contact">
             <i class="fas fa-envelope" aria-hidden="true" />
             email:
-            <a :href="'mailto:' + item.email" class="is-contacts-item-link">
-              <span itemprop="email">{{ item.email }}</span>
+            <a :href="'mailto:' + contact.contact_email" class="is-contacts-contact-link">
+              <span contactprop="email">{{ contact.contact_email }}</span>
             </a>
           </p>
-          <p class="is-contacts-item">
+          <p class="is-contacts-contact">
             <i class="far fa-calendar-alt" />
-            {{ item.work_graphic }}
+            {{ contact.contact_time }}
           </p>
           <hr class="clearfix w-100 d-md-none">
         </b-col>
@@ -96,11 +100,12 @@
       </b-card>
     </div>
     <div class="footer-copyright text-center py-3">
-      <p class="is_main-footer-copy">
+      <p class="is_main-footer-copy mb-2">
         © 2014 - 2021 Copyright
         <a href="https://booksc.ru"> Сеть сервисных центров Book-Service</a> <br>
         ИП Моисеенко К.А. ИНН: 323307422295 ОГРНИП: 314325624800051 <br>
-        Копирование и распространение материалов с данного сайта только с разрешения администрации сайта и с указанием ссылки на первоисточник. <br> Цены, указанные на сайте, не являются публичной офертой. Для уточнения цен необходимо обратиться в офис компании.
+        Копирование материалов с данного сайта запрещено. <br> Цены, указанные на сайте, не являются публичной офертой.
+        <br>Для уточнения цен необходимо обратиться в офис компании.
         <br>
         Developed by
         <a
@@ -110,42 +115,54 @@
           IceSlam
         </a>
         and based on
-        Nuxt.js and Strapi
+        <a
+          href="https://nuxtjs.org/"
+          target="_blank"
+        >
+          Nuxt.js
+        </a> and
+        <a
+          href="https://strapi.io/"
+          target="_blank"
+        >
+          Strapi.js
+        </a>
+        <br>
+        Powered by
+        <a
+          href="https://netangels.ru/?p_ref=u92953"
+          target="_blank"
+        >
+          NetAngels - Professional hosting
+        </a>
       </p>
     </div>
   </footer>
 </template>
 
 <script>
+import { mapActions, mapGetters } from 'vuex'
+
 export default {
   name: 'Footer',
   data () {
-    return {
-      ContactsData: [
-        {
-          id: 1,
-          name: 'Book-Service Красноармейская',
-          address_postal: '241037',
-          address_city: 'Брянск',
-          address_street: 'Красноармейская ул., 170',
-          address_station: 'ост. Памятник летчикам',
-          phone: '+7-900-373-6000',
-          email: 'help@booksc.ru',
-          work_graphic: 'ПН-СБ: 10:00 - 19:00 / ВС: 10:00 - 18:00'
-        },
-        {
-          id: 2,
-          name: 'Book-Service ТД Весна',
-          address_postal: '241035',
-          address_city: 'Брянск',
-          address_street: 'III Интернационала ул., 17А',
-          address_station: 'ТД Весна',
-          phone: '+7-930-720-2222',
-          email: 'help@booksc.ru',
-          work_graphic: 'ПН-СБ: 10:00 - 19:00 / ВС: 10:00 - 18:00'
-        }
-      ]
+    return {}
+  },
+  computed: {
+    ...mapGetters([
+      'THEME_SETTINGS'
+    ]),
+    footerInfo () {
+      return this.$store.state.themeSettings
     }
+  },
+  mounted () {
+    this.GET_THEME_SETTINGS_FROM_API()
+  },
+  methods: {
+    ...mapActions([
+      'GET_THEME_SETTINGS_FROM_API'
+    ])
   }
 }
 </script>
@@ -159,11 +176,11 @@ export default {
 .is-footer-contact-title {
   font-size: 1.25rem;
 }
-.is-contacts-item {
+.is-contacts-contact {
   color: #ffffff;
   font-size: .9rem;
 }
-.is-contacts-item-link {
+.is-contacts-contact-link {
   color: #ffffff;
 }
 .list-unstyled li a {
