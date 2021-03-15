@@ -7,7 +7,8 @@ Vue.use(Vuex)
 const store = () => new Vuex.Store({
   state: {
     homePage: [],
-    contactPage: {}
+    contactPage: {},
+    themeSettings: {}
   },
   mutations: {
     SET_HOMEPAGE_TO_STORE: (state, homePage) => {
@@ -15,6 +16,9 @@ const store = () => new Vuex.Store({
     },
     SET_CONTACTS_PAGE_TO_STORE: (state, contactsPage) => {
       state.contactPage = contactsPage
+    },
+    SET_THEME_SETTINGS_TO_STORE: (state, themeSettings) => {
+      state.themeSettings = themeSettings
     }
   },
   actions: {
@@ -33,6 +37,14 @@ const store = () => new Vuex.Store({
         .then((response) => {
           commit('SET_CONTACTS_PAGE_TO_STORE', response.data)
         })
+    },
+    GET_THEME_SETTINGS_FROM_API ({ commit }) {
+      return axios('https://api.booksc.ru/settings', {
+        method: 'GET'
+      })
+        .then((response) => {
+          commit('SET_THEME_SETTINGS_TO_STORE', response.data)
+        })
     }
   },
   getters: {
@@ -41,6 +53,9 @@ const store = () => new Vuex.Store({
     },
     CONTACTS_PAGE (state) {
       return state.contactPage
+    },
+    THEME_SETTINGS (state) {
+      return state.themeSettings
     }
   },
   modules: {

@@ -1,7 +1,4 @@
 {
-  "Logo": {
-    "description": "Auto imported from components/Logo.vue"
-  },
   "HomeBrands": {
     "description": "Auto imported from components/home/Brands.vue"
   },
