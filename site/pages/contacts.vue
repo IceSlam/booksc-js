@@ -1,35 +1,8 @@
 <template>
-  <article id="content">
-    <section id="page-heading" class="is_main-page-heading">
-      <b-container>
-        <b-row>
-          <b-col
-            md="6"
-          >
-            <h2 class="is_main-page-heading-title">
-              {{ pageInfo.page_longtitle }}
-            </h2>
-          </b-col>
-          <b-col
-            md="6"
-          >
-            <nav aria-label="breadcrumb is_main-heading-breadcrumbs text-right">
-              <ol style="float:right;" class="breadcrumb is_main-heading-breadcrumbs">
-                <li class="breadcrumb-item">
-                  <NLink to="/" exact>
-                    Главная
-                  </NLink>
-                </li>
-                <li class="breadcrumb-item active">
-                  {{ pageInfo.page_longtitle }}
-                </li>
-              </ol>
-            </nav>
-          </b-col>
-        </b-row>
-      </b-container>
-      </div>
-    </section>
+  <main id="content">
+    <Breadcrumbs
+      :breadcrumbs-page-title="pageMetaTitle"
+    />
     <section id="contacts-page" class="is_main-contacts-page">
       <b-container>
         <b-row>
@@ -84,22 +57,24 @@
         />
       </b-container>
     </section>
-  </article>
+  </main>
 </template>
 
 <script>
 import { mapActions, mapGetters } from 'vuex'
-import Offices from '../components/contacts/Offices'
+import Offices from '@/components/contacts/Offices'
+import Breadcrumbs from '@/components/main/Breadcrumbs'
 
 export default {
   name: 'ContactsPage',
   components: {
-    Offices
+    Offices,
+    Breadcrumbs
   },
   layout: 'contacts',
   data () {
     return {
-      PageTitle: this.$store.state.contactPage.page_title
+      pageMetaTitle: 'Контактная информация'
     }
   },
   head () {

@@ -12,10 +12,10 @@
 </template>
 
 <script>
+import { mapActions, mapGetters } from 'vuex'
 import Navbar from '@/components/main/Navbar'
 import Footer from '@/components/main/Footer'
 import SocialWidgets from '@/components/home/social'
-import { mapActions, mapGetters } from 'vuex'
 
 export default {
   name: 'Contacts',

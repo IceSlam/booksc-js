@@ -1,10 +1,4 @@
 {
-  "ContactsOffices": {
-    "description": "Auto imported from components/contacts/Offices.vue"
-  },
-  "ContactsOfficesCard": {
-    "description": "Auto imported from components/contacts/OfficesCard.vue"
-  },
   "HomeBrands": {
     "description": "Auto imported from components/home/Brands.vue"
   },
@@ -28,6 +22,15 @@
   },
   "HomeWhyWe": {
     "description": "Auto imported from components/home/WhyWe.vue"
+  },
+  "ContactsOffices": {
+    "description": "Auto imported from components/contacts/Offices.vue"
+  },
+  "ContactsOfficesCard": {
+    "description": "Auto imported from components/contacts/OfficesCard.vue"
+  },
+  "MainBreadcrumbs": {
+    "description": "Auto imported from components/main/Breadcrumbs.vue"
   },
   "MainFooter": {
     "description": "Auto imported from components/main/Footer.vue"

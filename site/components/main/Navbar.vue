@@ -64,6 +64,11 @@
               Магазин
             </b-nav-item>
             <b-nav-item
+              to="/reviews"
+            >
+              Отзывы
+            </b-nav-item>
+            <b-nav-item
               to="/contacts"
             >
               Контакты
@@ -111,6 +116,11 @@
             target="_blank"
           >
             Магазин
+          </b-nav-item>
+          <b-nav-item
+            to="/reviews"
+          >
+            Отзывы
           </b-nav-item>
           <b-nav-item
             to="/contacts"

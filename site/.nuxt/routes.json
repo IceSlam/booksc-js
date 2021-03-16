@@ -7,6 +7,13 @@
     "_name": "_10d8759e"
   },
   {
+    "name": "reviews",
+    "path": "/reviews",
+    "component": "C:\\\\Users\\\\IceSlam\\\\Documents\\\\GitHub\\\\booksc-js\\\\site\\\\pages\\\\reviews.vue",
+    "chunkName": "pages/reviews",
+    "_name": "_4f467cad"
+  },
+  {
     "name": "services",
     "path": "/services",
     "component": "C:\\\\Users\\\\IceSlam\\\\Documents\\\\GitHub\\\\booksc-js\\\\site\\\\pages\\\\services\\\\index.vue",
