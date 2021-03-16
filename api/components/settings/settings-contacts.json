@@ -30,6 +30,14 @@
     "contact_time": {
       "type": "string",
       "required": true
+    },
+    "contact_postal": {
+      "type": "integer",
+      "required": true
+    },
+    "contact_busstation": {
+      "type": "string",
+      "required": true
     }
   }
 }

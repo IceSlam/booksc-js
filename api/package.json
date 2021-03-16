@@ -1,8 +1,8 @@
 {
-  "name": "api",
+  "name": "book-service-api",
   "private": true,
-  "version": "0.1.0",
-  "description": "A Strapi application",
+  "version": "1.0.0",
+  "description": "Strapi.js API back-end for Book-Service",
   "scripts": {
     "develop": "strapi develop",
     "start": "strapi start",
@@ -22,7 +22,7 @@
     "strapi-utils": "3.5.3"
   },
   "author": {
-    "name": "A Strapi developer"
+    "name": "IceSlam"
   },
   "strapi": {
     "uuid": "07655119-e2a9-4ab5-bffd-7f72ed5b91d9"

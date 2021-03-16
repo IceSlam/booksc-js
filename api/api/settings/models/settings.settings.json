@@ -34,6 +34,16 @@
       "repeatable": true,
       "required": true,
       "component": "settings.settings-contacts"
+    },
+    "settings_logo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "plugin": "upload",
+      "required": true
     }
   }
 }

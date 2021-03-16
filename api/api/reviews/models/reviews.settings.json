@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reviews",
+  "info": {
+    "name": "Отзывы",
+    "description": "Отзывы с карточек организации на Яндекс"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "branch_office": {
+      "type": "enumeration",
+      "enum": [
+        "Book-Service Красноармейская",
+        "Book-Service ТД Весна"
+      ]
+    },
+    "reviewer_name": {
+      "type": "string",
+      "required": true
+    },
+    "reviewer_avatar": {
+      "type": "string"
+    },
+    "reviewer_link": {
+      "type": "string"
+    },
+    "review_rating": {
+      "type": "enumeration",
+      "enum": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    "review_date": {
+      "type": "date",
+      "required": true
+    },
+    "review_info": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

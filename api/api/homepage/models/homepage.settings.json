@@ -37,6 +37,15 @@
       "repeatable": true,
       "required": true,
       "component": "homepage.goods-block"
+    },
+    "homepage_brands_bg": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
     }
   }
 }
