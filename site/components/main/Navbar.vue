@@ -19,27 +19,31 @@
             :src="'https://api.booksc.ru' + navbarData.settings_logo.url"
             alt="Book-Service"
           >
-          Book-Service
+          {{ navbarData.settings_title }}
         </NLink>
       </b-navbar-brand>
       <button class="uk-button is-menu-mobile-toggle" type="button" uk-toggle="target: #mobile-sidebar-overlay">
         <i class="fas fa-bars" />
       </button>
-      <div id="mobile-sidebar-overlay" class="is-mobile-sidebar-overlay" uk-offcanvas="overlay: true">
-        <div class="uk-offcanvas-bar is-mobile-sidebar">
+      <div id="mobile-sidebar-overlay" class="is-mobile-sidebar-overlay" uk-offcanvas="overlay: true;mode: push">
+        <div
+          v-if="navbarData.settings_logo"
+          class="uk-offcanvas-bar is-mobile-sidebar"
+        >
           <button class="uk-offcanvas-close" type="button" uk-close />
           <img
-            src="/img/logotype.png"
+            :src="'https://api.booksc.ru' + navbarData.settings_logo.url"
             alt="Book-Service"
             style="max-width: 50%;"
           >
           <h3 class="is-mobile-sidebar-title">
-            Book-Service
+            {{ navbarData.settings_title }}
           </h3>
           <h4 class="is-mobile-sidebar-subtitle text-uppercase">
-            Сеть сервисных центров
+            {{ navbarData.settings_subtitle }}
           </h4>
           <b-navbar-nav
+            v-if="navbarData"
             class="mr-auto is_main-navbar-menu mobile text-left mt-4"
           >
             <b-nav-item
@@ -66,27 +70,20 @@
             </b-nav-item>
           </b-navbar-nav>
           <hr class="clearfix w-100 d-md-none">
-          <div class="d-flex justify-content-around">
+          <div
+            v-if="navbarData.settings_social"
+            class="d-flex justify-content-around"
+          >
             <a
+              v-for="link in navbarData.settings_social"
+              :key="link.id"
               class="item"
-              href="https://vk.com/bookservice"
+              :href="link.social_link"
               target="_blank"
             >
-              <i class="fab fa-vk" />
-            </a>
-            <a
-              class="item"
-              href="https://instagram.com/bookservice32"
-              target="_blank"
-            >
-              <i class="fab fa-instagram" />
-            </a>
-            <a
-              class="item"
-              href="https://yandex.ru/profile/224999423360"
-              target="_blank"
-            >
-              <i class="fab fa-yandex" />
+              <i
+                :class="link.social_icon"
+              />
             </a>
           </div>
         </div>
@@ -122,25 +119,18 @@
           </b-nav-item>
         </b-navbar-nav>
         <b-navbar-nav
+          v-if="navbarData.settings_social"
           class="ml-auto is_main-navbar-menu d-flex justify-content-center social"
         >
           <b-nav-item
-            href="https://vk.com/bookservice"
+            v-for="item in navbarData.settings_social"
+            :key="item.id"
+            :href="item.social_link"
             target="_blank"
           >
-            <i class="fab fa-vk" />
-          </b-nav-item>
-          <b-nav-item
-            href="https://instagram.com/bookservice32"
-            target="_blank"
-          >
-            <i class="fab fa-instagram" />
-          </b-nav-item>
-          <b-nav-item
-            href="https://yandex.ru/profile/224999423360"
-            target="_blank"
-          >
-            <i class="fab fa-yandex" />
+            <i
+              :class="item.social_icon"
+            />
           </b-nav-item>
         </b-navbar-nav>
       </b-collapse>
@@ -165,6 +155,9 @@ export default {
 </script>
 
 <style scoped>
+.navbar {
+  overflow: inherit;
+}
 .is-menu-mobile-toggle {
   padding: 0 .75rem;
   border: none;
@@ -179,9 +172,16 @@ export default {
 }
 .is-mobile-sidebar-overlay {
   background: rgba(0,0,0,.25);
+  position: fixed;
+  bottom: 0px;
+  display: block;
+}
+.is-mobile-sidebar-overlay.uk-open {
+  height: 100vh;
 }
 .is-mobile-sidebar {
   background: #a8312d;
+  height: 100vh;
 }
 .is-mobile-sidebar-title {
   margin-top: .5rem;

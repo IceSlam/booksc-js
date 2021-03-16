@@ -8,8 +8,8 @@
         :brands-data="HOMEPAGE"
       />
       <TopServices />
-      <Reviews
-        :reviews-data="REVIEWS"
+      <ReviewsHome
+        :reviews-home-data="REVIEWS"
       />
       <NewGoods
         :new-goods-data="HOMEPAGE"
@@ -26,7 +26,7 @@ import SocialWidgets from '@/components/home/social'
 import Brands from '@/components/home/Brands'
 import TopServices from '@/components/home/TopServices'
 import NewGoods from '@/components/home/NewGoods'
-import Reviews from '@/components/home/Reviews'
+import ReviewsHome from '@/components/home/ReviewsHome'
 
 export default {
   name: 'IndexPage',
@@ -36,7 +36,7 @@ export default {
     Brands,
     TopServices,
     NewGoods,
-    Reviews
+    ReviewsHome
   },
   data () {
     return {

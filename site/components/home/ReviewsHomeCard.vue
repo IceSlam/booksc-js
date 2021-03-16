@@ -8,8 +8,8 @@
       style="-webkit-border-radius: 8px;-moz-border-radius: 8px;border-radius: 8px;"
     >
       <div
-        v-if="reviewsCardData.reviewer_avatar"
-        :style="'background: url(' + reviewsCardData.reviewer_avatar + ');'"
+        v-if="reviewsHomeCardData.reviewer_avatar"
+        :style="'background: url(' + reviewsHomeCardData.reviewer_avatar + ');'"
         class="is-review__author-img"
       />
       <div
@@ -22,24 +22,24 @@
       <div
         class="review-rating"
       >
-        {{ reviewsCardData.review_rating }}
+        {{ reviewsHomeCardData.review_rating }}
         <i class="fas fa-star" />
       </div>
       <a
-        :href="reviewsCardData.reviewer_link"
+        :href="reviewsHomeCardData.reviewer_link"
         target="_blank"
         class="text-center text-uppercase mt-2 mx-auto"
         style="color: #a8312d;display: block;text-align: center;font-size: 1.5rem;font-weight: 200;"
       >
-        {{ reviewsCardData.reviewer_name }}
+        {{ reviewsHomeCardData.reviewer_name }}
       </a>
       <div
         class="review-info"
       >
-        {{ reviewsCardData.review_info.slice(0,100) }}
+        {{ reviewsHomeCardData.review_info.slice(0,100) }}
       </div>
       <div class="branch-office">
-        {{ reviewsCardData.branch_office }}
+        {{ reviewsHomeCardData.branch_office }}
       </div>
     </b-card>
   </b-col>
@@ -47,9 +47,9 @@
 
 <script>
 export default {
-  name: 'ReviewsCard',
+  name: 'ReviewsHomeCard',
   props: {
-    reviewsCardData: {
+    reviewsHomeCardData: {
       type: Object,
       default: () => {
         return {}

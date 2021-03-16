@@ -13,10 +13,10 @@
         </b-col>
       </b-row>
       <b-row>
-        <ReviewsCard
-          v-for="review in reviewsData.slice(0,3)"
+        <ReviewsHomeCard
+          v-for="review in reviewsHomeData.slice(0,3)"
           :key="review.id"
-          :reviews-card-data="review"
+          :reviews-home-card-data="review"
         />
       </b-row>
       <b-row
@@ -39,15 +39,15 @@
 </template>
 
 <script>
-import ReviewsCard from '@/components/reviews/ReviewsCard'
+import ReviewsHomeCard from '@/components/home/ReviewsHomeCard'
 
 export default {
-  name: 'Reviews',
+  name: 'ReviewsHome',
   components: {
-    ReviewsCard
+    ReviewsHomeCard
   },
   props: {
-    reviewsData: {
+    reviewsHomeData: {
       type: Array,
       default: () => {
         return []

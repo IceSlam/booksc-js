@@ -14,8 +14,11 @@
   "HomeNewGoodsCard": {
     "description": "Auto imported from components/home/newGoodsCard.vue"
   },
-  "HomeReviews": {
-    "description": "Auto imported from components/home/Reviews.vue"
+  "HomeReviewsHome": {
+    "description": "Auto imported from components/home/ReviewsHome.vue"
+  },
+  "HomeReviewsHomeCard": {
+    "description": "Auto imported from components/home/ReviewsHomeCard.vue"
   },
   "HomeSocial": {
     "description": "Auto imported from components/home/social.vue"
@@ -34,9 +37,6 @@
   },
   "MainNavbar": {
     "description": "Auto imported from components/main/Navbar.vue"
-  },
-  "ReviewsCard": {
-    "description": "Auto imported from components/reviews/ReviewsCard.vue"
   },
   "ServicesHeading": {
     "description": "Auto imported from components/services/Heading.vue"
