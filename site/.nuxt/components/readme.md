@@ -20,5 +20,7 @@ You can directly use them in pages and other components without the need to impo
 - `<MainFooter>` | `<main-footer>` (components/main/Footer.vue)
 - `<MainHeader>` | `<main-header>` (components/main/Header.vue)
 - `<MainNavbar>` | `<main-navbar>` (components/main/Navbar.vue)
+- `<Reviews>` | `<reviews>` (components/reviews/Reviews.vue)
+- `<ReviewsCard>` | `<reviews-card>` (components/reviews/ReviewsCard.vue)
 - `<ServicesHeading>` | `<services-heading>` (components/services/Heading.vue)
 - `<ServicesHeadingCategory>` | `<services-heading-category>` (components/services/HeadingCategory.vue)

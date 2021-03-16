@@ -12,6 +12,8 @@ export { default as MainBreadcrumbs } from '../..\\components\\main\\Breadcrumbs
 export { default as MainFooter } from '../..\\components\\main\\Footer.vue'
 export { default as MainHeader } from '../..\\components\\main\\Header.vue'
 export { default as MainNavbar } from '../..\\components\\main\\Navbar.vue'
+export { default as Reviews } from '../..\\components\\reviews\\Reviews.vue'
+export { default as ReviewsCard } from '../..\\components\\reviews\\ReviewsCard.vue'
 export { default as ServicesHeading } from '../..\\components\\services\\Heading.vue'
 export { default as ServicesHeadingCategory } from '../..\\components\\services\\HeadingCategory.vue'
 
@@ -29,5 +31,7 @@ export const LazyMainBreadcrumbs = import('../..\\components\\main\\Breadcrumbs.
 export const LazyMainFooter = import('../..\\components\\main\\Footer.vue' /* webpackChunkName: "components/main-footer" */).then(c => c.default || c)
 export const LazyMainHeader = import('../..\\components\\main\\Header.vue' /* webpackChunkName: "components/main-header" */).then(c => c.default || c)
 export const LazyMainNavbar = import('../..\\components\\main\\Navbar.vue' /* webpackChunkName: "components/main-navbar" */).then(c => c.default || c)
+export const LazyReviews = import('../..\\components\\reviews\\Reviews.vue' /* webpackChunkName: "components/reviews" */).then(c => c.default || c)
+export const LazyReviewsCard = import('../..\\components\\reviews\\ReviewsCard.vue' /* webpackChunkName: "components/reviews-card" */).then(c => c.default || c)
 export const LazyServicesHeading = import('../..\\components\\services\\Heading.vue' /* webpackChunkName: "components/services-heading" */).then(c => c.default || c)
 export const LazyServicesHeadingCategory = import('../..\\components\\services\\HeadingCategory.vue' /* webpackChunkName: "components/services-heading-category" */).then(c => c.default || c)

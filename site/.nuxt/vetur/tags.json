@@ -41,6 +41,12 @@
   "MainNavbar": {
     "description": "Auto imported from components/main/Navbar.vue"
   },
+  "Reviews": {
+    "description": "Auto imported from components/reviews/Reviews.vue"
+  },
+  "ReviewsCard": {
+    "description": "Auto imported from components/reviews/ReviewsCard.vue"
+  },
   "ServicesHeading": {
     "description": "Auto imported from components/services/Heading.vue"
   },
