@@ -80,7 +80,7 @@ export default {
   background-attachment: fixed;
 }
 .mask.rgba-stylish-strong {
-  background: rgba(62,69,81,.6);
+  background: rgba(62,69,81,.9);
 }
 h2:after {
   display: block;
@@ -94,10 +94,10 @@ h2:after {
   margin-top: 20px;
 }
 .more-reviews {
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  border-radius: 8px;
-  border: 3px solid #a8312d;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  border: 2px solid #a8312d;
   background: #a8312d;
   color: #fff;
   padding: .75rem 1.25rem;

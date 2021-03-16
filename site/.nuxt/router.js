@@ -25,6 +25,7 @@ const _29574966 = () => interopDefault(import('..\\pages\\services\\other\\_id.v
 const _3b342fee = () => interopDefault(import('..\\pages\\services\\smartphone\\_id.vue' /* webpackChunkName: "pages/services/smartphone/_id" */))
 const _8f9aebf0 = () => interopDefault(import('..\\pages\\services\\tablet\\_id.vue' /* webpackChunkName: "pages/services/tablet/_id" */))
 const _57295465 = () => interopDefault(import('..\\pages\\services\\tvs\\_id.vue' /* webpackChunkName: "pages/services/tvs/_id" */))
+const _1f364ffe = () => interopDefault(import('..\\pages\\services\\_slug.vue' /* webpackChunkName: "pages/services/_slug" */))
 const _fc81d738 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
@@ -122,6 +123,10 @@ export const routerOptions = {
     path: "/services/tvs/:id",
     component: _57295465,
     name: "services-tvs-id"
+  }, {
+    path: "/services/:slug",
+    component: _1f364ffe,
+    name: "services-slug"
   }, {
     path: "/",
     component: _fc81d738,

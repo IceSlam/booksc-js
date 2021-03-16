@@ -1,4 +1,10 @@
 {
+  "ContactsOffices": {
+    "description": "Auto imported from components/contacts/Offices.vue"
+  },
+  "ContactsOfficesCard": {
+    "description": "Auto imported from components/contacts/OfficesCard.vue"
+  },
   "HomeBrands": {
     "description": "Auto imported from components/home/Brands.vue"
   },
@@ -23,11 +29,17 @@
   "HomeWhyWe": {
     "description": "Auto imported from components/home/WhyWe.vue"
   },
-  "ContactsOffices": {
-    "description": "Auto imported from components/contacts/Offices.vue"
+  "Reviews": {
+    "description": "Auto imported from components/reviews/Reviews.vue"
   },
-  "ContactsOfficesCard": {
-    "description": "Auto imported from components/contacts/OfficesCard.vue"
+  "ReviewsCard": {
+    "description": "Auto imported from components/reviews/ReviewsCard.vue"
+  },
+  "ServicesList": {
+    "description": "Auto imported from components/services/ServicesList.vue"
+  },
+  "ServicesListCategoryCard": {
+    "description": "Auto imported from components/services/ServicesListCategoryCard.vue"
   },
   "MainBreadcrumbs": {
     "description": "Auto imported from components/main/Breadcrumbs.vue"
@@ -40,17 +52,5 @@
   },
   "MainNavbar": {
     "description": "Auto imported from components/main/Navbar.vue"
-  },
-  "Reviews": {
-    "description": "Auto imported from components/reviews/Reviews.vue"
-  },
-  "ReviewsCard": {
-    "description": "Auto imported from components/reviews/ReviewsCard.vue"
-  },
-  "ServicesHeading": {
-    "description": "Auto imported from components/services/Heading.vue"
-  },
-  "ServicesHeadingCategory": {
-    "description": "Auto imported from components/services/HeadingCategory.vue"
   }
 }

@@ -147,6 +147,13 @@
     "_name": "_57295465"
   },
   {
+    "name": "services-slug",
+    "path": "/services/:slug",
+    "component": "C:\\\\Users\\\\IceSlam\\\\Documents\\\\GitHub\\\\booksc-js\\\\site\\\\pages\\\\services\\\\_slug.vue",
+    "chunkName": "pages/services/_slug",
+    "_name": "_1f364ffe"
+  },
+  {
     "name": "index",
     "path": "/",
     "component": "C:\\\\Users\\\\IceSlam\\\\Documents\\\\GitHub\\\\booksc-js\\\\site\\\\pages\\\\index.vue",

@@ -8,6 +8,7 @@ const store = () => new Vuex.Store({
   state: {
     homePage: [],
     reviewsList: [],
+    categoiesList: [],
     contactPage: {},
     themeSettings: {}
   },
@@ -23,6 +24,9 @@ const store = () => new Vuex.Store({
     },
     SET_REVIEWS_TO_STORE: (state, reviewsList) => {
       state.reviewsList = reviewsList
+    },
+    SET_CATEGORIES_TO_STORE: (state, cateriesList) => {
+      state.categoiesList = cateriesList
     }
   },
   actions: {
@@ -57,6 +61,14 @@ const store = () => new Vuex.Store({
         .then((res) => {
           commit('SET_REVIEWS_TO_STORE', res.data)
         })
+    },
+    GET_CATEGORIES_FROM_API ({ commit }) {
+      return axios('https://api.booksc.ru/categories', {
+        method: 'GET'
+      })
+        .then((res) => {
+          commit('SET_CATEGORIES_TO_STORE', res.data)
+        })
     }
   },
   getters: {
@@ -71,6 +83,9 @@ const store = () => new Vuex.Store({
     },
     REVIEWS (state) {
       return state.reviewsList
+    },
+    CATEGORIES (state) {
+      return state.categoiesList
     }
   },
   modules: {

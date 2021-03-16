@@ -4,6 +4,7 @@
       :navbar-data="THEME_SETTINGS"
     />
     <nuxt />
+    <SocialWidgets />
     <Footer
       :footer-data="THEME_SETTINGS"
     />
@@ -11,14 +12,16 @@
 </template>
 
 <script>
+import { mapActions, mapGetters } from 'vuex'
 import Navbar from '@/components/main/Navbar'
 import Footer from '@/components/main/Footer'
-import {mapActions, mapGetters} from "vuex";
+import SocialWidgets from '@/components/home/social'
 export default {
   name: 'ServicesLayout',
   components: {
     Navbar,
-    Footer
+    Footer,
+    SocialWidgets
   },
   computed: {
     ...mapGetters([
