@@ -25,7 +25,7 @@
       <button class="uk-button is-menu-mobile-toggle" type="button" uk-toggle="target: #mobile-sidebar-overlay">
         <i class="fas fa-bars" />
       </button>
-      <div id="mobile-sidebar-overlay" class="is-mobile-sidebar-overlay" uk-offcanvas="overlay: true;mode: push">
+      <div id="mobile-sidebar-overlay" uk-offcanvas="overlay: true;mode: push">
         <div
           v-if="navbarData.settings_logo"
           class="uk-offcanvas-bar is-mobile-sidebar"
@@ -178,6 +178,7 @@ export default {
 }
 .is-mobile-sidebar-overlay.uk-open {
   height: 100vh;
+  margin-left: -1rem;
 }
 .is-mobile-sidebar {
   background: #a8312d;
