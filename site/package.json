@@ -19,7 +19,9 @@
     "core-js": "^3.8.3",
     "jquery": "^3.6.0",
     "nuxt": "^2.14.12",
-    "uikit": "^3.6.17"
+    "nuxt-ssr-cache": "^1.5.2",
+    "uikit": "^3.6.17",
+    "vue-lazy-hydration": "^2.0.0-beta.4"
   },
   "devDependencies": {
     "@nuxt/types": "^2.15.2",

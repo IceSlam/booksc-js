@@ -1,42 +1,48 @@
 <template>
-  <div>
-    <article id="content" class="is_main-content wow fadeIn " data-wow-duration="1s">
+  <article id="content" class="is_main-content">
+    <LazyHydrate when-idle>
       <WhyWe
         :why-we-data="HOMEPAGE"
       />
+    </LazyHydrate>
+    <LazyHydrate when-idle>
       <Brands
         :brands-data="HOMEPAGE"
       />
+    </LazyHydrate>
+    <LazyHydrate when-idle>
       <TopServices />
+    </LazyHydrate>
+    <LazyHydrate when-idle>
       <ReviewsHome
         :reviews-home-data="REVIEWS"
       />
+    </LazyHydrate>
+    <LazyHydrate when-idle>
       <NewGoods
         :new-goods-data="HOMEPAGE"
       />
+    </LazyHydrate>
+    <LazyHydrate when-idle>
       <SocialWidgets />
-    </article>
-  </div>
+    </LazyHydrate>
+  </article>
 </template>
 
 <script>
 import { mapActions, mapGetters } from 'vuex'
-import WhyWe from '@/components/home/WhyWe'
-import SocialWidgets from '@/components/home/social'
-import Brands from '@/components/home/Brands'
-import TopServices from '@/components/home/TopServices'
-import NewGoods from '@/components/home/NewGoods'
-import ReviewsHome from '@/components/home/ReviewsHome'
+import LazyHydrate from 'vue-lazy-hydration'
 
 export default {
   name: 'IndexPage',
   components: {
-    WhyWe,
-    SocialWidgets,
-    Brands,
-    TopServices,
-    NewGoods,
-    ReviewsHome
+    LazyHydrate,
+    WhyWe: () => import('@/components/home/WhyWe'),
+    SocialWidgets: () => import('@/components/home/social'),
+    Brands: () => import('@/components/home/Brands'),
+    TopServices: () => import('@/components/home/TopServices'),
+    NewGoods: () => import('@/components/home/NewGoods'),
+    ReviewsHome: () => import('@/components/home/ReviewsHome')
   },
   data () {
     return {

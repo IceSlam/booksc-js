@@ -1,29 +1,34 @@
 <template>
-  <div>
-    <Header
-      :header-data="THEME_SETTINGS"
-    />
-    <Navbar
-      :navbar-data="THEME_SETTINGS"
-    />
+  <div class="wrapper">
+    <LazyHydrate when-idle>
+      <Header
+        :header-data="THEME_SETTINGS"
+      />
+    </LazyHydrate>
+    <LazyHydrate when-idle>
+      <Navbar
+        :navbar-data="THEME_SETTINGS"
+      />
+    </LazyHydrate>
     <nuxt />
-    <Footer
-      :footer-data="THEME_SETTINGS"
-    />
+    <LazyHydrate when-idle>
+      <Footer
+        :footer-data="THEME_SETTINGS"
+      />
+    </LazyHydrate>
   </div>
 </template>
 
 <script>
-import Header from '@/components/main/Header.vue'
-import Navbar from '@/components/main/Navbar'
-import Footer from '@/components/main/Footer'
 import { mapActions, mapGetters } from 'vuex'
+import LazyHydrate from 'vue-lazy-hydration'
 
 export default {
   components: {
-    Header,
-    Navbar,
-    Footer
+    LazyHydrate,
+    Header: () => import('@/components/main/Header.vue'),
+    Navbar: () => import('@/components/main/Navbar'),
+    Footer: () => import('@/components/main/Footer')
   },
   head () {
     return {
