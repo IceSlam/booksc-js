@@ -6,8 +6,6 @@ You can directly use them in pages and other components without the need to impo
 
 **Tip:** If a component is conditionally rendered with `v-if` and is big, it is better to use `Lazy` or `lazy-` prefix to lazy load.
 
-- `<ContactsOffices>` | `<contacts-offices>` (components/contacts/Offices.vue)
-- `<ContactsOfficesCard>` | `<contacts-offices-card>` (components/contacts/OfficesCard.vue)
 - `<HomeBrands>` | `<home-brands>` (components/home/Brands.vue)
 - `<HomeNewGoods>` | `<home-new-goods>` (components/home/NewGoods.vue)
 - `<HomeNewGoodsCard>` | `<home-new-goods-card>` (components/home/newGoodsCard.vue)
@@ -16,11 +14,14 @@ You can directly use them in pages and other components without the need to impo
 - `<HomeSocial>` | `<home-social>` (components/home/social.vue)
 - `<HomeTopServices>` | `<home-top-services>` (components/home/TopServices.vue)
 - `<HomeWhyWe>` | `<home-why-we>` (components/home/WhyWe.vue)
+- `<MainBreadcrumbs>` | `<main-breadcrumbs>` (components/main/Breadcrumbs.vue)
+- `<MainBreadcrumbsCategory>` | `<main-breadcrumbs-category>` (components/main/BreadcrumbsCategory.vue)
+- `<MainFooter>` | `<main-footer>` (components/main/Footer.vue)
+- `<MainHeader>` | `<main-header>` (components/main/Header.vue)
+- `<MainNavbar>` | `<main-navbar>` (components/main/Navbar.vue)
+- `<ContactsOffices>` | `<contacts-offices>` (components/contacts/Offices.vue)
+- `<ContactsOfficesCard>` | `<contacts-offices-card>` (components/contacts/OfficesCard.vue)
 - `<Reviews>` | `<reviews>` (components/reviews/Reviews.vue)
 - `<ReviewsCard>` | `<reviews-card>` (components/reviews/ReviewsCard.vue)
 - `<ServicesList>` | `<services-list>` (components/services/ServicesList.vue)
 - `<ServicesListCategoryCard>` | `<services-list-category-card>` (components/services/ServicesListCategoryCard.vue)
-- `<MainBreadcrumbs>` | `<main-breadcrumbs>` (components/main/Breadcrumbs.vue)
-- `<MainFooter>` | `<main-footer>` (components/main/Footer.vue)
-- `<MainHeader>` | `<main-header>` (components/main/Header.vue)
-- `<MainNavbar>` | `<main-navbar>` (components/main/Navbar.vue)

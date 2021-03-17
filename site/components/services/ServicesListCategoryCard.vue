@@ -69,7 +69,7 @@ export default {
     }
   },
   methods: {
-    openCategory (category) {
+    openCategory (id) {
       this.$emit('openCategory', this.servicesCategoryData.category_slug)
     }
   }

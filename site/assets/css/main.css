@@ -683,3 +683,24 @@ h2.is_main-whywe-h2::after {
     text-align: center;
   }
 }
+
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.5s;
+}
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+}
+
+.layout-enter-active,
+.layout-leave-active {
+  transition: opacity .75s;
+  position: relative;
+}
+.layout-enter,
+.layout-leave-to {
+  opacity: 0;
+  position: relative;
+}
+

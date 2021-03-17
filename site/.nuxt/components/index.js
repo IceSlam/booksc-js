@@ -1,5 +1,3 @@
-export { default as ContactsOffices } from '../..\\components\\contacts\\Offices.vue'
-export { default as ContactsOfficesCard } from '../..\\components\\contacts\\OfficesCard.vue'
 export { default as HomeBrands } from '../..\\components\\home\\Brands.vue'
 export { default as HomeNewGoods } from '../..\\components\\home\\NewGoods.vue'
 export { default as HomeNewGoodsCard } from '../..\\components\\home\\newGoodsCard.vue'
@@ -8,17 +6,18 @@ export { default as HomeReviewsHomeCard } from '../..\\components\\home\\Reviews
 export { default as HomeSocial } from '../..\\components\\home\\social.vue'
 export { default as HomeTopServices } from '../..\\components\\home\\TopServices.vue'
 export { default as HomeWhyWe } from '../..\\components\\home\\WhyWe.vue'
+export { default as MainBreadcrumbs } from '../..\\components\\main\\Breadcrumbs.vue'
+export { default as MainBreadcrumbsCategory } from '../..\\components\\main\\BreadcrumbsCategory.vue'
+export { default as MainFooter } from '../..\\components\\main\\Footer.vue'
+export { default as MainHeader } from '../..\\components\\main\\Header.vue'
+export { default as MainNavbar } from '../..\\components\\main\\Navbar.vue'
+export { default as ContactsOffices } from '../..\\components\\contacts\\Offices.vue'
+export { default as ContactsOfficesCard } from '../..\\components\\contacts\\OfficesCard.vue'
 export { default as Reviews } from '../..\\components\\reviews\\Reviews.vue'
 export { default as ReviewsCard } from '../..\\components\\reviews\\ReviewsCard.vue'
 export { default as ServicesList } from '../..\\components\\services\\ServicesList.vue'
 export { default as ServicesListCategoryCard } from '../..\\components\\services\\ServicesListCategoryCard.vue'
-export { default as MainBreadcrumbs } from '../..\\components\\main\\Breadcrumbs.vue'
-export { default as MainFooter } from '../..\\components\\main\\Footer.vue'
-export { default as MainHeader } from '../..\\components\\main\\Header.vue'
-export { default as MainNavbar } from '../..\\components\\main\\Navbar.vue'
 
-export const LazyContactsOffices = import('../..\\components\\contacts\\Offices.vue' /* webpackChunkName: "components/contacts-offices" */).then(c => c.default || c)
-export const LazyContactsOfficesCard = import('../..\\components\\contacts\\OfficesCard.vue' /* webpackChunkName: "components/contacts-offices-card" */).then(c => c.default || c)
 export const LazyHomeBrands = import('../..\\components\\home\\Brands.vue' /* webpackChunkName: "components/home-brands" */).then(c => c.default || c)
 export const LazyHomeNewGoods = import('../..\\components\\home\\NewGoods.vue' /* webpackChunkName: "components/home-new-goods" */).then(c => c.default || c)
 export const LazyHomeNewGoodsCard = import('../..\\components\\home\\newGoodsCard.vue' /* webpackChunkName: "components/home-new-goods-card" */).then(c => c.default || c)
@@ -27,11 +26,14 @@ export const LazyHomeReviewsHomeCard = import('../..\\components\\home\\ReviewsH
 export const LazyHomeSocial = import('../..\\components\\home\\social.vue' /* webpackChunkName: "components/home-social" */).then(c => c.default || c)
 export const LazyHomeTopServices = import('../..\\components\\home\\TopServices.vue' /* webpackChunkName: "components/home-top-services" */).then(c => c.default || c)
 export const LazyHomeWhyWe = import('../..\\components\\home\\WhyWe.vue' /* webpackChunkName: "components/home-why-we" */).then(c => c.default || c)
+export const LazyMainBreadcrumbs = import('../..\\components\\main\\Breadcrumbs.vue' /* webpackChunkName: "components/main-breadcrumbs" */).then(c => c.default || c)
+export const LazyMainBreadcrumbsCategory = import('../..\\components\\main\\BreadcrumbsCategory.vue' /* webpackChunkName: "components/main-breadcrumbs-category" */).then(c => c.default || c)
+export const LazyMainFooter = import('../..\\components\\main\\Footer.vue' /* webpackChunkName: "components/main-footer" */).then(c => c.default || c)
+export const LazyMainHeader = import('../..\\components\\main\\Header.vue' /* webpackChunkName: "components/main-header" */).then(c => c.default || c)
+export const LazyMainNavbar = import('../..\\components\\main\\Navbar.vue' /* webpackChunkName: "components/main-navbar" */).then(c => c.default || c)
+export const LazyContactsOffices = import('../..\\components\\contacts\\Offices.vue' /* webpackChunkName: "components/contacts-offices" */).then(c => c.default || c)
+export const LazyContactsOfficesCard = import('../..\\components\\contacts\\OfficesCard.vue' /* webpackChunkName: "components/contacts-offices-card" */).then(c => c.default || c)
 export const LazyReviews = import('../..\\components\\reviews\\Reviews.vue' /* webpackChunkName: "components/reviews" */).then(c => c.default || c)
 export const LazyReviewsCard = import('../..\\components\\reviews\\ReviewsCard.vue' /* webpackChunkName: "components/reviews-card" */).then(c => c.default || c)
 export const LazyServicesList = import('../..\\components\\services\\ServicesList.vue' /* webpackChunkName: "components/services-list" */).then(c => c.default || c)
 export const LazyServicesListCategoryCard = import('../..\\components\\services\\ServicesListCategoryCard.vue' /* webpackChunkName: "components/services-list-category-card" */).then(c => c.default || c)
-export const LazyMainBreadcrumbs = import('../..\\components\\main\\Breadcrumbs.vue' /* webpackChunkName: "components/main-breadcrumbs" */).then(c => c.default || c)
-export const LazyMainFooter = import('../..\\components\\main\\Footer.vue' /* webpackChunkName: "components/main-footer" */).then(c => c.default || c)
-export const LazyMainHeader = import('../..\\components\\main\\Header.vue' /* webpackChunkName: "components/main-header" */).then(c => c.default || c)
-export const LazyMainNavbar = import('../..\\components\\main\\Navbar.vue' /* webpackChunkName: "components/main-navbar" */).then(c => c.default || c)

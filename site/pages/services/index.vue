@@ -1,16 +1,18 @@
 <template>
-  <main>
-    <Breadcrumbs
-      :breadcrumbs-page-title="pageMetaTitle"
-    />
-    <section id="services-list" class="is_main-services-list">
-      <b-container>
-        <ServicesList
-          :services-data="CATEGORIES"
-        />
-      </b-container>
-    </section>
-  </main>
+  <transition name="page">
+    <main>
+      <Breadcrumbs
+        :breadcrumbs-page-title="pageMetaTitle"
+      />
+      <section id="services-list" class="is_main-services-list">
+        <b-container>
+          <ServicesList
+            :services-data="CATEGORIES"
+          />
+        </b-container>
+      </section>
+    </main>
+  </transition>
 </template>
 
 <script>
@@ -25,6 +27,10 @@ export default {
     ServicesList
   },
   layout: 'services',
+  transition: {
+    name: 'page',
+    mode: 'out-in'
+  },
   data () {
     return {
       pageMetaTitle: 'Услуги и цены'
@@ -61,5 +67,13 @@ export default {
 }
 </script>
 
-<style type="scss" scoped>
+<style>
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.5s;
+}
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+}
 </style>

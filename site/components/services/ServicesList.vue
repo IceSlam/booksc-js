@@ -28,8 +28,8 @@ export default {
   data: () => ({
   }),
   methods: {
-    openCategory (category) {
-      this.$router.push('/services/' + category)
+    openCategory (id) {
+      this.$router.push('/services/' + id)
     }
   }
 }

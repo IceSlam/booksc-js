@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <main class="wrapper">
     <LazyHydrate when-idle>
       <Header
         :header-data="THEME_SETTINGS"
@@ -16,7 +16,7 @@
         :footer-data="THEME_SETTINGS"
       />
     </LazyHydrate>
-  </div>
+  </main>
 </template>
 
 <script>
@@ -60,3 +60,5 @@ export default {
   }
 }
 </script>
+<style>
+</style>
