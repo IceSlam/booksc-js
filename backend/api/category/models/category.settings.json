@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categories",
+  "info": {
+    "name": "Категории услуг",
+    "description": "Список категорий услуг сервисного центра"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "category_name": {
+      "type": "string",
+      "required": true
+    },
+    "services": {
+      "collection": "services",
+      "via": "services_cat"
+    },
+    "category_image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "category_slug": {
+      "type": "uid",
+      "targetField": "category_name",
+      "required": true
+    },
+    "category_icon": {
+      "type": "string"
+    },
+    "category_longtitle": {
+      "type": "string"
+    }
+  }
+}
