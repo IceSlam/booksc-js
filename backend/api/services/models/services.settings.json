@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "services",
+  "info": {
+    "name": "Услуги",
+    "description": "Список услуг сервисного центра"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "page_title": {
+      "type": "string",
+      "required": true
+    },
+    "page_longtitle": {
+      "type": "string"
+    },
+    "page_description": {
+      "type": "text"
+    },
+    "page_keywords": {
+      "type": "string"
+    },
+    "min_price": {
+      "type": "string"
+    },
+    "services_cat": {
+      "via": "services",
+      "model": "category"
+    }
+  }
+}
