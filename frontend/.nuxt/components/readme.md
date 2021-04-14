@@ -1,0 +1,27 @@
+# Discovered Components
+
+This is an auto-generated list of components discovered by [nuxt/components](https://github.com/nuxt/components).
+
+You can directly use them in pages and other components without the need to import them.
+
+**Tip:** If a component is conditionally rendered with `v-if` and is big, it is better to use `Lazy` or `lazy-` prefix to lazy load.
+
+- `<ContactsOffices>` | `<contacts-offices>` (components/contacts/Offices.vue)
+- `<ContactsOfficesCard>` | `<contacts-offices-card>` (components/contacts/OfficesCard.vue)
+- `<HomeBrands>` | `<home-brands>` (components/home/Brands.vue)
+- `<HomeNewGoods>` | `<home-new-goods>` (components/home/NewGoods.vue)
+- `<HomeReviewsHome>` | `<home-reviews-home>` (components/home/ReviewsHome.vue)
+- `<HomeReviewsHomeCard>` | `<home-reviews-home-card>` (components/home/ReviewsHomeCard.vue)
+- `<HomeTopServices>` | `<home-top-services>` (components/home/TopServices.vue)
+- `<HomeWhyWe>` | `<home-why-we>` (components/home/WhyWe.vue)
+- `<HomeNewGoodsCard>` | `<home-new-goods-card>` (components/home/newGoodsCard.vue)
+- `<HomeSocial>` | `<home-social>` (components/home/social.vue)
+- `<MainBreadcrumbs>` | `<main-breadcrumbs>` (components/main/Breadcrumbs.vue)
+- `<MainBreadcrumbsCategory>` | `<main-breadcrumbs-category>` (components/main/BreadcrumbsCategory.vue)
+- `<MainFooter>` | `<main-footer>` (components/main/Footer.vue)
+- `<MainHeader>` | `<main-header>` (components/main/Header.vue)
+- `<MainNavbar>` | `<main-navbar>` (components/main/Navbar.vue)
+- `<Reviews>` | `<reviews>` (components/reviews/Reviews.vue)
+- `<ReviewsCard>` | `<reviews-card>` (components/reviews/ReviewsCard.vue)
+- `<ServicesList>` | `<services-list>` (components/services/ServicesList.vue)
+- `<ServicesListCategoryCard>` | `<services-list-category-card>` (components/services/ServicesListCategoryCard.vue)
