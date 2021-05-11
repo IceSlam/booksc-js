@@ -7,7 +7,7 @@
       <b-container>
         <b-row>
           <b-col
-            v-for="service in getServices"
+            v-for="service in services"
             :key="service._id"
             md="12"
           >
@@ -38,7 +38,8 @@ export default {
   layout: 'category',
   data () {
     return {
-      pageMetaTitle: ''
+      pageMetaTitle: '',
+      services: {}
     }
   },
   head () {
@@ -59,9 +60,13 @@ export default {
   computed: {
     ...mapGetters([
       'CATEGORIES'
-    ]),
-    getServices () {
-      return this.CATEGORIES.find(e => e.category_slug === this.$route.params.slug).services
+    ])
+  },
+  watch: {
+    CATEGORIES () {
+      const category = this.CATEGORIES.find(e => e.category_slug === this.$route.params.slug)
+      this.services = category.services
+      this.pageMetaTitle = category.category_name
     }
   },
   mounted () {
