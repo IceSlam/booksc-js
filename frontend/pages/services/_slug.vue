@@ -7,106 +7,17 @@
       <b-container>
         <b-row>
           <b-col
+            v-for="service in getServices"
+            :key="service._id"
             md="12"
           >
             <div class="d-flex justify-content-between align-items-center px-3 service-card">
               <h3 class="service-title mb-0">
-                Название услуги
+                {{ service.page_title }}
               </h3>
               <p class="service-price font-weight-bold text-uppercase">
-                000
-                <i class="fas fa-ruble-sign"></i>
-              </p>
-            </div>
-          </b-col>
-          <b-col
-            md="12"
-          >
-            <div class="d-flex justify-content-between align-items-center px-3 service-card">
-              <h3 class="service-title mb-0">
-                Название услуги
-              </h3>
-              <p class="service-price font-weight-bold text-uppercase">
-                000
-                <i class="fas fa-ruble-sign"></i>
-              </p>
-            </div>
-          </b-col>
-          <b-col
-            md="12"
-          >
-            <div class="d-flex justify-content-between align-items-center px-3 service-card">
-              <h3 class="service-title mb-0">
-                Название услуги
-              </h3>
-              <p class="service-price font-weight-bold text-uppercase">
-                000
-                <i class="fas fa-ruble-sign"></i>
-              </p>
-            </div>
-          </b-col>
-          <b-col
-            md="12"
-          >
-            <div class="d-flex justify-content-between align-items-center px-3 service-card">
-              <h3 class="service-title mb-0">
-                Название услуги
-              </h3>
-              <p class="service-price font-weight-bold text-uppercase">
-                000
-                <i class="fas fa-ruble-sign"></i>
-              </p>
-            </div>
-          </b-col>
-          <b-col
-            md="12"
-          >
-            <div class="d-flex justify-content-between align-items-center px-3 service-card">
-              <h3 class="service-title mb-0">
-                Название услуги
-              </h3>
-              <p class="service-price font-weight-bold text-uppercase">
-                000
-                <i class="fas fa-ruble-sign"></i>
-              </p>
-            </div>
-          </b-col>
-          <b-col
-            md="12"
-          >
-            <div class="d-flex justify-content-between align-items-center px-3 service-card">
-              <h3 class="service-title mb-0">
-                Название услуги
-              </h3>
-              <p class="service-price font-weight-bold text-uppercase">
-                000
-                <i class="fas fa-ruble-sign"></i>
-              </p>
-            </div>
-          </b-col>
-          <b-col
-            md="12"
-          >
-            <div class="d-flex justify-content-between align-items-center px-3 service-card">
-              <h3 class="service-title mb-0">
-                Название услуги
-              </h3>
-              <p class="service-price font-weight-bold text-uppercase">
-                000
-                <i class="fas fa-ruble-sign"></i>
-              </p>
-            </div>
-          </b-col>
-          <b-col
-            md="12"
-          >
-            <div class="d-flex justify-content-between align-items-center px-3 service-card">
-              <h3 class="service-title mb-0">
-                Название услуги
-              </h3>
-              <p class="service-price font-weight-bold text-uppercase">
-                000
-                <i class="fas fa-ruble-sign"></i>
+                {{ service.min_price }}
+                <i class="fas fa-ruble-sign" />
               </p>
             </div>
           </b-col>
@@ -148,7 +59,10 @@ export default {
   computed: {
     ...mapGetters([
       'CATEGORIES'
-    ])
+    ]),
+    getServices () {
+      return this.CATEGORIES.find(e => e.category_slug === this.$route.params.slug).services
+    }
   },
   mounted () {
     this.GET_CATEGORIES_FROM_API()
