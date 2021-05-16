@@ -615,6 +615,7 @@ h2.is_main-whywe-h2::after {
   -webkit-background-size: cover;
   background-size: cover;
   position: relative;
+  overflow: hidden;
 }
 
 .is_main-services-list-card-box-new .card .card-body {
@@ -624,6 +625,25 @@ h2.is_main-whywe-h2::after {
   justify-content: center;
   transition: all .25s;
   position: relative;
+}
+
+.is_main-services-list-card-box-new .card .btn.view-service {
+  color: #fff;
+  z-index: 1;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 0;
+  padding: 1rem 0;
+  transform: translateY(100%);
+  left: 0;
+  right: 0;
+  background: #a8312d;
+  transition: transform .25s;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
 }
 
 .is_main-services-list-card-box-new .card .card-body .brand {
@@ -649,27 +669,17 @@ h2.is_main-whywe-h2::after {
   font-weight: bold;
 }
 
-.is_main-services-list-card-box .card-title {
-  margin-bottom: 0;
-  padding-bottom: 0;
+.is_main-services-list-card-box-new .card:hover .brand {
+  -webkit-transform: translateY(-35px);
+  -moz-transform: translateY(-35px);
+  -ms-transform: translateY(-35px);
+  -o-transform: translateY(-35px);
+  transform: translateY(-35px);
 }
 
-.is_main-services-list-card-box > .card-img-top {
-  size: cover;
-  position: fixed;
-}
-
-.is_main-services-list-card-box h4 {
-  margin-top: 0 !important;
-  text-transform: uppercase !important;
-}
-
-.is_main-services-list-card-box h4 > a {
-  color: #a8312d;
-}
-
-.is_main-services-list-card-box h4 > a > i.is_arrow {
-  float: right;
+.is_main-services-list-card-box-new .card:hover .btn.view-service {
+  transform: translateY(0%);
+  transition: transform .25s;
 }
 
 /* Services Category Page */

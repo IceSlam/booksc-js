@@ -22,6 +22,9 @@
           {{ servicesCategoryData.category_name }}
         </span>
       </a>
+      <a
+        @click.prevent="openCategory()"
+        class="btn view-service">Подробнее</a>
     </b-card>
   </b-col>
 </template>
