@@ -39,12 +39,13 @@ export default {
   data () {
     return {
       pageMetaTitle: '',
-      services: {}
+      services: {},
+      pageTitle: ''
     }
   },
   head () {
     return {
-      title: 'Услуги и цены - Сеть сервисных центров Book-Service',
+      title: this.pageTitle + 'Услуги и цены - Сеть сервисных центров Book-Service',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -67,6 +68,7 @@ export default {
       const category = this.CATEGORIES.find(e => e.category_slug === this.$route.params.slug)
       this.services = category.services
       this.pageMetaTitle = category.category_name
+      this.pageTitle = this.pageMetaTitle + ' - '
     }
   },
   mounted () {
