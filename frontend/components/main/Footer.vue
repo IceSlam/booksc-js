@@ -73,32 +73,19 @@
               </a>
             </li>
             <li>
-              <NLink to="/contacts">
-                Контакты
+              <NLink to="/reviews">
+                Отзывы
               </NLink>
             </li>
             <li>
-              <b-button
-                v-b-toggle.collapsed-ya-map
-                class="map-collapse-btn"
-              >
-                СЦ на карте
-              </b-button>
+              <NLink to="/contacts">
+                Контакты
+              </NLink>
             </li>
           </ul>
         </b-col>
       </b-row>
     </b-container>
-    <div id="map-accordeon">
-      <b-card
-        class="z-depth-0"
-        style="background-color: transparent; border: none;"
-      >
-        <b-collapse id="collapsed-ya-map">
-          <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A76ea0ff14f25dccb0001d250726fa6efa283b055a34a618a96877072ceef3fd7&amp;width=100%25&amp;height=450&amp;lang=ru_RU&amp;scroll=true" />
-        </b-collapse>
-      </b-card>
-    </div>
     <div class="footer-copyright text-center py-3">
       <p class="is_main-footer-copy mb-2">
         © 2014 - 2021 Copyright
