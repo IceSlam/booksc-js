@@ -3,58 +3,26 @@
     lg="4"
     md="6"
     sm="12"
-    class="is_main-services-list-card-box"
+    class="is_main-services-list-card-box-new"
   >
-    <div class="card">
-      <div
-        v-if="servicesCategoryData.category_image"
-        class="view d-block is_main-services-list-card-img-box"
+    <b-card
+      v-if="servicesCategoryData.category_image"
+      :style="'background: url(https://api.booksc.ru' + servicesCategoryData.category_image.url + ');'"
+      :alt="servicesCategoryData.category_name"
+    >
+      <div class="mask rgba-stylish-strong"></div>
+      <a
+        @click.prevent="openCategory()"
+        class="brand"
       >
-        <img
-          class="card-img-top"
-          :src="'https://api.booksc.ru' + servicesCategoryData.category_image.url"
-          :alt="servicesCategoryData.category_name"
-        >
-        <div class="mask rgba-stylish-strong" />
-        <div
-          class="mask"
-          style="z-index: 101;"
+        <i
+          :class="servicesCategoryData.category_icon + ' fa-7x'"
         />
-        <p
-          v-if="servicesCategoryData.services"
-          class="services-exists"
-          style="z-index: 100;"
-        >
-          <a
-            v-for="service in servicesCategoryData.services"
-            :key="service.id"
-          >
-            {{ service.page_title }}
-          </a>
-        </p>
-        <p
-          v-else
-        >
-          Услуг пока нет
-        </p>
-      </div>
-      <div class="card-body">
-        <h4 class="card-title">
-          <a
-            class="nav-link"
-            @click.prevent="openCategory()"
-          >
-            <i
-              :class="servicesCategoryData.category_icon"
-            />
-            {{ servicesCategoryData.category_name }}
-            <i
-              class="fas fa-arrow-right text-right is_arrow"
-            />
-          </a>
-        </h4>
-      </div>
-    </div>
+        <span class="mt-3">
+          {{ servicesCategoryData.category_name }}
+        </span>
+      </a>
+    </b-card>
   </b-col>
 </template>
 

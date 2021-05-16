@@ -7,6 +7,7 @@
       <b-container>
         <b-row>
           <b-col
+            v-if="service.min_price"
             v-for="service in services"
             :key="service._id"
             md="12"
@@ -15,7 +16,9 @@
               <h3 class="service-title mb-0">
                 {{ service.page_title }}
               </h3>
-              <p class="service-price font-weight-bold text-uppercase">
+              <p
+                class="service-price font-weight-bold text-uppercase"
+              >
                 <span style="text-transform: none;">
                   от
                 </span>
@@ -23,6 +26,11 @@
                 <i class="fas fa-ruble-sign" />
               </p>
             </div>
+          </b-col>
+          <b-col
+            v-else
+          >
+            Услуги есть, но мы пока что их не добавили((( Ожидайте
           </b-col>
         </b-row>
       </b-container>
