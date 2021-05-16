@@ -42,6 +42,10 @@
         {{ reviewsCardData.review_info.slice(0,100) }}
       </div>
       <div class="branch-office">
+        <i
+          class="fab fa-yandex"
+          style="margin-right: .5rem;font-size: .75rem;"
+        />
         {{ reviewsCardData.branch_office }}
       </div>
     </b-card>
@@ -70,6 +74,18 @@ export default {
 .card {
   margin-top: 3rem;
   margin-bottom: 1rem;
+  background: #fff;
+  border: none;
+  -webkit-box-shadow: 0px 0px 50px -10px rgba(0,0,0,0.24);
+  -moz-box-shadow:  0px 0px 50px -10px rgba(0,0,0,0.24);
+  box-shadow:  0px 0px 50px -10px rgba(0,0,0,0.24);
+  transition: all .25s;
+}
+.card:hover {
+  -webkit-box-shadow: 0px 0px 50px 10px rgba(0,0,0,0.24);
+  -moz-box-shadow: 0px 0px 50px 10px rgba(0,0,0,0.24);
+  box-shadow: 0px 0px 50px 10px rgba(0,0,0,0.24);
+  transition: all .25s;
 }
 .is-review__author-img {
   width: 128px;
@@ -105,17 +121,19 @@ export default {
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
   border-radius: 100%;
-  background: #fff;
+  background: none;
 }
 .branch-office {
   position: absolute;
-  bottom: .5rem;
+  bottom: 0;
   left: 0;
   right: 0;
   text-align: center;
-  color: #a8312d;
+  background: #a8312d;
+  color: #ffffff;
   text-transform: uppercase;
-  font-weight: 200;
-  font-size: .75rem;
+  font-weight: 400;
+  font-size: 1rem;
+  padding: .5rem;
 }
 </style>
