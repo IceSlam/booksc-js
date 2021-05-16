@@ -545,7 +545,6 @@ h2.is_main-whywe-h2::after {
 }
 
 .is_main-services-list-card-box {
-  margin-bottom: 1em !important;
 }
 
 .is_main-services-list-card-img-box {
@@ -556,12 +555,11 @@ h2.is_main-whywe-h2::after {
 
 .is_main-services-list-card-box > .card {
   box-shadow: none !important;
+  border: none;
 }
 
 .is_main-services-list-card-box > .card > .card-body {
   background-color: #F5F5F5;
-  border-left: 1px solid #E2E6E7;
-  border-right: 1px solid #E2E6E7;
 }
 
 .is_main-services-list-card-img-box > p {

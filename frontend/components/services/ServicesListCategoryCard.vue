@@ -1,5 +1,10 @@
 <template>
-  <div class="col-lg-4 col-md-6 col-sm-12 is_main-services-list-card-box wow slideInLeft" data-wow-duration="1.5s">
+  <b-col
+    lg="4"
+    md="6"
+    sm="12"
+    class="is_main-services-list-card-box"
+  >
     <div class="card">
       <div
         v-if="servicesCategoryData.category_image"
@@ -50,7 +55,7 @@
         </h4>
       </div>
     </div>
-  </div>
+  </b-col>
 </template>
 
 <script>
