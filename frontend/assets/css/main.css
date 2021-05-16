@@ -683,6 +683,10 @@ h2.is_main-whywe-h2::after {
     width: 100%;
   }
 
+  .is_contacts-page-reg-title {
+    margin-bottom: -1rem;
+  }
+
   .is_main-reviews .row .col-lg-4 {
     margin-bottom: 3rem;
   }
@@ -701,6 +705,23 @@ h2.is_main-whywe-h2::after {
 
   .is_main-navbar-menu.social .nav-item {
     text-align: center;
+  }
+
+  .service-card {
+    display: block !important;
+    padding: 1rem;
+  }
+
+  .service-price {
+    text-align: right;
+    margin-bottom: .5rem;
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .is_main-contacts-page-title {
+    font-size: 2.5rem;
   }
 }
 
