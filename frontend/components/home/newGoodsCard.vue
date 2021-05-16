@@ -1,7 +1,7 @@
 <template>
   <b-col
-    lg="3"
-    md="4"
+    lg="4"
+    md="6"
     sm="6"
   >
     <b-card

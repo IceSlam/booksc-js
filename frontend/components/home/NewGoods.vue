@@ -18,7 +18,7 @@
           v-for="goods in newGoodsData.new_goods"
           :key="goods.id"
           lg="3"
-          md="4"
+          md="6"
           sm="6"
         >
           <b-card

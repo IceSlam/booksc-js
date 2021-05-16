@@ -9,11 +9,12 @@
           v-for="item in TopServicesData"
           :key="item.id"
           class="mb-4"
-          md="4"
-          sm="6"
+          md="6"
+          lg="4"
+          sm="12"
         >
           <b-card
-            style="background-image: url(/img/smartphone.webp);"
+            :style="'background: url(' + item.category_img + '), rgba(0,0,0,.25);'"
           >
             <div class="mask d-flex align-items-center rgba-stylish-light py-3 px-2" />
             <div class="py-3 px-2 position-relative">
@@ -70,7 +71,8 @@ export default {
           service_name: 'Замена экрана на iPhone',
           service_desription: 'Замена экрана (дисплейного модуля) на смартфонах Apple iPhone различных поколений на экрана качества Оригинал, а также на дисплеи с идеальным соотношением цена-качество',
           category_link: '/services/apple',
-          min_price: 699
+          min_price: 699,
+          category_img: 'https://api.booksc.ru/uploads/apple_94409e12c8.webp'
         },
         {
           id: 2,
@@ -79,7 +81,8 @@ export default {
           service_name: 'Удаление Google FRP',
           service_desription: 'Удаление блокировки телефона Google-аккаунтом (FRP) в следствие неправильного сброса устройства к заводским настройкам, либо ошибкам в работе ОС Android / неполадкам в работе телефона',
           category_link: '/services/smartphone',
-          min_price: 399
+          min_price: 399,
+          category_img: 'https://api.booksc.ru/uploads/smartphone_c2a916f595.webp'
         },
         {
           id: 3,
@@ -88,7 +91,8 @@ export default {
           service_name: 'Замена разъема на планшете',
           service_desription: 'Замена системных разъемов microUSB, аудио- и видеоразъемов на планшетных ПК марок Acer, DEXP, DNS, Irbis, Samsung, Digma, Xiaomi и других производителей в кратчайшие сроки с гарантией на выполненные работы',
           category_link: '/services/tablet',
-          min_price: 299
+          min_price: 299,
+          category_img: 'https://api.booksc.ru/uploads/tablet_78253557e9.webp'
         },
         {
           id: 4,
@@ -97,7 +101,8 @@ export default {
           service_name: 'Ремонт корпуса ноутбука',
           service_desription: 'Ремонт корпуса или его замена на новый на ноутбуках, марок Samsung, Dell, Lenovo, Acer, Asus, MSI и многих других с гарантией на выполненные работы от 1 месяца!',
           category_link: '/services/laptop',
-          min_price: 999
+          min_price: 999,
+          category_img: 'https://api.booksc.ru/uploads/laptop_b4c6622f46.webp'
         },
         {
           id: 5,
@@ -106,7 +111,8 @@ export default {
           service_name: 'Замена комплектующих',
           service_desription: 'Замена комплектующих настольного персонального компьютера на новые вместо неисправных, так и на более мощные(апгрейд) комплектующие с гарантией от СЦ, так и от вендоров',
           category_link: '/services/desktop',
-          min_price: 299
+          min_price: 299,
+          category_img: 'https://api.booksc.ru/uploads/desktop_b7ab5669b0.webp'
         },
         {
           id: 6,
@@ -115,7 +121,8 @@ export default {
           service_name: 'Ремонт нагревателя IQOS',
           service_desription: 'Профессиональная замена нагревательного элемента (лезвия) на специальном оборудовании. В стоимость входит стоимость работы + запчасть + чистка',
           category_link: '/services/iqos',
-          min_price: 799
+          min_price: 799,
+          category_img: 'https://api.booksc.ru/uploads/iqos_5e4e4df1c8.webp'
         }
       ]
     }

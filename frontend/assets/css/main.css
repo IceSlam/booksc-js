@@ -665,10 +665,30 @@ h2.is_main-whywe-h2::after {
     margin-right: auto;
 }
 
+@media screen and (max-width: 991px) {
+  .is_main-reviews .row .col-lg-4 {
+    margin: 0 auto 3rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .is_main-reviews .row .col-lg-4 {
+    margin-bottom: 3rem;
+  }
+}
+
 @media screen and (max-width: 575px) {
   #navbar {
     position: fixed;
     width: 100%;
+  }
+
+  .is_main-reviews .row .col-lg-4 {
+    margin-bottom: 3rem;
+  }
+
+  .is_main-page-heading {
+    padding-top: 5em;
   }
 
   .navbar-brand {
