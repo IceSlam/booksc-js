@@ -497,9 +497,9 @@ h2.is_main-whywe-h2::after {
   background-color: #F5F5F5;
   padding-top: 2em;
   padding-bottom: 1em;
-  box-shadow: -2px -26px 10px -21px rgba(0,0,0,0.24) inset;
-  -webkit-box-shadow: -2px -26px 10px -21px rgba(0,0,0,0.24) inset;
-  -moz-box-shadow: -2px -26px 10px -21px rgba(0,0,0,0.24) inset;
+  box-shadow: 0px -5px 10px -10px rgba(0,0,0,0.24) inset;
+  -webkit-box-shadow: 0px -5px 10px -10px rgba(0,0,0,0.24) inset;
+  -moz-box-shadow: 0px -5px 10px -10px rgba(0,0,0,0.24) inset;
 }
 
 .is_main-page-heading-title {

@@ -16,6 +16,9 @@
                 {{ service.page_title }}
               </h3>
               <p class="service-price font-weight-bold text-uppercase">
+                <span style="text-transform: none;">
+                  от
+                </span>
                 {{ service.min_price }}
                 <i class="fas fa-ruble-sign" />
               </p>
@@ -84,7 +87,6 @@ export default {
 
 <style scoped>
 .service-card {
-  border: 1px solid #dedede;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
