@@ -20,6 +20,9 @@
           </div>
         </b-col>
         <b-col
+          md="4"
+        />
+        <b-col
           class="d-flex align-items-center justify-content-center"
           md="4"
         >
@@ -28,12 +31,6 @@
           <script type="text/javascript">
             VK.Widgets.Group('vk_groups', {mode: 3, color1: 'A8312D', color2: 'FFF', color3: 'FFF'}, 77717062);
           </script>
-        </b-col>
-        <b-col
-          class="d-flex align-items-center justify-content-center mt-3"
-          md="4"
-        >
-          <iframe src="https://averin.pro/widget.php?l=bookservice32&style=2&width=250&gallery=0&s=80&icc=3&icr=3&t=1&tt=Мы в Инстаграм&h=1&ttcolor=FFFFFF&th=c3c3c3&bw=ffffff&bscolor=FFFFFF&bs=a8312d&ts=Подписаться&ch=utf8" allowtransparency="true" frameborder="0" scrolling="no" style="background:rgba(255,255,255,.01);border:none;overflow:hidden;width:350px;height:300px;" />
         </b-col>
       </b-row>
     </b-container>

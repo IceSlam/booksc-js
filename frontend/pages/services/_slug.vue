@@ -52,7 +52,7 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: 'Ремонт телефонов, планшетов, ноутбуков и компьютеров, техники Apple и устройств IQOS'
+          content: 'Ремонт техники из категории ' + this.pageTitle
         }
       ],
       link: [{ rel: 'icon', type: 'image/x-icon', href: '/img/logotype.png' }]
