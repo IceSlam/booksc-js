@@ -4,7 +4,7 @@
       <Breadcrumbs
         :breadcrumbs-page-title="pageMetaTitle"
       />
-      <section id="services-list" class="is_main-services-list">
+      <section id="services-list" class="is_main-services-list main">
         <b-container>
           <ServicesList
             :services-data="CATEGORIES"
@@ -27,7 +27,7 @@ export default {
     ServicesList
   },
   layout: 'services',
-  transition: {
+  pageTransition: {
     name: 'page',
     mode: 'out-in'
   },

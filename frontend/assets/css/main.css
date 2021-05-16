@@ -790,6 +790,9 @@ h2.is_main-whywe-h2::after {
     margin-top: 1rem;
   }
   .is_main-services-list {
+    padding: 1.5rem;
+  }
+  .is_main-services-list.main {
     padding: 0;
   }
 }
@@ -800,34 +803,25 @@ h2.is_main-whywe-h2::after {
   }
 }
 
-.page-enter-active,
-.page-leave-active {
-  transition: all 0.5s;
-}
-.page-enter,
-.page-leave-to {
-  opacity: 0;
-}
-
 .layout-enter-active {
-  transition: all .2s;
+  transition: all .3s;
   transform: translateX(0px);
   position: relative;
 }
 .layout-leave-active {
-  transition: all .2s;
+  transition: all .3s;
   transform: translateX(50px);
   position: relative;
 }
 .layout-enter {
-  transition: all .2s;
+  transition: all .3s;
   transform: translateX(-50px);
   position: relative;
   opacity: 0;
 }
 
 .layout-leave-to {
-  transition: all .2s;
+  transition: all .3s;
   transform: translateX(50px);
   position: relative;
   opacity: 0;
