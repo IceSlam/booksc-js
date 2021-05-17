@@ -32,9 +32,6 @@
       >
         <i class="fas fa-thumbs-up" aria-hidden="true" />
       </div>
-      <a href="#!">
-        <div class="mask rgba-white-slight" />
-      </a>
       <div class="card-body" style="">
         <h4 class="card-title is_main-goods-card-title">
           <a
@@ -45,7 +42,7 @@
           </a>
           <a
             class="is_main-goods-card-title-link d-block mt-2"
-            :href="newGoodsItemData.goods_link"
+            :href="test"
             target="_blank"
           >
             {{ newGoodsItemData.goods_title }}
@@ -105,5 +102,9 @@ export default {
 }
 .is_main-goods-card .card-body .card-body {
   padding: 1.25rem !important;
+}
+
+.is_main-goods-card .card-body .mask {
+  display: none;
 }
 </style>

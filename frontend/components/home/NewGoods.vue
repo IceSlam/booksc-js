@@ -49,9 +49,6 @@
             >
               <i class="fas fa-thumbs-up" aria-hidden="true" />
             </div>
-            <a href="#!">
-              <div class="mask rgba-white-slight" />
-            </a>
             <div class="card-body" style="padding: 1rem;">
               <h4 class="card-title is_main-goods-card-title">
                 <a
