@@ -78,7 +78,7 @@ export default {
     CATEGORIES () {
       const category = this.CATEGORIES.find(e => e.category_slug === this.$route.params.slug)
       this.services = category.services
-      this.pageMetaTitle = category.category_name
+      this.pageMetaTitle = category.category_longtitle
       this.pageTitle = this.pageMetaTitle + ' - '
     }
   },
