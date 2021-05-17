@@ -24,14 +24,6 @@ export default {
     '~/assets/css/main.css'
   ],
 
-  pageTransition: {
-    name: 'all-pages',
-    mode: 'out-in',
-    beforeEnter (el) {
-      console.log('Before enter...');
-    }
-  },
-
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     { src: '~/plugins/uikit.js', ssr: false }

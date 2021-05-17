@@ -27,10 +27,6 @@ export default {
     ServicesList
   },
   layout: 'services',
-  pageTransition: {
-    name: 'page',
-    mode: 'out-in'
-  },
   data () {
     return {
       pageMetaTitle: 'Услуги и цены'
@@ -68,12 +64,12 @@ export default {
 </script>
 
 <style>
-.page-enter-active,
-.page-leave-active {
+.my-page-enter-active,
+.my-page-leave-active {
   transition: opacity 0.5s;
 }
-.page-enter,
-.page-leave-to {
+.my-page-enter,
+.my-page-leave-to {
   opacity: 0;
 }
 </style>

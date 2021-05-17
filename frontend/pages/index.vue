@@ -44,10 +44,6 @@ export default {
     NewGoods: () => import('@/components/home/NewGoods'),
     ReviewsHome: () => import('@/components/home/ReviewsHome')
   },
-  transition: {
-    name: 'page',
-    mode: 'out-in'
-  },
   data () {
     return {
       PageTitle: '',
