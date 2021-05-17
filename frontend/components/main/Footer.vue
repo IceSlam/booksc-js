@@ -113,6 +113,7 @@
         >
           Strapi.js
         </a>
+        <br>
         Powered by
         <a
           href="https://netangels.ru/?p_ref=u92953"
@@ -120,6 +121,7 @@
         >
           NetAngels - Professional hosting
         </a>
+        <br>
         Сайт может некорректно отображаться в браузере Internet Explorer. Используйте современные браузеры: Chrome, Firefox, Opera, Safari и др.
       </p>
     </div>
