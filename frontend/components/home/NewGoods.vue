@@ -118,4 +118,25 @@ export default {
 .card-body {
   padding: 0;
 }
+.card {
+  -webkit-box-shadow: 0 0 35px 0 rgba(154,161,171,.15);
+  -moz-box-shadow: 0 0 35px 0 rgba(154,161,171,.15);
+  box-shadow: 0 0 35px 0 rgba(154,161,171,.15);
+  border: none;
+  transition: all .3s;
+}
+.card:hover {
+  transition: all .3s;
+  -webkit-box-shadow: 0px 0px 30px 0px rgba(50, 50, 50, 0.25);
+  -moz-box-shadow:    0px 0px 30px 0px rgba(50, 50, 50, 0.25);
+  box-shadow:         0px 0px 30px 0px rgba(50, 50, 50, 0.25);
+}
+.badge {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.bs-btn {
+  transition: all .5s;
+}
 </style>

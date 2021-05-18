@@ -390,6 +390,7 @@ h2.is_main-whywe-h2::after {
   -webkit-box-shadow: 0px 0px 30px 0px rgba(168, 49, 45, 0.5);
   -moz-box-shadow: 0px 0px 30px 0px rgba(168, 49, 45, 0.5);
   box-shadow: 0px 0px 30px 0px rgba(168, 49, 45, 0.5);
+  left: -10px;
 }
 
 .is_main-goods-card-badge-new {
@@ -404,8 +405,14 @@ h2.is_main-whywe-h2::after {
   top: 62px;
 }
 
+.bagde {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
 .is_main-goods-card-cat-name {
-  border-radius: 0px;
+  border-radius: 4px;
   border: 2px solid white;
   transition: ease 1.25s !important;
   text-decoration: none;
