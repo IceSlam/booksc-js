@@ -52,11 +52,11 @@ export default {
       '@naumstory/nuxtjs-yandex-metrika',
       {
         id: '36912760',
-        webvisor: true
-        // clickmap:true,
-        // useCDN:false,
-        // trackLinks:true,
-        // accurateTrackBounce:true,
+        webvisor: true,
+        clickmap: true,
+        useCDN: false,
+        trackLinks: true,
+        accurateTrackBounce: true
       }
     ]
   ],
