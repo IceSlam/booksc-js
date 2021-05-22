@@ -13,8 +13,8 @@ export default {
   },
 
   server: {
-    host: '127.0.6.68',
-    port: 57946
+    host: process.env.APP_IP || '127.0.0.1',
+    port: process.env.APP_PORT || 3000
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -28,6 +28,8 @@ export default {
   plugins: [
     { src: '~/plugins/uikit.js', ssr: false }
   ],
+
+  pageTransition: 'ispage',
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,

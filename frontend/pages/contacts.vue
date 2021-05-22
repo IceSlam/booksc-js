@@ -71,7 +71,7 @@ export default {
     Offices,
     Breadcrumbs
   },
-  layout: 'contacts',
+  layout: 'pages',
   data () {
     return {
       pageMetaTitle: 'Контактная информация'

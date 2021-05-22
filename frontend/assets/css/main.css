@@ -833,3 +833,29 @@ h2.is_main-whywe-h2::after {
   position: relative;
   opacity: 0;
 }
+
+// page transitions
+
+   .ispage-enter-active {
+     transition: all .4s;
+     transform: translateX(0px);
+     position: relative;
+   }
+.ispage-leave-active {
+  transition: all .4s;
+  transform: translateX(30px);
+  position: relative;
+}
+.ispage-enter {
+  transition: all .4s;
+  transform: translateX(-50px);
+  position: relative;
+  opacity: 0;
+}
+
+.ispage-leave-to {
+  transition: all .4s;
+  transform: translateX(30px);
+  position: relative;
+  opacity: 0;
+}
