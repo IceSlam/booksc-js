@@ -810,52 +810,16 @@ h2.is_main-whywe-h2::after {
   }
 }
 
-.layout-enter-active {
-  transition: all .3s;
-  transform: translateX(0px);
-  position: relative;
-}
+.ispage-enter-active,
+.ispage-leave-active,
+.layout-enter-active,
 .layout-leave-active {
-  transition: all .3s;
-  transform: translateX(50px);
-  position: relative;
+  transition: opacity 0.25s ease-in-out, transform 0.25s ease-in-out;
 }
-.layout-enter {
-  transition: all .3s;
-  transform: translateX(-50px);
-  position: relative;
-  opacity: 0;
-}
-
+.ispage-enter,
+.ispage-leave-to,
+.layout-enter,
 .layout-leave-to {
-  transition: all .3s;
-  transform: translateX(50px);
-  position: relative;
   opacity: 0;
-}
-
-// page transitions
-
-   .ispage-enter-active {
-     transition: all .4s;
-     transform: translateX(0px);
-     position: relative;
-   }
-.ispage-leave-active {
-  transition: all .4s;
-  transform: translateX(30px);
-  position: relative;
-}
-.ispage-enter {
-  transition: all .4s;
-  transform: translateX(-50px);
-  position: relative;
-  opacity: 0;
-}
-
-.ispage-leave-to {
-  transition: all .4s;
-  transform: translateX(30px);
-  position: relative;
-  opacity: 0;
+  transform: translate3d(15px, 0px, 0px);
 }
