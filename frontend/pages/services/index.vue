@@ -26,7 +26,7 @@ export default {
     Breadcrumbs,
     ServicesList
   },
-  layout: 'pages',
+  layout: 'services',
   data () {
     return {
       pageMetaTitle: 'Услуги и цены'

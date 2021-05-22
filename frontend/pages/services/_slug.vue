@@ -46,7 +46,7 @@ export default {
   components: {
     BreadcrumbsCategory: () => import('@/components/main/BreadcrumbsCategory')
   },
-  layout: 'pages',
+  layout: 'category',
   data () {
     return {
       pageMetaTitle: '',
