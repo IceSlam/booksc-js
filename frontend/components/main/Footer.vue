@@ -125,6 +125,28 @@
         Сайт может некорректно отображаться в браузере Internet Explorer. Используйте современные браузеры: Chrome, Firefox, Opera, Safari и др.
       </p>
     </div>
+    <script type='text/javascript'>
+      (function () {
+        window['yandexChatWidgetCallback'] = function() {
+          try {
+            window.yandexChatWidget = new Ya.ChatWidget({
+              guid: '33a18ea9-9d13-4425-a4e5-df23aafa08fd',
+              buttonText: '',
+              title: 'Чат',
+              theme: 'light',
+              collapsedDesktop: 'never',
+              collapsedTouch: 'never'
+            });
+          } catch(e) { }
+        };
+        var n = document.getElementsByTagName('script')[0],
+          s = document.createElement('script');
+        s.async = true;
+        s.charset = 'UTF-8';
+        s.src = 'https://yastatic.net/s3/chat/widget.js';
+        n.parentNode.insertBefore(s, n);
+      })();
+    </script>
   </footer>
 </template>
 

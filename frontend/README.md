@@ -1,20 +1,9 @@
-# booksc-frontend
+# Book-Service
+## Website Nuxt.js frontend
 
-## Build Setup
+## Info
+* Author: [IceSlam](https://pkhlopkov.ru)
+* Tech: Nuxt.js v.3.15.x
 
-```bash
-# install dependencies
-$ npm install
-
-# serve with hot reload at localhost:3000
-$ npm run dev
-
-# build for production and launch server
-$ npm run build
-$ npm run start
-
-# generate static project
-$ npm run generate
-```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+## Project's frontend link
+* [Book-Service](https://booksc.ru)
