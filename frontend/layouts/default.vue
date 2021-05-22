@@ -56,7 +56,7 @@ export default {
   methods: {
     ...mapActions([
       'GET_THEME_SETTINGS_FROM_API'
-    ])
+    ]),
   }
 }
 </script>

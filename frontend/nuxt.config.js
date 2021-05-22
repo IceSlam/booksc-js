@@ -5,7 +5,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' }
+      { hid: 'description', name: 'description', content: 'Сервисный центр по ремонту цифровой техники, техники Apple и IQOS, телефонов, смартфонов, планшетов, ноутбуков и персональных компьютеров, мониторов и LED-телевизоров и многое другое, а также продажа аксессуаров и запчастей для цифровой техники' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: './assets/img/logotype-min.webp' }
@@ -13,8 +13,8 @@ export default {
   },
 
   server: {
-    host: '127.0.6.68',
-    port: 57946
+    host: process.env.APP_IP,
+    port: process.env.APP_PORT
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -26,16 +26,18 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    { src: '~/plugins/uikit.js', ssr: false }
+    { src: '~/plugins/uikit.js', ssr: false },
+    { src: '~/plugins/custom.js', ssr: false }
   ],
 
+  pageTransition: 'ispage',
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/eslint
-   ],
+  ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
