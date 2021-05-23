@@ -13,8 +13,8 @@ export default {
   },
 
   server: {
-    host: process.env.APP_IP || '127.0.0.1',
-    port: process.env.APP_PORT || 3000
+    host: process.env.APP_IP,
+    port: process.env.APP_PORT
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
