@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Allow: /services
+Allow: /servces/
+Allow: /reviews
+Allow: /contacts
+Host: booksc.ru
+Disallow:
