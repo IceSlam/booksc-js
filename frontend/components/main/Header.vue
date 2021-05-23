@@ -17,7 +17,7 @@
             alt=""
           >
           <h1 class="display-4 font-weight-bold text-uppercase text-white">
-            {{ headerData.settings_title }}1
+            {{ headerData.settings_title }}
           </h1>
           <h2 class="h3-responsive text-uppercase is_main-header-h2 text-white">
             {{ headerData.settings_subtitle }}
