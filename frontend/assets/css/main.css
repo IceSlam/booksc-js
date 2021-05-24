@@ -786,6 +786,14 @@ h2.is_main-whywe-h2::after {
     width: 100%;
   }
 
+  .header-arrow {
+    margin-top: 1rem;
+  }
+
+  .header-title {
+    font-size: 3rem;
+  }
+
   .is_contacts-page-reg-title {
     margin-bottom: -1rem;
   }

@@ -16,7 +16,7 @@
             class="img-fluid is_main-header-img"
             alt=""
           >
-          <h1 class="display-4 font-weight-bold text-uppercase text-white">
+          <h1 class="display-4 font-weight-bold text-uppercase text-white header-title">
             {{ headerData.settings_title }}
           </h1>
           <h2 class="h3-responsive text-uppercase is_main-header-h2 text-white">
