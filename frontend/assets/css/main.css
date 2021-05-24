@@ -6,6 +6,7 @@ body {
   margin-top: 6rem;
   opacity: .5;
   transition: all .3s;
+  color: #ffffff;
 }
 .header-arrow:hover {
   opacity: 1;
