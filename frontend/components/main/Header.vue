@@ -25,6 +25,7 @@
           <h3 class="is_main-header-caption d-block mx-auto text-white">
             {{ headerData.settings_description }}
           </h3>
+          <i class="fas fa-chevron-down fa-3x header-arrow" />
         </b-col>
       </b-row>
     </b-container>
