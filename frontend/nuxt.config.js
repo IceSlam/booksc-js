@@ -27,7 +27,8 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     { src: '~/plugins/uikit.js', ssr: false },
-    { src: '~/plugins/custom.js', ssr: false }
+    { src: '~/plugins/custom.js', ssr: false },
+    { src: '~/plugins/v-scroll.js', ssr: false}
   ],
 
   pageTransition: 'ispage',

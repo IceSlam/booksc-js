@@ -16,6 +16,7 @@
         :footer-data="THEME_SETTINGS"
       />
     </LazyHydrate>
+    <v-scroll-to-top class="to-top-btn" />
   </main>
 </template>
 

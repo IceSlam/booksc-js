@@ -8,6 +8,7 @@
     <Footer
       :footer-data="THEME_SETTINGS"
     />
+    <v-scroll-to-top class="to-top-btn" />
   </div>
 </template>
 
