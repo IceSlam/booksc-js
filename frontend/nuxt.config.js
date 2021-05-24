@@ -59,6 +59,11 @@ export default {
         trackLinks: true,
         accurateTrackBounce: true
       }
+    ],
+    ['vue-scrollto/nuxt',
+      {
+        duration: 500
+      }
     ]
   ],
 

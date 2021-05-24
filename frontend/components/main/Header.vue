@@ -25,7 +25,9 @@
           <h3 class="is_main-header-caption d-block mx-auto text-white">
             {{ headerData.settings_description }}
           </h3>
-          <i class="fas fa-chevron-down fa-3x header-arrow" />
+          <a href="" v-scroll-to="'#whywe'">
+            <i class="fas fa-chevron-down fa-3x header-arrow" />
+          </a>
         </b-col>
       </b-row>
     </b-container>
