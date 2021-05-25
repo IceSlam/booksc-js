@@ -1,42 +1,28 @@
 <template>
   <article id="content" class="is_main-content">
-    <LazyHydrate when-idle>
-      <WhyWe
-        :why-we-data="HOMEPAGE"
-      />
-    </LazyHydrate>
-    <LazyHydrate when-idle>
-      <Brands
-        :brands-data="HOMEPAGE"
-      />
-    </LazyHydrate>
-    <LazyHydrate when-idle>
-      <TopServices />
-    </LazyHydrate>
-    <LazyHydrate when-idle>
-      <ReviewsHome
-        :reviews-home-data="REVIEWS"
-      />
-    </LazyHydrate>
-    <LazyHydrate when-idle>
-      <NewGoods
-        :new-goods-data="HOMEPAGE"
-      />
-    </LazyHydrate>
-    <LazyHydrate when-idle>
-      <SocialWidgets />
-    </LazyHydrate>
+    <WhyWe
+      :why-we-data="HOMEPAGE"
+    />
+    <Brands
+      :brands-data="HOMEPAGE"
+    />
+    <TopServices />
+    <ReviewsHome
+      :reviews-home-data="REVIEWS"
+    />
+    <NewGoods
+      :new-goods-data="HOMEPAGE"
+    />
+    <SocialWidgets />
   </article>
 </template>
 
 <script>
 import { mapActions, mapGetters } from 'vuex'
-import LazyHydrate from 'vue-lazy-hydration'
 
 export default {
   name: 'IndexPage',
   components: {
-    LazyHydrate,
     WhyWe: () => import('@/components/home/WhyWe'),
     SocialWidgets: () => import('@/components/home/social'),
     Brands: () => import('@/components/home/Brands'),
@@ -44,6 +30,7 @@ export default {
     NewGoods: () => import('@/components/home/NewGoods'),
     ReviewsHome: () => import('@/components/home/ReviewsHome')
   },
+  layout: 'homepage',
   data () {
     return {
       PageTitle: '',

@@ -1,32 +1,25 @@
 <template>
   <main class="wrapper">
-    <LazyHydrate when-idle>
-      <Header
-        :header-data="THEME_SETTINGS"
-      />
-    </LazyHydrate>
-    <LazyHydrate when-idle>
-      <Navbar
-        :navbar-data="THEME_SETTINGS"
-      />
-    </LazyHydrate>
+    <Header
+      :header-data="THEME_SETTINGS"
+    />
+    <Navbar
+      :navbar-data="THEME_SETTINGS"
+    />
     <nuxt />
-    <LazyHydrate when-idle>
-      <Footer
-        :footer-data="THEME_SETTINGS"
-      />
-    </LazyHydrate>
+    <Footer
+      :footer-data="THEME_SETTINGS"
+    />
     <v-scroll-to-top class="to-top-btn" />
   </main>
 </template>
 
 <script>
 import { mapActions, mapGetters } from 'vuex'
-import LazyHydrate from 'vue-lazy-hydration'
 
 export default {
+  name: 'HomePageLayout',
   components: {
-    LazyHydrate,
     Header: () => import('@/components/main/Header.vue'),
     Navbar: () => import('@/components/main/Navbar'),
     Footer: () => import('@/components/main/Footer')

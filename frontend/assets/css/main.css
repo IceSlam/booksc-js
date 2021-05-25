@@ -2,6 +2,21 @@ body {
   overflow-x: hidden;
 }
 
+.error-layout {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+}
+
+.error-layout .display-1 {
+  font-size: 10rem;
+  color: #a8312a;
+}
+
+.error-layout .display-4 {
+  font-size: 2rem;
+}
+
 .header-arrow {
   margin-top: 6rem;
   opacity: .5;
@@ -781,6 +796,13 @@ h2.is_main-whywe-h2::after {
 }
 
 @media screen and (max-width: 575px) {
+  .error-layout {
+    height: 95vh;
+    padding: 3rem 0;
+  }
+  .error-layout .display-2 {
+    font-size: 3rem;
+  }
   #navbar {
     position: fixed;
     width: 100%;
