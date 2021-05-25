@@ -5,9 +5,10 @@
     />
     <section id="services-list" class="is_main-services-list">
       <b-container>
-        <b-row>
+        <b-row
+          v-if="services.length"
+        >
           <b-col
-            v-if="service.min_price"
             v-for="service in services"
             :key="service._id"
             md="12"
@@ -27,8 +28,12 @@
               </p>
             </div>
           </b-col>
+        </b-row>
+        <b-row
+          v-else
+        >
           <b-col
-            v-else
+            md="12"
           >
             Услуги есть, но мы пока что их не добавили((( Ожидайте
           </b-col>
