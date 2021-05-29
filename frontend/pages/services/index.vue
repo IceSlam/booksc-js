@@ -17,14 +17,12 @@
 
 <script>
 import { mapActions, mapGetters } from 'vuex'
-import Breadcrumbs from '@/components/main/Breadcrumbs'
-import ServicesList from '@/components/services/ServicesList'
 
 export default {
   name: 'ServicesPage',
   components: {
-    Breadcrumbs,
-    ServicesList
+    Breadcrumbs: () => import('@/components/main/Breadcrumbs'),
+    ServicesList: () => import('@/components/services/ServicesList')
   },
   layout: 'pages',
   data () {
@@ -64,12 +62,4 @@ export default {
 </script>
 
 <style>
-.my-page-enter-active,
-.my-page-leave-active {
-  transition: opacity 0.5s;
-}
-.my-page-enter,
-.my-page-leave-to {
-  opacity: 0;
-}
 </style>

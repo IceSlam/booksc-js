@@ -39,12 +39,10 @@
 </template>
 
 <script>
-import ReviewsHomeCard from '@/components/home/ReviewsHomeCard'
-
 export default {
   name: 'ReviewsHome',
   components: {
-    ReviewsHomeCard
+    ReviewsHomeCard: () => import('@/components/home/ReviewsHomeCard')
   },
   props: {
     reviewsHomeData: {

@@ -6,7 +6,9 @@
     <Brands
       :brands-data="HOMEPAGE"
     />
-    <TopServices />
+    <TopServices
+      :top-services-data="TOP_SERVICES"
+    />
     <ReviewsHome
       :reviews-home-data="REVIEWS"
     />
@@ -55,17 +57,20 @@ export default {
   computed: {
     ...mapGetters([
       'HOMEPAGE',
-      'REVIEWS'
+      'REVIEWS',
+      'TOP_SERVICES'
     ])
   },
   mounted () {
     this.GET_HOMEPAGE_FROM_API()
     this.GET_REVIEWS_FROM_API()
+    this.GET_TOP_SERVICES_FROM_API()
   },
   methods: {
     ...mapActions([
       'GET_HOMEPAGE_FROM_API',
-      'GET_REVIEWS_FROM_API'
+      'GET_REVIEWS_FROM_API',
+      'GET_TOP_SERVICES_FROM_API'
     ])
   }
 }

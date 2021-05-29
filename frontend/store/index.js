@@ -8,9 +8,10 @@ const store = () => new Vuex.Store({
   state: {
     homePage: [],
     reviewsList: [],
-    categoiesList: [],
+    categoriesList: [],
     contactPage: {},
-    themeSettings: {}
+    themeSettings: {},
+    topServices: []
   },
   mutations: {
     SET_HOMEPAGE_TO_STORE: (state, homePage) => {
@@ -25,8 +26,11 @@ const store = () => new Vuex.Store({
     SET_REVIEWS_TO_STORE: (state, reviewsList) => {
       state.reviewsList = reviewsList
     },
-    SET_CATEGORIES_TO_STORE: (state, cateriesList) => {
-      state.categoiesList = cateriesList
+    SET_CATEGORIES_TO_STORE: (state, categoriesList) => {
+      state.categoriesList = categoriesList
+    },
+    SET_TOP_SERVICES_TO_STORE: (state, topServices) => {
+      state.topServices = topServices
     }
   },
   actions: {
@@ -69,6 +73,14 @@ const store = () => new Vuex.Store({
         .then((res) => {
           commit('SET_CATEGORIES_TO_STORE', res.data)
         })
+    },
+    GET_TOP_SERVICES_FROM_API ({ commit }) {
+      return axios('https://api.booksc.ru/services?is_popular=true', {
+        method: 'GET'
+      })
+        .then((res) => {
+          commit('SET_TOP_SERVICES_TO_STORE', res.data)
+        })
     }
   },
   getters: {
@@ -85,7 +97,10 @@ const store = () => new Vuex.Store({
       return state.reviewsList
     },
     CATEGORIES (state) {
-      return state.categoiesList
+      return state.categoriesList
+    },
+    TOP_SERVICES (state) {
+      return state.topServices
     }
   },
   modules: {
