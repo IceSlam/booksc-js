@@ -4,7 +4,7 @@
       <Breadcrumbs
         :breadcrumbs-page-title="pageMetaTitle"
       />
-      <section id="services-list" class="is_main-services-list main">
+      <section id="services-list" class="is_main-services-list main-section">
         <b-container>
           <ServicesList
             :services-data="CATEGORIES"

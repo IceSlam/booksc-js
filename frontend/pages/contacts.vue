@@ -3,7 +3,7 @@
     <Breadcrumbs
       :breadcrumbs-page-title="pageMetaTitle"
     />
-    <section id="contacts-page" class="is_main-contacts-page">
+    <section id="contacts-page" class="is_main-contacts-page main-section">
       <b-container>
         <b-row>
           <b-col

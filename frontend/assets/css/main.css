@@ -1,5 +1,6 @@
 body {
   overflow-x: hidden;
+  background: #f5f5f5;
 }
 
 .error-layout {
@@ -250,7 +251,7 @@ h2.is_main-whywe-h2::after {
 }
 
 .is_main-brand-right {
-  background-color: rgba(0,0,0,.02);
+  background-color: rgba(255,255,255,.05);
   padding-top: 4rem;
   padding-bottom: 1.5rem;
   margin: 0;
@@ -313,7 +314,7 @@ h2.is_main-whywe-h2::after {
 }
 
 .is_main-top-title {
-  margin-top: 2em;
+  padding-top: 2em;
 }
 
 .is_main-top-title::after {
@@ -871,10 +872,22 @@ h2.is_main-whywe-h2::after {
   transition: opacity 0.25s ease-in-out, transform 0.25s ease-in-out;
 }
 .ispage-enter,
-.ispage-leave-to,
+.ispage-leave-to {
+  opacity: 0;
+  transform: scale(.99);
+}
+
+
 .layout-enter,
 .layout-leave-to {
   opacity: 0;
+  -webkit-transform: translate3d(15px, 0px, 0px);
+  -moz-transform: translate3d(15px, 0px, 0px);
+  -ms-transform: translate3d(15px, 0px, 0px);
+  -o-transform: translate3d(15px, 0px, 0px);
   transform: translate3d(15px, 0px, 0px);
 }
 
+.main-section {
+  background: #ffffff;
+}

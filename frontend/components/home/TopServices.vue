@@ -1,5 +1,5 @@
 <template>
-  <section id="top" class="is_main-top">
+  <section id="top" class="is_main-top main-section">
     <b-container>
       <h2 class="is_main-top-title text-center text-uppercase mb-5">
         Наши услуги

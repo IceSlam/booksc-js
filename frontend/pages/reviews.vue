@@ -4,7 +4,7 @@
       :breadcrumbs-page-title="pageMetaTitle"
     />
     <section
-      class="content-section"
+      class="content-section main-section"
     >
       <b-container>
         <Reviews

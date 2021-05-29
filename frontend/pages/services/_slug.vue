@@ -3,7 +3,7 @@
     <BreadcrumbsCategory
       :breadcrumbs-page-title="pageMetaTitle"
     />
-    <section id="services-list" class="is_main-services-list">
+    <section id="services-list" class="is_main-services-list main-section">
       <b-container>
         <b-row
           v-if="services.length"

@@ -2,7 +2,7 @@
   <section
     v-if="newGoodsData.new_goods"
     id="goods"
-    class="is_main-goods"
+    class="is_main-goods main-section"
   >
     <b-container>
       <h2 class="h2-resposive is_main-whywe-h2 text-center text-uppercase">

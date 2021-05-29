@@ -1,5 +1,5 @@
 <template>
-  <section id="whywe" class="is_main-whywe">
+  <section id="whywe" class="is_main-whywe main-section">
     <b-container>
       <b-row
         v-if="whyWeData.homepage_why_we"
