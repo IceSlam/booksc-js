@@ -91,6 +91,8 @@ export default {
   },
 
   robots: {
+    Allow: '/',
+    Host: 'booksc.ru',
     Sitemap: '/sitemap.xml'
   },
 
