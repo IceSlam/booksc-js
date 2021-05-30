@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/iceslam/booksc-js/issues"
   },
-  "homepage": "https://github.com/iceslam/booksc-js#readme"
+  "homepage": "https://github.com/iceslam/booksc-js#readme",
+  "dependencies": {
+    "@nuxtjs/sitemap": "^2.4.0"
+  }
 }

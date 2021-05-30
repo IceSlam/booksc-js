@@ -25,6 +25,9 @@ export default {
     Footer: () => import('@/components/main/Footer')
   },
   head () {
+    const canonical = `https://mysite.com${this.$route.path
+      .toLowerCase()
+      .replace(/\/$/, '')}`
     return {
       title: 'Сеть сервисных центров Book-Service',
       meta: [
@@ -36,13 +39,24 @@ export default {
           content: 'Ремонт телефонов, планшетов, ноутбуков и компьютеров, техники Apple и устройств IQOS'
         }
       ],
-      link: [{ rel: 'icon', type: 'image/x-icon', href: './img/logotype.png' }]
+      link: [{ rel: 'icon', type: 'image/x-icon', href: './img/logotype.png' }],
+      link: [{ rel: 'canonical', href: canonical }]
     }
   },
   computed: {
     ...mapGetters([
       'THEME_SETTINGS'
-    ])
+    ]),
+    meta () {
+      return [
+        { charset: 'utf-8' },
+        {
+          name: 'viewport',
+          content: 'width=device-width, initial-scale=1, maximum-scale=1 shrink-to-fit=no'
+        },
+        { hid: 'description', name: 'description', content: 'Главная' }
+      ]
+    }
   },
   mounted () {
     this.GET_THEME_SETTINGS_FROM_API()

@@ -69,12 +69,29 @@ export default {
         duration: 500
       }
     ],
-
-    '@nuxtjs/style-resources'
+    [
+      "nuxt-imagemin",
+      {
+        optipng: { optimizationLevel: 5 },
+        gifsicle: { optimizationLevel: 2 }
+      }
+    ],
+    '@nuxtjs/style-resources',
+    '@nuxtjs/sitemap',
+    '@nuxtjs/robots'
   ],
 
   styleResources: {
     scss: ["./assets/scss/*.scss"]
+  },
+
+  sitemap: {
+    hostname: 'https://booksc.ru',
+    gzip: true,
+  },
+
+  robots: {
+    Sitemap: '/sitemap.xml'
   },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
