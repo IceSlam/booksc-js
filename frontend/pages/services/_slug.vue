@@ -36,6 +36,12 @@
             v-for="load in 8"
             :key="load"
           />
+          <p
+            class="uk-text-center w-100"
+            style="font-size: .75rem;color: #bbbbbb;"
+          >
+            Если загрузка длится более 10 секунд - материала для отображения не найдено...
+          </p>
         </b-row>
       </b-container>
     </section>
