@@ -19,9 +19,7 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    '~/assets/css/fontawesome.min.css',
-    'uikit/dist/css/uikit.min.css',
-    '~/assets/css/main.css'
+    '~assets/scss/app.scss',
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -70,8 +68,14 @@ export default {
       {
         duration: 500
       }
-    ]
+    ],
+
+    '@nuxtjs/style-resources'
   ],
+
+  styleResources: {
+    scss: ["./assets/scss/*.scss"]
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
