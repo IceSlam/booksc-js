@@ -36,6 +36,12 @@
             v-for="load in 8"
             :key="load"
           />
+          <p
+            class="uk-text-center w-100"
+            style="font-size: .75rem;color: #bbbbbb;"
+          >
+            Если загрузка длится более 10 секунд - материала для отображения не найдено...
+          </p>
         </b-row>
       </b-container>
     </section>
@@ -111,10 +117,5 @@ export default {
 }
 .service-price i {
   font-size: 1rem;
-}
-.fa-pulse {
-  -webkit-animation: fa-spin 1.5s steps(144) infinite;
-  -o-animation: fa-spin 1.5s steps(144) infinite;
-  animation: fa-spin 1.5s steps(144) infinite;
 }
 </style>
