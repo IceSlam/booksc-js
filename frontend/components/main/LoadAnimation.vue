@@ -1,5 +1,8 @@
 <template>
-  <b-col md="12">
+  <b-col
+    class="load-block"
+    md="12"
+  >
     <b-row>
       <b-col
         md="12"

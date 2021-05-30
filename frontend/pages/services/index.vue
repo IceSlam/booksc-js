@@ -1,18 +1,23 @@
 <template>
-  <transition name="page">
-    <main>
-      <Breadcrumbs
-        :breadcrumbs-page-title="pageMetaTitle"
-      />
-      <section id="services-list" class="is_main-services-list main-section">
-        <b-container>
-          <ServicesList
-            :services-data="CATEGORIES"
+  <main class="services-page">
+    <Breadcrumbs
+      :breadcrumbs-page-title="pageMetaTitle"
+    />
+    <section id="services-list" class="is_main-services-list main-section">
+      <b-container>
+        <ServicesList
+          v-if="CATEGORIES.length"
+          :services-data="CATEGORIES"
+        />
+        <b-row v-else>
+          <LoadAnimation
+            v-for="cat in 9"
+            :key="cat"
           />
-        </b-container>
-      </section>
-    </main>
-  </transition>
+        </b-row>
+      </b-container>
+    </section>
+  </main>
 </template>
 
 <script>
@@ -22,7 +27,8 @@ export default {
   name: 'ServicesPage',
   components: {
     Breadcrumbs: () => import('@/components/main/Breadcrumbs'),
-    ServicesList: () => import('@/components/services/ServicesList')
+    ServicesList: () => import('@/components/services/ServicesList'),
+    LoadAnimation: () => import('@/components/main/LoadAnimation')
   },
   layout: 'pages',
   data () {
@@ -62,4 +68,12 @@ export default {
 </script>
 
 <style>
+.services-page .load-block {
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+  padding: 0 1.5rem;
+}
+.services-page .load-block .load-animation {
+  min-height: 400px;
+}
 </style>

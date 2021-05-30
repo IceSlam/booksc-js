@@ -20,8 +20,7 @@ export default {
   components: {
     SocialWidgets: () => import('@/components/home/social'),
     Navbar: () => import('@/components/main/Navbar'),
-    Footer: () => import('@/components/main/Footer'),
-    Breadcrumbs: () => import('@/components/main/Breadcrumbs')
+    Footer: () => import('@/components/main/Footer')
   },
   computed: {
     ...mapGetters([

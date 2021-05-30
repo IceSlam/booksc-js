@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main class="category-page">
     <BreadcrumbsCategory
       :breadcrumbs-page-title="pageMetaTitle"
     />
