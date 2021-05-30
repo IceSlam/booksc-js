@@ -32,11 +32,10 @@
         <b-row
           v-else
         >
-          <b-col
-            md="12"
-          >
-            Услуги есть, но мы пока что их не добавили((( Ожидайте
-          </b-col>
+          <LoadAnimation
+            v-for="load in 8"
+            :key="load"
+          />
         </b-row>
       </b-container>
     </section>
@@ -49,7 +48,8 @@ import { mapActions, mapGetters } from 'vuex'
 export default {
   name: 'ServicesCategoryPage',
   components: {
-    BreadcrumbsCategory: () => import('@/components/main/BreadcrumbsCategory')
+    BreadcrumbsCategory: () => import('@/components/main/BreadcrumbsCategory'),
+    LoadAnimation: () => import('@/components/main/LoadAnimation')
   },
   layout: 'pages',
   data () {
@@ -103,7 +103,7 @@ export default {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
-  background: #F5F5F5;
+  background: #f5f5f5;
   margin-bottom: 1rem;
 }
 .service-price {
@@ -111,5 +111,10 @@ export default {
 }
 .service-price i {
   font-size: 1rem;
+}
+.fa-pulse {
+  -webkit-animation: fa-spin 1.5s steps(144) infinite;
+  -o-animation: fa-spin 1.5s steps(144) infinite;
+  animation: fa-spin 1.5s steps(144) infinite;
 }
 </style>

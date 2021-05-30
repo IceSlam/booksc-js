@@ -1,7 +1,9 @@
 <template>
   <section id="page-heading" class="is_main-page-heading">
     <b-container>
-      <b-row>
+      <b-row
+        v-if="breadcrumbsPageTitle.length"
+      >
         <b-col
           md="6"
         >
@@ -31,6 +33,11 @@
           </nav>
         </b-col>
       </b-row>
+      <b-row
+        v-else
+      >
+        <LoadAnimation />
+      </b-row>
     </b-container>
   </section>
 </template>
@@ -38,6 +45,9 @@
 <script>
 export default {
   name: 'BreadcrumbsCategory',
+  components: {
+    LoadAnimation: () => import('@/components/main/LoadAnimation')
+  },
   props: {
     breadcrumbsPageTitle: {
       type: String,

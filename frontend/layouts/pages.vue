@@ -13,17 +13,15 @@
 </template>
 
 <script>
-import Navbar from '@/components/main/Navbar'
-import Footer from '@/components/main/Footer'
-import SocialWidgets from '@/components/home/social'
-import {mapActions, mapGetters} from "vuex";
+import { mapActions, mapGetters } from 'vuex'
 
 export default {
   name: 'PagesLayout',
   components: {
-    SocialWidgets,
-    Navbar,
-    Footer
+    SocialWidgets: () => import('@/components/home/social'),
+    Navbar: () => import('@/components/main/Navbar'),
+    Footer: () => import('@/components/main/Footer'),
+    Breadcrumbs: () => import('@/components/main/Breadcrumbs')
   },
   computed: {
     ...mapGetters([

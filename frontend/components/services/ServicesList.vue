@@ -10,12 +10,10 @@
 </template>
 
 <script>
-import ServicesListCategoryCard from './ServicesListCategoryCard'
-
 export default {
   name: 'ServicesList',
   components: {
-    ServicesListCategoryCard
+    ServicesListCategoryCard: () => import('./ServicesListCategoryCard')
   },
   props: {
     servicesData: {
