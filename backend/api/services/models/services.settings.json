@@ -30,6 +30,9 @@
     "services_cat": {
       "via": "services",
       "model": "category"
+    },
+    "is_popular": {
+      "type": "boolean"
     }
   }
 }

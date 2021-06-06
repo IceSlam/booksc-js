@@ -16,8 +16,8 @@
       "required": true
     },
     "services": {
-      "collection": "services",
-      "via": "services_cat"
+      "via": "services_cat",
+      "collection": "services"
     },
     "category_image": {
       "model": "file",
