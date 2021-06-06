@@ -1,6 +1,6 @@
 <template>
   <b-col
-    lg="4"
+    lg="3"
     md="6"
     sm="6"
   >
@@ -32,7 +32,7 @@
       >
         <i class="fas fa-thumbs-up" aria-hidden="true" />
       </div>
-      <div class="card-body" style="">
+      <div class="card-body" style="padding: 1rem;">
         <h4 class="card-title is_main-goods-card-title">
           <a
             class="btn bs-btn is_main-goods-card-cat-name"
@@ -42,15 +42,15 @@
           </a>
           <a
             class="is_main-goods-card-title-link d-block mt-2"
-            :href="test"
+            :href="newGoodsItemData.goods_link"
             target="_blank"
           >
             {{ newGoodsItemData.goods_title }}
           </a>
         </h4>
         <span class="badge bs-bg mx-auto d-block" style="border-radius:0px;text-align:center !important;font-size:.55em;color:rgba(255,255,255,.85);max-width: 70%;font-weight:400;text-transform:uppercase;padding:5px;box-shadow:none;">
-          Артикул: {{ newGoodsItemData.goods_article }}
-        </span>
+            Артикул: {{ newGoodsItemData.goods_article }}
+          </span>
         <div class="card-text">
           <p class="mt-2 text-center">
             <small>
@@ -63,8 +63,8 @@
           <span
             style="font-size:.5em;text-decoration:line-through;font-weight:300;"
           >
-            <i class="fas fa-ruble-sign fa-1x" aria-hidden="true" />
-          </span>
+              <i class="fas fa-ruble-sign fa-1x" aria-hidden="true" />
+            </span>
         </p>
         <a
           :href="newGoodsItemData.goods_link"
@@ -97,14 +97,29 @@ export default {
 </script>
 
 <style scoped>
-.is_main-goods-card .card-body {
+
+.card-body {
   padding: 0;
 }
-.is_main-goods-card .card-body .card-body {
-  padding: 1.25rem !important;
+.card {
+  -webkit-box-shadow: 0 0 35px 0 rgba(154,161,171,.15);
+  -moz-box-shadow: 0 0 35px 0 rgba(154,161,171,.15);
+  box-shadow: 0 0 35px 0 rgba(154,161,171,.15);
+  border: none;
+  transition: all .3s;
 }
-
-.is_main-goods-card .card-body .mask {
-  display: none;
+.card:hover {
+  transition: all .3s;
+  -webkit-box-shadow: 0px 0px 30px 0px rgba(50, 50, 50, 0.25);
+  -moz-box-shadow:    0px 0px 30px 0px rgba(50, 50, 50, 0.25);
+  box-shadow:         0px 0px 30px 0px rgba(50, 50, 50, 0.25);
+}
+.badge {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.bs-btn {
+  transition: all .5s;
 }
 </style>
