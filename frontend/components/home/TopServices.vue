@@ -9,7 +9,7 @@
       </h4>
       <b-row>
         <TopServicesCard
-          v-for="card in TopServicesData"
+          v-for="card in TOP_SERVICES"
           :key="card.id"
           :top-services-card-data="card"
         />
@@ -19,18 +19,25 @@
 </template>
 
 <script>
+import { mapActions, mapGetters } from 'vuex'
+
 export default {
   name: 'TopServices',
   components: {
     TopServicesCard: () => import('@/components/home/TopServicesCard')
   },
-  props: {
-    TopServicesData: {
-      type: Array,
-      default: () => {
-        return []
-      }
-    }
+  computed: {
+    ...mapGetters([
+      'TOP_SERVICES'
+    ])
+  },
+  mounted () {
+    this.GET_TOP_SERVICES_FROM_API()
+  },
+  methods: {
+    ...mapActions([
+      'GET_TOP_SERVICES_FROM_API'
+    ])
   },
   data () {
     return {

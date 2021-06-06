@@ -14,7 +14,7 @@
       </b-row>
       <b-row>
         <ReviewsHomeCard
-          v-for="review in reviewsHomeData.slice(0,3)"
+          v-for="review in REVIEWS.slice(0,3)"
           :key="review.id"
           :reviews-home-card-data="review"
         />
@@ -39,6 +39,8 @@
 </template>
 
 <script>
+import { mapActions, mapGetters } from 'vuex'
+
 export default {
   name: 'ReviewsHome',
   components: {
@@ -53,7 +55,20 @@ export default {
     }
   },
   data: () => ({
-  })
+  }),
+  computed: {
+    ...mapGetters([
+      'REVIEWS'
+    ])
+  },
+  mounted () {
+    this.GET_REVIEWS_FROM_API()
+  },
+  methods: {
+    ...mapActions([
+      'GET_REVIEWS_FROM_API'
+    ])
+  }
 }
 </script>
 

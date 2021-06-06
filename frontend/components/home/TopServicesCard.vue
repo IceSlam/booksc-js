@@ -55,10 +55,10 @@
 export default {
   name: 'TopServicesCard',
   props: {
-    TopServicesCardData:  {
+    TopServicesCardData: {
       type: Object,
       default: () => {
-        return {}
+        return ''
       }
     }
   }
