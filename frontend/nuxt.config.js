@@ -19,14 +19,14 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    '~assets/scss/app.scss',
+    '~assets/scss/app.scss'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     { src: '~/plugins/uikit.js', ssr: false },
     { src: '~/plugins/custom.js', ssr: false },
-    { src: '~/plugins/v-scroll.js', ssr: false}
+    { src: '~/plugins/v-scroll.js', ssr: false }
   ],
   loadingIndicator: {
     name: 'circle',
@@ -70,7 +70,7 @@ export default {
       }
     ],
     [
-      "nuxt-imagemin",
+      'nuxt-imagemin',
       {
         optipng: { optimizationLevel: 5 },
         gifsicle: { optimizationLevel: 2 }
@@ -82,12 +82,12 @@ export default {
   ],
 
   styleResources: {
-    scss: ["./assets/scss/*.scss"]
+    scss: ['./assets/scss/*.scss']
   },
 
   sitemap: {
     hostname: 'https://booksc.ru',
-    gzip: true,
+    gzip: true
   },
 
   robots: {
