@@ -1,26 +1,26 @@
 {
-  "_from": "strapi-plugin-users-permissions@3.6.3",
-  "_id": "strapi-plugin-users-permissions@3.6.3",
+  "_from": "strapi-plugin-users-permissions@3.6.8",
+  "_id": "strapi-plugin-users-permissions@3.6.8",
   "_inBundle": false,
-  "_integrity": "sha512-8FZRhzZUTP2G7tzJ9rEqTOiN2blkbumebD1oKo+3NcHETRWQ4OEhCQdSupU0AJJheAqt6yrCqrw0w6j/d2sWgQ==",
+  "_integrity": "sha512-DZPPYMUzcDxadc3BHntEobVwrWwYsI1hHK+ENTU0EVD1w9Zi4h41Bae5DKIuqwRCK2G24Dsmr5G/edcVCFeRCg==",
   "_location": "/strapi-plugin-users-permissions",
   "_phantomChildren": {},
   "_requested": {
     "type": "version",
     "registry": true,
-    "raw": "strapi-plugin-users-permissions@3.6.3",
+    "raw": "strapi-plugin-users-permissions@3.6.8",
     "name": "strapi-plugin-users-permissions",
     "escapedName": "strapi-plugin-users-permissions",
-    "rawSpec": "3.6.3",
+    "rawSpec": "3.6.8",
     "saveSpec": null,
-    "fetchSpec": "3.6.3"
+    "fetchSpec": "3.6.8"
   },
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/strapi-plugin-users-permissions/-/strapi-plugin-users-permissions-3.6.3.tgz",
-  "_shasum": "7f8ade042045cc9020f25f36bb99488778186430",
-  "_spec": "strapi-plugin-users-permissions@3.6.3",
+  "_resolved": "https://registry.npmjs.org/strapi-plugin-users-permissions/-/strapi-plugin-users-permissions-3.6.8.tgz",
+  "_shasum": "7a46c73bb19881607afae3c527eca8835d532210",
+  "_spec": "strapi-plugin-users-permissions@3.6.8",
   "_where": "/home/c34754/api.booksc.ru/app",
   "author": {
     "name": "Strapi team",
@@ -32,12 +32,12 @@
   },
   "bundleDependencies": false,
   "dependencies": {
-    "@buffetjs/core": "3.3.6",
-    "@buffetjs/custom": "3.3.6",
-    "@buffetjs/hooks": "3.3.6",
-    "@buffetjs/icons": "3.3.6",
-    "@buffetjs/styles": "3.3.6",
-    "@buffetjs/utils": "3.3.6",
+    "@buffetjs/core": "3.3.8",
+    "@buffetjs/custom": "3.3.8",
+    "@buffetjs/hooks": "3.3.8",
+    "@buffetjs/icons": "3.3.8",
+    "@buffetjs/styles": "3.3.8",
+    "@buffetjs/utils": "3.3.8",
     "@purest/providers": "^1.0.2",
     "bcryptjs": "^2.4.3",
     "grant-koa": "5.4.8",
@@ -55,8 +55,8 @@
     "reactstrap": "8.4.1",
     "redux-saga": "^0.16.0",
     "request": "^2.83.0",
-    "strapi-helper-plugin": "3.6.3",
-    "strapi-utils": "3.6.3",
+    "strapi-helper-plugin": "3.6.8",
+    "strapi-utils": "3.6.8",
     "uuid": "^3.1.0"
   },
   "deprecated": false,
@@ -68,7 +68,7 @@
     "node": ">=10.16.0 <=14.x.x",
     "npm": ">=6.0.0"
   },
-  "gitHead": "0ab3503e3c68c0e794878324a866ce9e6cfe5d47",
+  "gitHead": "8972d78e8d1783ded6089d0318bfb62aff8e6962",
   "homepage": "https://github.com/strapi/strapi#readme",
   "license": "SEE LICENSE IN LICENSE",
   "maintainers": [
@@ -92,5 +92,5 @@
     "description": "users-permissions.plugin.description",
     "required": true
   },
-  "version": "3.6.3"
+  "version": "3.6.8"
 }
