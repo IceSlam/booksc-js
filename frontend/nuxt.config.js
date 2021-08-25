@@ -104,10 +104,16 @@ export default {
     },
 
     store: {
-      type: 'memory',
-      max: 100,
-      ttl: 60,
-    },
+      type: 'redis',
+      host: 'localhost',
+      ttl: 10 * 60,
+      configure: [
+        // these values are configured
+        // on redis upon initialization
+        ['maxmemory', '200mb'],
+        ['maxmemory-policy', 'allkeys-lru'],
+      ]
+    }
   },
 
   styleResources: {
