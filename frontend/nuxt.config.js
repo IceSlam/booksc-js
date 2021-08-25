@@ -78,8 +78,37 @@ export default {
     ],
     '@nuxtjs/style-resources',
     '@nuxtjs/sitemap',
-    '@nuxtjs/robots'
+    '@nuxtjs/robots',
+    'nuxt-ssr-cache'
   ],
+
+  cache: {
+    useHostPrefix: false,
+    pages: [
+      '/',
+      '/services',
+      '/contacts',
+      '/reviews',
+      '/services/apple',
+      '/services/smartphone',
+      '/services/tablet',
+      '/services/laptop',
+      '/services/desktop',
+      '/services/monitor',
+      '/services/tvs',
+      'services/iqos',
+      '/services/other'
+    ],
+
+    key(route, context) {
+    },
+
+    store: {
+      type: 'memory',
+      max: 100,
+      ttl: 60,
+    },
+  },
 
   styleResources: {
     scss: ['./assets/scss/*.scss']
