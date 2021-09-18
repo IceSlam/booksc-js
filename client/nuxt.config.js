@@ -1,24 +1,43 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'client',
+    title: 'Сеть сервисных центров Book-Service',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { hid: 'description', name: 'description', content: '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: './favicon.ico' }
     ]
+  },
+
+  server: {
+    host: process.env.APP_IP || '127.0.0.1',
+    port: process.env.APP_PORT || 3111
+  },
+
+  loadingIndicator: {
+    name: 'circle',
+    color: '#3B8070',
+    background: 'black'
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    '~/node_modules/normalize.css',
+    '~/assets/scss/_dark.scss',
+    '~/assets/scss/_main.scss',
+    '~/assets/scss/_grid.scss'
   ],
+
+  styleResources: {
+    scss: ["~/assets/scss/_vars.scss"]
+  },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    { src: '~/plugins/fa.js', ssr: true },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -26,6 +45,7 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
+    '@nuxtjs/google-fonts',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -34,15 +54,253 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    [
+      '@naumstory/nuxtjs-yandex-metrika',
+      {
+        id: '36912760',
+        webvisor: true,
+        clickmap: true,
+        useCDN: false,
+        trackLinks: true,
+        accurateTrackBounce: true
+      }
+    ],
+    ['vue-scrollto/nuxt',
+      {
+        duration: 500
+      }
+    ],
+    [
+      'nuxt-imagemin',
+      {
+        optipng: { optimizationLevel: 5 },
+        gifsicle: { optimizationLevel: 2 }
+      }
+    ],
+    '@nuxtjs/style-resources',
+    '@nuxtjs/sitemap',
+    '@nuxtjs/robots',
+    'nuxt-ssr-cache',
+    '@nuxtjs/proxy',
+    '@nuxtjs/auth-next'
   ],
 
+  recaptcha: {
+    hideBadge: true, // Hide badge element (v3 & v2 via size=invisible)
+    siteKey: process.env.RECAPTCHA_SITE_KEY,    // Site key for requests
+    version: 3,     // Version
+    size: 'invisible'        // Size: 'compact', 'normal', 'invisible' (v2)
+  },
+
+  googleFonts: {
+    display: 'swap',
+    prefetch: true,
+    preconnect: true,
+    preload: true,
+    families: {
+      'Open+Sans': {
+        wght: [200, 300, 400, 500, 600, 700, 800,900]
+      },
+      Rubik: {
+        wght: [100, 200, 300, 400, 500, 600, 700, 800, 900],
+        ital: [100, 200, 300, 400, 500, 600, 700, 800, 900]
+      }
+    }
+  },
+
+  pageTransition: 'ispage',
+
+  toast: {
+    position: 'bottom-right',
+    register: [
+      {
+        name: 'logged_out',
+        message: 'Вы вышли из аккаунта!',
+        options: {
+          type: 'info',
+          duration: 3000,
+          position: 'bottom-right',
+          iconPack: 'fontawesome',
+          icon : 'sign-out-alt',
+          className: 'is-logout',
+          action : {
+            onClick : (e, toastObject) => {
+              toastObject.goAway(0);
+            },
+            icon: 'times'
+          }
+        }
+      },
+      {
+        name: 'logged_in',
+        message: 'Вы авторизованы!',
+        options: {
+          type: 'success',
+          duration: 3000,
+          position: 'bottom-right',
+          iconPack: 'fontawesome',
+          icon : 'fingerprint',
+          className: 'is-login',
+          action : {
+            onClick : (e, toastObject) => {
+              toastObject.goAway(0);
+            },
+            icon: 'times'
+          }
+        }
+      },
+      {
+        name: 'register',
+        message: 'Вы зарегистрировались!',
+        options: {
+          type: 'success',
+          duration: 3000,
+          position: 'bottom-right',
+          iconPack: 'fontawesome',
+          icon : 'user-plus',
+          className: 'is-login',
+          action : {
+            onClick : (e, toastObject) => {
+              toastObject.goAway(0);
+            },
+            icon: 'times'
+          }
+        }
+      },
+      {
+        name: 'logged_in_error',
+        message: 'Неверный email или пароль!',
+        options: {
+          type: 'error',
+          duration: 5000,
+          position: 'bottom-right',
+          iconPack: 'fontawesome',
+          icon: 'exclamation-triangle',
+          className: 'is-error',
+          action : {
+            onClick : (e, toastObject) => {
+              toastObject.goAway(0);
+            },
+            icon: 'times'
+          }
+        }
+      },
+      {
+        name: 'email_exists',
+        message: 'Пользователь с таким email существует!',
+        options: {
+          type: 'error',
+          duration: 5000,
+          position: 'bottom-right',
+          iconPack: 'fontawesome',
+          icon: 'exclamation-triangle',
+          className: 'is-error',
+          action : {
+            onClick : (e, toastObject) => {
+              toastObject.goAway(0);
+            },
+            icon: 'times'
+          }
+        }
+      },
+      {
+        name: 'route_404',
+        message: 'Обработчик запроса не найден',
+        options: {
+          type: 'error',
+          duration: 5000,
+          position: 'bottom-right',
+          iconPack: 'fontawesome',
+          icon: 'exclamation-triangle',
+          className: 'is-error',
+          action : {
+            onClick : (e, toastObject) => {
+              toastObject.goAway(0);
+            },
+            icon: 'times'
+          }
+        }
+      },
+      {
+        name: 'route_500',
+        message: 'Обработчик запроса не отвечает',
+        options: {
+          type: 'error',
+          duration: 5000,
+          position: 'bottom-right',
+          iconPack: 'fontawesome',
+          icon: 'exclamation-triangle',
+          className: 'is-error',
+          action : {
+            onClick : (e, toastObject) => {
+              toastObject.goAway(0);
+            },
+            icon: 'times'
+          }
+        }
+      },
+      {
+        name: 'route_503',
+        message: 'Сервер-обработчик недоступен',
+        options: {
+          type: 'error',
+          duration: 5000,
+          position: 'bottom-right',
+          iconPack: 'fontawesome',
+          icon: 'exclamation-triangle',
+          className: 'is-error',
+          action : {
+            onClick : (e, toastObject) => {
+              toastObject.goAway(0);
+            },
+            icon: 'times'
+          }
+        }
+      }
+    ]
+  },
+
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  axios: {
+    proxy: true,
+    baseURL: process.env.API_URL
+  },
+
+  proxy: {
+    '/api/': {
+      target: 'https://api.booksc.ru/',
+      pathRewrite: { '^/api/': '' }
+    }
+  },
+
+  sitemap: {
+    hostname: 'https://booksc.ru',
+    gzip: true
+  },
+
+  robots: {
+    Allow: '/',
+    Host: 'booksc.ru',
+    Sitemap: '/sitemap.xml'
+  },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {
-      lang: 'en'
+      lang: 'ru',
+      name: 'Сеть сервисных центров Book-Service',
+      short_name: 'Book-Service',
+      display: 'standalone',
+      orientation: 'portrait',
+      theme_color: '#a8312d'
+    },
+    meta: {
+      mobileApp: 'true',
+      name: 'Сеть сервисных центров Book-Service',
+      short_name: 'Book-Service',
+      author: 'IceSlam',
+      theme_color: '#a8312d',
+      description: 'Сервисный центр по ремонту цифровой техники, техники Apple и IQOS, телефонов, смартфонов, планшетов, ноутбуков и персональных компьютеров, мониторов и LED-телевизоров и многое другое, а также продажа аксессуаров и запчастей для цифровой техники'
     }
   },
 

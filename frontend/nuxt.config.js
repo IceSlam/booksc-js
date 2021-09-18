@@ -28,6 +28,7 @@ export default {
     { src: '~/plugins/custom.js', ssr: false },
     { src: '~/plugins/v-scroll.js', ssr: false }
   ],
+
   loadingIndicator: {
     name: 'circle',
     color: '#3B8070',

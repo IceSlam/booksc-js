@@ -2,7 +2,7 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-lg-12">
-        Текст
+        Контакты
       </div>
     </div>
   </div>
@@ -10,8 +10,8 @@
 
 <script>
 export default {
-  name: 'HomePage',
-  layout: 'home',
+  name: 'ContactsPage',
+  layout: 'default',
   data () {
     return {}
   }

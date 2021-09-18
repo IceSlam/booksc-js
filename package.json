@@ -17,6 +17,9 @@
   },
   "homepage": "https://github.com/iceslam/booksc-js#readme",
   "dependencies": {
-    "@nuxtjs/sitemap": "^2.4.0"
+    "@naumstory/nuxtjs-yandex-metrika": "^1.0.5",
+    "@nuxtjs/proxy": "^2.1.0",
+    "@nuxtjs/sitemap": "^2.4.0",
+    "vue-scrollto": "^2.20.0"
   }
 }
