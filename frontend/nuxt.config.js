@@ -79,7 +79,8 @@ export default {
     '@nuxtjs/style-resources',
     '@nuxtjs/sitemap',
     '@nuxtjs/robots',
-    'nuxt-ssr-cache'
+    'nuxt-ssr-cache',
+    '@nuxtjs/proxy'
   ],
 
   cache: {
@@ -132,7 +133,16 @@ export default {
   },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  axios: {
+    proxy: true
+  },
+
+  proxy: {
+    '/api/': {
+      target: 'https://api.booksc.ru/',
+      pathRewrite: { '^/api/': '' }
+    }
+  },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
