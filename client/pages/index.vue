@@ -1,10 +1,6 @@
 <template>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-lg-12">
-        Текст
-      </div>
-    </div>
+  <div class="content">
+    <lazy-home-choice />
   </div>
 </template>
 
@@ -17,3 +13,7 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+.content {}
+</style>
