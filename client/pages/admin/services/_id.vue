@@ -115,11 +115,6 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-6">
-      </div>
-      <pre>
-            {{ itemData }}
-          </pre>
     </form>
   </section>
 </template>
