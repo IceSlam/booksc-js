@@ -18,6 +18,20 @@
       <li>
         <nuxt-link
           exact
+          to="/admin"
+        >
+          <fai icon="chart-line" />
+          Дашборд
+        </nuxt-link>
+      </li>
+    </ul>
+    <ul class="is-sidebar__menu">
+      <p class="is-sidebar__menu__title">
+        Коллекции
+      </p>
+      <li>
+        <nuxt-link
+          exact
           to="/admin/services"
         >
           <fai icon="stream" />
@@ -38,7 +52,7 @@
           exact
           to="/admin/reviews"
         >
-          <fai icon="th-list" />
+          <fai icon="binoculars" />
           Отзывы
         </nuxt-link>
       </li>
@@ -97,6 +111,15 @@
           Права доступа
         </nuxt-link>
       </li>
+      <li>
+        <nuxt-link
+          exact
+          to="/admin/theme"
+        >
+          <fai icon="palette" />
+          Оформление
+        </nuxt-link>
+      </li>
     </ul>
   </aside>
 </template>
@@ -121,6 +144,7 @@ export default {
       bottom: 0;
       left: 0;
       padding: 1rem;
+      overflow-y: scroll;
       &__menu {
         list-style-type: none;
         padding-left: 0;

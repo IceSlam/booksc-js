@@ -162,6 +162,9 @@ export default {
             border: 2px solid $bsColor;
             padding: 1rem;
             outline: none;
+            font-weight: 600;
+            font-size: 1.125rem;
+            font-family: 'Open Sans', sans-serif;
           }
         }
         button {
