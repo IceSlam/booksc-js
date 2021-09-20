@@ -1,84 +1,36 @@
 <template>
   <section class="is-admin is-services container-fluid">
+    <div class="col-lg-12">
+      <ul class="is-admin-breadcrumbs">
+        <li>
+          <nuxt-link
+            to="/admin"
+          >
+            <fai icon="home" />
+            Панель управления
+          </nuxt-link>
+        </li>
+        <li>
+          <fai icon="stream" />
+          Услуги
+        </li>
+      </ul>
+    </div>
     <div class="row">
       <div class="col-lg-12">
         <h2 class="is-admin__title">
           Список услуг
         </h2>
       </div>
-      <div class="col-lg-12 is-services__list">
-        <div class="row">
-          <div class="col-lg-1">
-            <h3 class="is-services__list__col-title">
-              ID
-            </h3>
-          </div>
-          <div class="col-lg-5">
-            <h3 class="is-services__list__col-title">
-              Наименование услуги
-            </h3>
-          </div>
-          <div class="col-lg-2">
-            <h3 class="is-services__list__col-title">
-              Мин. стоимость
-            </h3>
-          </div>
-          <div class="col-lg-2">
-            <h3 class="is-services__list__col-title">
-              Категория
-            </h3>
-          </div>
-          <div class="col-lg-2">
-            <h3 class="is-services__list__col-title">
-              Дата добавления
-            </h3>
-          </div>
-        </div>
-        <div
-          v-for="service in SERVICES"
-          :key="service.createdAt"
-          class="row"
-        >
-          <div class="col-lg-1">
-            <h4 class="is-services__list__col-item id">
-              {{ service.id.slice(0,10) }}
-            </h4>
-          </div>
-          <div class="col-lg-5">
-            <h4 class="is-services__list__col-item name">
-              {{ service.page_title }}
-            </h4>
-          </div>
-          <div class="col-lg-2">
-            <h4 class="is-services__list__col-item price">
-              {{ service.min_price }}<fai icon="ruble-sign" />
-            </h4>
-          </div>
-          <div class="col-lg-2">
-            <h4 class="is-services__list__col-item category">
-              {{ service.services_cat.category_name }}
-            </h4>
-          </div>
-          <div class="col-lg-2">
-            <h4 class="is-services__list__col-item date">
-              {{ service.createdAt }}
-            </h4>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-12">
-            <p class="is-services__list__count">
-              <span>Всего услуг: </span>{{ this.$store.state.servicesCount.servicesCount }}
-            </p>
-          </div>
-        </div>
-      </div>
+      <lazy-admin-services-wrapper
+        :services-list="SERVICES"
+      />
     </div>
   </section>
 </template>
 
 <script>
-import {mapActions, mapGetters} from "vuex";
+import { mapActions, mapGetters } from "vuex";
 
 export default {
   name: 'AdminServicesPage',
@@ -128,6 +80,10 @@ export default {
           margin-bottom: .5rem;
           transition: all .3s;
           cursor: pointer;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
           &:hover {
             background-color: #f0f0f0;
             transition: all .3s

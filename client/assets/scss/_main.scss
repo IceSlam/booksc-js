@@ -105,6 +105,44 @@ html {
   transform: translate3d(15px, 0px, 0px);
 }
 
-.is-brands {
+.is-admin-breadcrumbs {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  text-decoration: none;
+  color: #333;
+  li {
+    display: flex;
+    align-items: center;
+    a {
+      color: #333;
+      text-decoration: none;
+      svg {
+        margin-right: .5rem;
+      }
+    }
+    &:after {
+      content: '';
+      display: block;
+      width: 10px;
+      height: 10px;
+      border: 2px solid #333;
+      margin: 0 .5rem;
+      border-left: none;
+      border-bottom: none;
+      transform: rotate(45deg);
+      margin-right: 1rem;
+    }
+    &:last-child {
+      &:after {
+        display: none;
+      }
+    }
+    .category {
+      font-weight: 600;
+      margin-left: .25rem;
+    }
+  }
 }
 

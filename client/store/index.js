@@ -6,6 +6,7 @@ import categoriesCount from './modules/categoriesCount'
 import reviewsCount from './modules/reviewsCount'
 import users from './modules/users'
 import services from './modules/services'
+import categories from './modules/categories'
 
 Vue.use(Vuex)
 
@@ -16,7 +17,8 @@ const store = () => new Vuex.Store({
     categoriesCount,
     reviewsCount,
     users,
-    services
+    services,
+    categories
   }
 })
 
