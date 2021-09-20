@@ -1,3 +1,7 @@
+html {
+  overflow-x: hidden;
+}
+
 * {
   font-family: 'Open Sans', sans-serif;
   scrollbar-width: thin;
@@ -16,6 +20,65 @@
   }
   * {
     font-family: 'Open Sans', sans-serif;
+  }
+}
+
+
+.toasted-container {
+  &.bottom-right {
+    right: 16px !important;
+    bottom: 16px !important;
+    .toasted {
+      border-radius: 0;
+      font-weight: 600;
+      font-size: 1rem;
+      -webkit-box-shadow: 8px 8px 20px rgba(48, 25, 97, 0.15);
+      -moz-box-shadow: 8px 8px 20px rgba(48, 25, 97, 0.15);
+      box-shadow: 8px 8px 20px rgba(48, 25, 97, 0.15);
+      padding: .5rem 1rem;
+      justify-content: space-between;
+      background-color: rgba(255, 255, 255, 0.9) !important;
+      color: #222423;
+      svg {
+        margin-right: 1rem;
+        font-size: 2rem;
+        path {
+        }
+      }
+      .action {
+        &.icon {
+          svg {
+            margin-right: 0 !important;
+            margin-left: .5rem;
+            font-size: 1rem;
+            path {
+              fill: red !important;
+            }
+          }
+        }
+      }
+      &.is-login {
+        svg {
+          path {
+            fill: #4caf50;
+          }
+        }
+      }
+      &.is-error {
+        svg {
+          path {
+            fill: #f44336;
+          }
+        }
+      }
+      &.is-logout {
+        svg {
+          path {
+            fill: #ffcb05;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -40,5 +103,8 @@
   -ms-transform: translate3d(15px, 0px, 0px);
   -o-transform: translate3d(15px, 0px, 0px);
   transform: translate3d(15px, 0px, 0px);
+}
+
+.is-brands {
 }
 

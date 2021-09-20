@@ -1,6 +1,7 @@
 <template>
   <div class="content">
     <lazy-home-choice />
+    <lazy-home-brands />
   </div>
 </template>
 

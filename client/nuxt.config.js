@@ -8,13 +8,59 @@ export default {
       { hid: 'description', name: 'description', content: '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: './favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
 
   server: {
     host: process.env.APP_IP || '127.0.0.1',
     port: process.env.APP_PORT || 3111
+  },
+
+  auth: {
+    cookie: {
+      prefix: 'booksc.',
+      options: {
+        path: '/',
+        expires: 1,
+        maxAge: 86400
+      }
+    },
+    strategies: {
+      local: {
+        endpoints: {
+          login: {
+            url: '/api/auth/local',
+            method: 'post'
+          },
+          logout: false,
+          user: {
+            url: '/api/users/me/',
+            method: 'get'
+          },
+        },
+        autoLogout: true,
+        token: {
+          property: 'jwt',
+          global: true,
+          required: true,
+          type: 'Bearer',
+          name: 'Authorization',
+          maxAge: 86400
+        },
+        user: {
+          property: '',
+          autoFetch: true
+        },
+      },
+    },
+    redirect: {
+      login: '/admin/auth',
+      logout: '/',
+      user: '/admin/me',
+      callback:'/',
+      home: '/'
+    }
   },
 
   loadingIndicator: {
@@ -82,7 +128,8 @@ export default {
     '@nuxtjs/robots',
     'nuxt-ssr-cache',
     '@nuxtjs/proxy',
-    '@nuxtjs/auth-next'
+    '@nuxtjs/auth-next',
+    '@nuxtjs/toast',
   ],
 
   recaptcha: {
@@ -281,7 +328,8 @@ export default {
   robots: {
     Allow: '/',
     Host: 'booksc.ru',
-    Sitemap: '/sitemap.xml'
+    Sitemap: '/sitemap.xml',
+    Disallow: '/admin'
   },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa

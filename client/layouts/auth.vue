@@ -1,16 +1,15 @@
 <template>
-  <section class="is-admin">
-    Админ-панель
-  </section>
+  <main class="layout default container-fluid">
+    <nuxt />
+  </main>
 </template>
 
 <script>
 export default {
-  name: 'AdminPage',
-  layout: 'admin',
+  name: 'AuthLayout',
   data () {
     return {
-      title: 'Панель управления сайтом'
+      title: 'Авторизация'
     }
   },
   head () {
@@ -24,3 +23,7 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+
+</style>

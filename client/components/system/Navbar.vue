@@ -137,7 +137,7 @@ export default {
       margin: 0rem .25rem;
       a {
         font-family: 'Open Sans', sans-serif;
-        font-weight: 500;
+        font-weight: 600;
         color: #fff;
         text-decoration: none;
         padding: .5rem;

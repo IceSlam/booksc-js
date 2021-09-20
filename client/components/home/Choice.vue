@@ -63,7 +63,7 @@ export default {
 
 <style lang="scss">
 .is-choice {
-  padding: 3rem 0;
+  padding: 3rem 0 5rem;
   &__title {
     font-family: 'Rubik', 'Open Sans', sans-serif;
     font-weight: 400;
