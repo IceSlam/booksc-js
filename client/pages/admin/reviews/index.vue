@@ -1,5 +1,5 @@
 <template>
-  <section class="is-admin is-services container-fluid">
+  <section class="is-admin is-services is-reviews container-fluid">
     <div class="col-lg-12">
       <ul class="is-admin-breadcrumbs">
         <li>
@@ -11,27 +11,27 @@
           </nuxt-link>
         </li>
         <li>
-          <fai icon="stream" />
-          Услуги
+          <fai icon="binoculars" />
+          Отзывы
         </li>
       </ul>
     </div>
     <div class="row">
       <div class="col-lg-12 is-services__header">
         <h2 class="is-admin__title">
-          Список услуг
+          Список отзывов
         </h2>
         <div class="is-services__header-buttons">
           <nuxt-link
-            to="/admin/services/new"
+            to="/admin/reviews/new"
             class="btn save">
             <fai icon="plus" />
-            Новая услуга
+            Новый отзыв
           </nuxt-link>
         </div>
       </div>
-      <lazy-admin-services-wrapper
-        :services-list="SERVICES"
+      <lazy-admin-reviews-wrapper
+        :reviews-list="REVIEWS"
       />
     </div>
   </section>
@@ -41,24 +41,24 @@
 import { mapActions, mapGetters } from "vuex";
 
 export default {
-  name: 'AdminServicesPage',
+  name: 'AdminReviewsPage',
   layout: 'admin',
   data () {
     return {
-      title: 'Список услуг'
+      title: 'Список отзывов'
     }
   },
   computed: {
     ...mapGetters([
-      'SERVICES',
+      'REVIEWS',
     ])
   },
   mounted () {
-    this.GET_SERVICES()
+    this.GET_REVIEWS()
   },
   methods: {
     ...mapActions([
-      'GET_SERVICES'
+      'GET_REVIEWS'
     ])
   },
   head () {

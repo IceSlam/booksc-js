@@ -12,7 +12,7 @@
       {{ ReviewsWrapperListItem.review_rating }} <fai icon="star" />
     </span>
     <span class="name col-lg-3">
-      {{ $moment(ReviewsWrapperListItem.createdAt).formatWithJDF("dd.MM.yyyy") }}
+      {{ $moment(ReviewsWrapperListItem.review_date).formatWithJDF("dd.MM.yyyy") }}
     </span>
   </li>
 </template>
