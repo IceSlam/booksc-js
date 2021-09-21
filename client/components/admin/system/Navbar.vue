@@ -65,6 +65,7 @@ export default {
         justify-content: center;
         &__link {
           display: flex;
+          text-decoration: none;
           &-img {
             max-width: 48px;
             width: 100%;
