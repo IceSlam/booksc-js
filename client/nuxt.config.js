@@ -241,6 +241,24 @@ export default {
         }
       },
       {
+        name: 'successful_created',
+        message: 'Успешно создано!',
+        options: {
+          type: 'success',
+          duration: 3000,
+          position: 'bottom-right',
+          iconPack: 'fontawesome',
+          icon : 'check',
+          className: 'is-login',
+          action : {
+            onClick : (e, toastObject) => {
+              toastObject.goAway(0);
+            },
+            icon: 'times'
+          }
+        }
+      },
+      {
         name: 'errored_deletion',
         message: 'Ошибка удаления!',
         options: {
@@ -261,6 +279,24 @@ export default {
       {
         name: 'errored_update',
         message: 'Ошибка обновления!',
+        options: {
+          type: 'error',
+          duration: 3000,
+          position: 'bottom-right',
+          iconPack: 'fontawesome',
+          icon : 'exclamation-triangle',
+          className: 'is-error',
+          action : {
+            onClick : (e, toastObject) => {
+              toastObject.goAway(0);
+            },
+            icon: 'times'
+          }
+        }
+      },
+      {
+        name: 'errored_creation',
+        message: 'Ошибка создания!',
         options: {
           type: 'error',
           duration: 3000,

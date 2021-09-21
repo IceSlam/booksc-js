@@ -1,57 +1,26 @@
 <template>
-  <div class="col-lg-6 is-admin__half-card">
-    <div class="is-admin__half-card__content">
-      <h2 class="is-admin__half-card__content-title">
-        Список услуг (Всего: {{ SERVICES_COUNT }})
-      </h2>
-      <lazy-admin-dashboard-serviceswrapper
-        :services-wrapper-list="SERVICES"
-      />
-      <div class="is-admin__half-card__content-buttons">
-        <nuxt-link
-          to="/admin/services"
-        >
-          <fai icon="stream" />
-          Все услуги
-        </nuxt-link>
-        <nuxt-link
-          v-if="this.$auth.user.role.id === '6148cb5a15248f00ca3e882a' || this.$auth.user.role.id === '6148850e4c85a4001978318f'"
-          to="/admin/services/new"
-        >
-          <fai icon="plus" />
-          Добавить услугу
-        </nuxt-link>
-      </div>
-    </div>
-  </div>
+  <ul class="is-admin__half-card__content-list">
+    <lazy-admin-dashboard-services-wrapper-list
+      v-for="item in ServicesWrapperList"
+      :key="item.id"
+      :services-wrapper-list-item="item"
+    />
+  </ul>
 </template>
 
 <script>
-import { mapActions, mapGetters } from 'vuex'
-
 export default {
-  name: 'AdminDashboardServices',
+  name: 'AdminDashboardServicesWrapper',
+  props: {
+    ServicesWrapperList: {
+      type: Array,
+      default: () => {
+        return []
+      }
+    }
+  },
   data () {
     return {}
-  },
-  computed: {
-    ...mapGetters([
-      'SERVICES',
-      'SERVICES_COUNT'
-    ])
-  },
-  mounted () {
-    this.GET_SERVICES()
-    this.GET_SERVICES_COUNT()
-  },
-  methods: {
-    ...mapActions([
-      'GET_SERVICES',
-      'GET_SERVICES_COUNT'
-    ]),
-    viewItem (id) {
-      this.$router.push('/admin/services/' + id)
-    },
   }
 }
 </script>

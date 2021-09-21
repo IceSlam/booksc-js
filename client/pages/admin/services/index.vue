@@ -17,10 +17,18 @@
       </ul>
     </div>
     <div class="row">
-      <div class="col-lg-12">
+      <div class="col-lg-12 is-services__header">
         <h2 class="is-admin__title">
           Список услуг
         </h2>
+        <div class="is-services__header-buttons">
+          <nuxt-link
+            to="/admin/services/new"
+            class="btn save">
+            <fai icon="plus" />
+            Новая услуга
+          </nuxt-link>
+        </div>
       </div>
       <lazy-admin-services-wrapper
         :services-list="SERVICES"
@@ -103,6 +111,41 @@ export default {
           &:last-child {
             background-color: transparent;
             cursor: inherit;
+          }
+        }
+      }
+      &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &-buttons {
+          display: flex;
+          .btn {
+            display: flex;
+            border: 2px solid $bsColor;
+            margin: .5rem .25rem;
+            padding: .75rem;
+            color: $bsColor;
+            font-size: 1rem;
+            cursor: pointer;
+            &.save {
+              color: #fff;
+              border-color: $bsColor;
+              background-color: $bsColor;
+              display: flex;
+              align-items: center;
+              text-decoration: none;
+              font-weight: 600;
+              font-family: 'Open Sans', sans-serif;
+              text-transform: uppercase;
+              svg {
+                margin-right: .5rem;
+              }
+              &:hover {
+                color: $bsColor;
+                background-color: transparent;
+              }
+            }
           }
         }
       }
