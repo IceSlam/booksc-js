@@ -12,7 +12,7 @@
         </li>
         <li>
           <nuxt-link
-            to="/admin/services"
+            to="/admin/reviews"
           >
             <fai icon="binoculars" />
             Отзывы
@@ -26,8 +26,9 @@
     <div class="col-lg-12 is-services-item__header">
       <h2 class="is-admin__title">
 <!--        {{ servicesItemData.page_title }}-->
+        Отзыв от {{ itemData.reviewer_name }}
         <span>
-          Информация об услуге
+          Филиал: {{ itemData.branch_office }}
         </span>
       </h2>
       <div class="is-services-item__header-buttons">
@@ -51,26 +52,10 @@
       </div>
       <div class="col-lg-6">
         <div class="form-group">
-          <label for="page-title">
-            Название услуги
+          <label for="reviewer-name">
+            Автор отзыва
           </label>
-          <input id="page-title" type="text" v-model="itemData.page_title">
-        </div>
-      </div>
-      <div class="col-lg-6">
-        <div class="form-group">
-          <label for="long-title">
-            Расширенное название услуги
-          </label>
-          <input id="long-title" type="text" v-model="itemData.page_longtitle">
-        </div>
-      </div>
-      <div class="col-lg-6">
-        <div class="form-group">
-          <label for="page-description">
-            Описание услуги
-          </label>
-          <textarea id="page-description" type="text" v-model="itemData.page_description" />
+          <input id="reviewer-name" type="text" v-model="itemData.reviewer_name">
         </div>
       </div>
       <div class="col-lg-6">
@@ -78,76 +63,104 @@
           class="form-group"
         >
           <label
-            v-if="itemData.services_cat"
-            for="service-category">
-            Категория: {{ itemData.services_cat.category_name }}
+            for="branch-office">
+            Филиал: {{ itemData.branch_office }}
           </label>
           <select
-            v-if="itemData.services_cat"
-            id="service-category"
-            v-model="itemData.services_cat"
+            id="branch-office"
+            v-model="itemData.branch_office"
           >
             <option
               disabled
               selected
-              :value="itemData.services_cat.category_name"
+              :value="itemData.branch_office"
             >
-              Текущая категория: {{ itemData.services_cat.category_name }}
+              Текущий филиал: {{ itemData.branch_office }}
             </option>
             <option
-              v-for="category in CATEGORIES"
-              :key="category.id"
-              :value="category.id"
+              value="Book-Service Красноармейская"
             >
-              {{ category.category_name }}
+              Book-Service Красноармейская
+            </option>
+            <option
+              value="Book-Service ТД Весна"
+            >
+              Book-Service ТД Весна
             </option>
           </select>
         </div>
-        <div class="form-group d-flex">
-          <div class="form-group">
-            <label for="min-price">
-              Мнимальная цена ( <fai icon="ruble-sign" /> )
-            </label>
-            <input id="min-price" type="text" v-model="itemData.min_price">
-
-          </div>
-          <div class="form-group checkbox">
-            <p class="label">
-              Популярная услуга?
-            </p>
-            <input id="is-popular" type="checkbox" v-model="itemData.is_popular">
-            <label for="is-popular" />
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-12">
-        <div class="is-services-item__form__title">
-          SEO
-        </div>
       </div>
       <div class="col-lg-6">
         <div class="form-group">
-          <label for="meta-title">
-            Meta-заголовок
+          <label for="review-info">
+            Текст отзыва
           </label>
-          <input id="meta-title" type="text" v-model="itemData.meta_title">
+          <textarea
+            id="review-info"
+            type="text"
+            v-model="itemData.review_info"
+          />
         </div>
       </div>
       <div class="col-lg-6">
-        <div class="form-group">
-          <label for="meta-keywords">
-            Ключевые слова
+        <div
+          class="form-group"
+        >
+          <label
+            for="review-rating">
+            Рейтинг: {{ itemData.review_rating }} <fai icon="star" />
           </label>
-          <input id="meta-keywords" type="text" v-model="itemData.meta_keywords">
+          <select
+            id="review-rating"
+            v-model="itemData.review_rating"
+          >
+            <option
+              disabled
+              selected
+              :value="itemData.review_rating"
+            >
+              Текущий рейтинг: {{ itemData.review_rating }} <fai icon="star" />
+            </option>
+            <option
+              value="1"
+            >
+              1 <fai icon="star" />
+            </option>
+            <option
+              value="2"
+            >
+              2 <fai icon="star" />
+            </option>
+            <option
+              value="3"
+            >
+              3 <fai icon="star" />
+            </option>
+            <option
+              value="4"
+            >
+              4 <fai icon="star" />
+            </option>
+            <option
+              value="5"
+            >
+              5 <fai icon="star" />
+            </option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label
+            for="review-date">
+            Дата публикации: {{ $moment(itemData.review_date).formatWithJDF("dd. MM. yyyy") }}
+          </label>
+          <input
+            id="review-date"
+            type="date"
+            v-model:value="itemData.review_date"
+          >
         </div>
       </div>
-      <div class="col-lg-12">
-        <div class="form-group">
-          <label for="meta-description">
-            Meta-описание
-          </label>
-          <textarea id="meta-description" type="text" v-model="itemData.meta_description" />
-        </div>
+      <div class="col-lg-6">
       </div>
     </form>
   </section>
@@ -155,7 +168,6 @@
 
 <script>
 import { mapActions, mapGetters } from 'vuex'
-const vm = this
 
 export default {
   name: 'AdminServicesItemPage',

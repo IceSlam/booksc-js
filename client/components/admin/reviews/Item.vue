@@ -32,7 +32,7 @@
     </div>
     <div class="col-lg-2 is-reviews__list__col center">
       <h4 class="is-reviews__list__col-item date">
-        {{ $moment(ReviewsItem.review_date).formatWithJDF("HH:mm dd.MM.yyyy") }}
+        {{ $moment(ReviewsItem.review_date).formatWithJDF("dd.MM.yyyy") }}
       </h4>
     </div>
   </div>
