@@ -14,18 +14,18 @@
           <nuxt-link
             to="/admin/services"
           >
-            <fai icon="stream" />
-            Услуги
+            <fai icon="binoculars" />
+            Отзывы
           </nuxt-link>
         </li>
-        <li v-if="servicesItemData.services_cat">
-          {{ servicesItemData.page_title }} <span class="category">[{{ servicesItemData.services_cat.category_name }}]</span>
+        <li >
+          Отзыв от {{ reviewsItemData.reviewer_name }} <span class="category">[{{ reviewsItemData.branch_office }}]</span>
         </li>
       </ul>
     </div>
     <div class="col-lg-12 is-services-item__header">
       <h2 class="is-admin__title">
-        {{ servicesItemData.page_title }}
+<!--        {{ servicesItemData.page_title }}-->
         <span>
           Информация об услуге
         </span>
@@ -168,33 +168,30 @@ export default {
   },
   computed: {
     ...mapGetters([
-      'SERVICES',
-      'CATEGORIES'
+      'REVIEWS'
     ]),
-    servicesItemData () {
+    reviewsItemData () {
       let itemContent = {}
       const vm = this
-      this.SERVICES.map(function (item) {
+      this.REVIEWS.map(function (item) {
         if (item.id === vm.$route.params.id) {
           itemContent = item
           vm.itemData = item
-          vm.title = item.page_title
+          vm.title = item.reviewer_name
         }
       })
       return itemContent
     }
   },
   mounted () {
-    this.GET_SERVICES()
-    this.GET_CATEGORIES()
+    this.GET_REVIEWS()
   },
   methods: {
     ...mapActions([
-      'GET_SERVICES',
-      'GET_CATEGORIES'
+      'GET_REVIEWS',
     ]),
     async itemDelete () {
-      await this.$axios.$delete('/api/services/' + this.itemData.id, {})
+      await this.$axios.$delete('/api/reviews/' + this.itemData.id, {})
         .then((response) => {
           this.$router.push('./')
           this.$toast.global.successful_deletion()
@@ -205,7 +202,7 @@ export default {
     },
     async itemUpdate () {
       const vm = this;
-      await this.$axios.$put('/api/services/' + this.itemData.id, this.itemData)
+      await this.$axios.$put('/api/reviews/' + this.itemData.id, this.itemData)
         .then((response) => {
           this.$toast.global.successful_updated()
         }, (error) => {
@@ -218,7 +215,7 @@ export default {
       title: this.title,
       titleTemplate: (titleChunk) => {
         // If undefined or blank then we don't need the hyphen
-        return titleChunk ? `Book-Service | Информация об услуге ${titleChunk}` : 'Сеть сервисных центров Book-Service';
+        return titleChunk ? `Book-Service | Отзыв от ${titleChunk}` : 'Сеть сервисных центров Book-Service';
       }
     }
   }

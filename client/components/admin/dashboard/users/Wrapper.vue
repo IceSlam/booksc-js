@@ -56,7 +56,16 @@ export default {
 <style lang="scss">
 .is-admin {
   &__half-card {
+    padding: 1rem;
+    height: 100%;
+    display: flex;
     &__content {
+      height: 100%;
+      width: 100%;
+      padding: 1rem;
+      -webkit-box-shadow: 0 4px 15px 2px rgba(34,41,47,.1);
+      -moz-box-shadow: 0 4px 15px 2px rgba(34,41,47,.1);
+      box-shadow: 0 4px 15px 2px rgba(34,41,47,.1);
       &-title {
         font-family: 'Rubik', 'SansSerif', sans-serif;
         font-size: 1.5rem;

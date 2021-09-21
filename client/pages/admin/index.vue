@@ -46,6 +46,7 @@ export default {
     font-size: 2rem;
     color: #333;
     margin-right: 1rem;
+    margin: .75rem 0;
   }
 }
 </style>
