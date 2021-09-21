@@ -25,7 +25,6 @@
     </div>
     <div class="col-lg-12 is-services-item__header">
       <h2 class="is-admin__title">
-<!--        {{ servicesItemData.page_title }}-->
         Отзыв от {{ itemData.reviewer_name }}
         <span>
           Филиал: {{ itemData.branch_office }}
@@ -159,8 +158,6 @@
             v-model:value="itemData.review_date"
           >
         </div>
-      </div>
-      <div class="col-lg-6">
       </div>
     </form>
   </section>

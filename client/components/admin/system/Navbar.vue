@@ -8,7 +8,7 @@
           Book-Service
         </span>
           <span class="sub">
-          Control panel
+          CliBase/0.1a Contorl Panel
         </span>
         </h1>
       </nuxt-link>

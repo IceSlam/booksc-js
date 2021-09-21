@@ -180,7 +180,6 @@ export default {
         .then((response) => {
           this.$toast.global.successful_created()
           this.$router.push('./' + response.id)
-          console.log(response)
         }, (error) => {
           this.$toast.global.errored_creation()
         })
