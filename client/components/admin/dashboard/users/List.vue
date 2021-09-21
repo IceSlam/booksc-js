@@ -1,18 +1,19 @@
 <template>
   <ul class="is-admin__half-card__content-list">
-    <lazy-admin-dashboard-services-wrapper-list
-      v-for="item in ServicesWrapperList"
+    <lazy-admin-dashboard-users-item
+      v-for="item in UsersWrapperList.slice(0,2)"
       :key="item.id"
-      :services-wrapper-list-item="item"
+      :users-wrapper-list-item="item"
+      @viewItem="viewItem"
     />
   </ul>
 </template>
 
 <script>
 export default {
-  name: 'AdminDashboardServicesWrapper',
+  name: 'AdminDashboardUsersWrapper',
   props: {
-    ServicesWrapperList: {
+    UsersWrapperList: {
       type: Array,
       default: () => {
         return []
@@ -21,6 +22,11 @@ export default {
   },
   data () {
     return {}
+  },
+  methods: {
+    viewItem (id) {
+      this.$router.push('/admin/users/' + id)
+    }
   }
 }
 </script>

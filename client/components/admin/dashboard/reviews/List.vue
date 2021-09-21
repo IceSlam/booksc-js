@@ -1,67 +1,32 @@
 <template>
-  <div class="col-lg-6 is-admin__half-card">
-    <div class="is-admin__half-card__content">
-      <h2 class="is-admin__half-card__content-title">
-        Список пользователей (Всего: {{ this.$store.state.usersCount.usersCount }})
-      </h2>
-      <ul class="is-admin__half-card__content-list">
-        <nuxt-link
-          to="/admin/users/view"
-          tag="li"
-          v-for="user in USERS.slice(0,3)"
-          :key="user.id"
-        >
-          <span class="name">
-            <div v-if="user.avatar" class="avatar" :style="'background: url(/api/' + user.avatar.url + ');'" />
-            <div v-else class="avatar" style="background: url(https://erastech.com/wp-content/uploads/2015/08/placeholder_male1.jpg);" />
-            {{ user.name }}
-          </span>
-          <span class="role">
-            {{ user.role.name }}
-          </span>
-          <span class="created">
-            <span class="title">Создан:</span> {{ $moment(user.createdAt).formatWithJDF("HH:mm dd.MM.yyyy") }}
-          </span>
-        </nuxt-link>
-      </ul>
-      <div class="is-admin__half-card__content-buttons">
-        <nuxt-link
-          to="/admin/users"
-        >
-          <fai icon="users" />
-          Все пользователи
-        </nuxt-link>
-        <nuxt-link
-          to="/admin/users/new"
-        >
-          <fai icon="plus" />
-          Добавить нового
-        </nuxt-link>
-      </div>
-    </div>
-  </div>
+  <ul class="is-admin__half-card__content-list">
+    <lazy-admin-dashboard-reviews-item
+      v-for="item in ReviewsWrapperList.slice(0,5)"
+      :key="item.id"
+      :reviews-wrapper-list-item="item"
+      @viewItem="viewItem"
+    />
+  </ul>
 </template>
 
 <script>
-import { mapActions, mapGetters } from 'vuex'
-
 export default {
-  name: 'AdminDashboardUsers',
+  name: 'AdminDashboardReviewsWrapper',
+  props: {
+    ReviewsWrapperList: {
+      type: Array,
+      default: () => {
+        return []
+      }
+    }
+  },
   data () {
     return {}
   },
-  computed: {
-    ...mapGetters([
-      'USERS'
-    ])
-  },
-  mounted () {
-    this.GET_USERS()
-  },
   methods: {
-    ...mapActions([
-      'GET_USERS'
-    ])
+    viewItem (id) {
+      this.$router.push('/admin/reviews/' + id)
+    }
   }
 }
 </script>
@@ -69,16 +34,7 @@ export default {
 <style lang="scss">
 .is-admin {
   &__half-card {
-    padding: 1rem;
-    height: 100%;
-    display: flex;
     &__content {
-      height: 100%;
-      width: 100%;
-      padding: 1rem;
-      -webkit-box-shadow: 0 4px 15px 2px rgba(34,41,47,.1);
-      -moz-box-shadow: 0 4px 15px 2px rgba(34,41,47,.1);
-      box-shadow: 0 4px 15px 2px rgba(34,41,47,.1);
       &-title {
         font-family: 'Rubik', 'SansSerif', sans-serif;
         font-size: 1.5rem;
@@ -127,17 +83,10 @@ export default {
               margin-right: .5rem;
             }
           }
-          .role {
+          .category {
             font-family: 'Open Sans', sans-serif;
             font-weight: 600;
             color: #333;
-          }
-          .created {
-            .title {
-              font-family: 'Open Sans', sans-serif;
-              font-weight: 600;
-              color: #333;
-            }
           }
         }
       }

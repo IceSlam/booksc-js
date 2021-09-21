@@ -18,26 +18,29 @@
             Услуги
           </nuxt-link>
         </li>
-        <li>
-          Новая услуга: {{ itemData.page_title }}
+        <li v-if="servicesItemData.services_cat">
+          {{ servicesItemData.page_title }} <span class="category">[{{ servicesItemData.services_cat.category_name }}]</span>
         </li>
       </ul>
     </div>
     <div class="col-lg-12 is-services-item__header">
       <h2 class="is-admin__title">
-        {{ itemData.page_title }}
+        {{ servicesItemData.page_title }}
         <span>
-          Новая услуга
+          Информация об услуге
         </span>
       </h2>
       <div class="is-services-item__header-buttons">
         <a @click="$router.go(-1)" class="btn cancel">
           <fai icon="times" />
         </a>
-        <button @click.prevent="itemCreate" class="btn save">
-          <fai icon="save" />
-          Создать
+        <button @click.prevent="itemDelete" class="btn delete">
+          <fai icon="trash" />
         </button>
+        <a @click.prevent="itemUpdate" class="btn save">
+          <fai icon="save" />
+          Сохранить
+        </a>
       </div>
     </div>
     <form class="is-services-item__form row">
@@ -75,13 +78,22 @@
           class="form-group"
         >
           <label
+            v-if="itemData.services_cat"
             for="service-category">
-            Категория
+            Категория: {{ itemData.services_cat.category_name }}
           </label>
           <select
+            v-if="itemData.services_cat"
             id="service-category"
             v-model="itemData.services_cat"
           >
+            <option
+              disabled
+              selected
+              :value="itemData.services_cat.category_name"
+            >
+              Текущая категория: {{ itemData.services_cat.category_name }}
+            </option>
             <option
               v-for="category in CATEGORIES"
               :key="category.id"
@@ -143,46 +155,61 @@
 
 <script>
 import { mapActions, mapGetters } from 'vuex'
+const vm = this
 
 export default {
-  name: 'AdminServicesItemCreatePage',
+  name: 'AdminServicesItemPage',
   layout: 'admin',
   data () {
     return {
-      title: 'Новая услуга',
-      itemData: {
-        page_title: '',
-        page_longtitle: '',
-        page_description: '',
-        services_cat: '',
-        is_popular: '',
-        meta_title: '',
-        meta_keywords: '',
-        meta_description: '',
-        min_price: ''
-      }
+      title: 'Информация об услуге',
+      itemData: ''
     }
   },
   computed: {
     ...mapGetters([
+      'SERVICES',
       'CATEGORIES'
-    ])
+    ]),
+    servicesItemData () {
+      let itemContent = {}
+      const vm = this
+      this.SERVICES.map(function (item) {
+        if (item.id === vm.$route.params.id) {
+          itemContent = item
+          vm.itemData = item
+          vm.title = item.page_title
+        }
+      })
+      return itemContent
+    }
   },
   mounted () {
+    this.GET_SERVICES()
     this.GET_CATEGORIES()
   },
   methods: {
     ...mapActions([
+      'GET_SERVICES',
       'GET_CATEGORIES'
     ]),
-    async itemCreate () {
-      await this.$axios.$post('/api/services/', this.itemData)
+    async itemDelete () {
+      await this.$axios.$delete('/api/services/' + this.itemData.id, {})
         .then((response) => {
-          this.$toast.global.successful_created()
-          this.$router.push('./' + response.id)
-          console.log(response)
+          this.$router.push('./')
+          this.$toast.global.successful_deletion()
         }, (error) => {
-          this.$toast.global.errored_creation()
+          console.log(error)
+          this.$toast.global.errored_deletion()
+        })
+    },
+    async itemUpdate () {
+      const vm = this;
+      await this.$axios.$put('/api/services/' + this.itemData.id, this.itemData)
+        .then((response) => {
+          this.$toast.global.successful_updated()
+        }, (error) => {
+          this.$toast.global.errored_update()
         })
     }
   },
@@ -191,7 +218,7 @@ export default {
       title: this.title,
       titleTemplate: (titleChunk) => {
         // If undefined or blank then we don't need the hyphen
-        return titleChunk ? `Book-Service | Добавление услуги` : 'Сеть сервисных центров Book-Service';
+        return titleChunk ? `Book-Service | Информация об услуге ${titleChunk}` : 'Сеть сервисных центров Book-Service';
       }
     }
   }

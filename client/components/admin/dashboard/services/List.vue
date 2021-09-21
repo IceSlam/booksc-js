@@ -1,30 +1,32 @@
 <template>
-  <li>
-    <span class="name">
-      {{ ServicesWrapperListItem.page_title.slice(0,40) }}... ({{ ServicesWrapperListItem.min_price }} <fai icon="ruble-sign" />)
-    </span>
-    <span
-      v-if="ServicesWrapperListItem.services_cat"
-      class="category"
-    >
-      {{ ServicesWrapperListItem.services_cat.category_name }}
-    </span>
-  </li>
+  <ul class="is-admin__half-card__content-list">
+    <lazy-admin-dashboard-services-item
+      v-for="item in ServicesWrapperList.slice(0,5)"
+      :key="item.id"
+      :services-wrapper-list-item="item"
+      @viewItem="viewItem"
+    />
+  </ul>
 </template>
 
 <script>
 export default {
-  name: 'AdminDashboardServicesWrapperItem',
+  name: 'AdminDashboardServicesWrapper',
   props: {
-    ServicesWrapperListItem: {
-      type: Object,
+    ServicesWrapperList: {
+      type: Array,
       default: () => {
-        return {}
+        return []
       }
     }
   },
   data () {
     return {}
+  },
+  methods: {
+    viewItem (id) {
+      this.$router.push('/admin/services/' + id)
+    }
   }
 }
 </script>

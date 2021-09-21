@@ -10,8 +10,10 @@
       <lazy-admin-dashboard-services-count />
       <lazy-admin-dashboard-categories-count />
       <lazy-admin-dashboard-reviews-count />
-      <lazy-admin-dashboard-users />
-      <lazy-admin-dashboard-services />
+      <lazy-admin-dashboard-reviews-wrapper />
+      <lazy-admin-dashboard-services-wrapper />
+      <lazy-admin-dashboard-category-wrapper />
+      <lazy-admin-dashboard-users-wrapper />
     </div>
   </section>
 </template>

@@ -2,40 +2,24 @@
   <div class="col-lg-6 is-admin__half-card">
     <div class="is-admin__half-card__content">
       <h2 class="is-admin__half-card__content-title">
-        Список пользователей (Всего: {{ this.$store.state.usersCount.usersCount }})
+        Список отзывов (Всего: {{ USERS_COUNT }})
       </h2>
-      <ul class="is-admin__half-card__content-list">
-        <nuxt-link
-          to="/admin/users/view"
-          tag="li"
-          v-for="user in USERS.slice(0,3)"
-          :key="user.id"
-        >
-          <span class="name">
-            <div v-if="user.avatar" class="avatar" :style="'background: url(/api/' + user.avatar.url + ');'" />
-            <div v-else class="avatar" style="background: url(https://erastech.com/wp-content/uploads/2015/08/placeholder_male1.jpg);" />
-            {{ user.name }}
-          </span>
-          <span class="role">
-            {{ user.role.name }}
-          </span>
-          <span class="created">
-            <span class="title">Создан:</span> {{ $moment(user.createdAt).formatWithJDF("HH:mm dd.MM.yyyy") }}
-          </span>
-        </nuxt-link>
-      </ul>
+      <lazy-admin-dashboard-users-list
+        :users-wrapper-list="USERS"
+      />
       <div class="is-admin__half-card__content-buttons">
         <nuxt-link
-          to="/admin/users"
+          to="/admin/reviews"
         >
           <fai icon="users" />
           Все пользователи
         </nuxt-link>
         <nuxt-link
+          v-if="this.$auth.user.role.id === '6148cb5a15248f00ca3e882a' || this.$auth.user.role.id === '6148850e4c85a4001978318f'"
           to="/admin/users/new"
         >
           <fai icon="plus" />
-          Добавить нового
+          Создать пользователя
         </nuxt-link>
       </div>
     </div>
@@ -52,15 +36,18 @@ export default {
   },
   computed: {
     ...mapGetters([
-      'USERS'
+      'USERS',
+      'USERS_COUNT'
     ])
   },
   mounted () {
     this.GET_USERS()
+    this.GET_USERS_COUNT()
   },
   methods: {
     ...mapActions([
-      'GET_USERS'
+      'GET_USERS',
+      'GET_USERS_COUNT'
     ])
   }
 }
@@ -69,16 +56,7 @@ export default {
 <style lang="scss">
 .is-admin {
   &__half-card {
-    padding: 1rem;
-    height: 100%;
-    display: flex;
     &__content {
-      height: 100%;
-      width: 100%;
-      padding: 1rem;
-      -webkit-box-shadow: 0 4px 15px 2px rgba(34,41,47,.1);
-      -moz-box-shadow: 0 4px 15px 2px rgba(34,41,47,.1);
-      box-shadow: 0 4px 15px 2px rgba(34,41,47,.1);
       &-title {
         font-family: 'Rubik', 'SansSerif', sans-serif;
         font-size: 1.5rem;
@@ -127,17 +105,10 @@ export default {
               margin-right: .5rem;
             }
           }
-          .role {
+          .category {
             font-family: 'Open Sans', sans-serif;
             font-weight: 600;
             color: #333;
-          }
-          .created {
-            .title {
-              font-family: 'Open Sans', sans-serif;
-              font-weight: 600;
-              color: #333;
-            }
           }
         }
       }

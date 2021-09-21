@@ -2,24 +2,24 @@
   <div class="col-lg-6 is-admin__half-card">
     <div class="is-admin__half-card__content">
       <h2 class="is-admin__half-card__content-title">
-        Список услуг (Всего: {{ SERVICES_COUNT }})
+        Список отзывов (Всего: {{ REVIEWS_COUNT }})
       </h2>
-      <lazy-admin-dashboard-serviceswrapper
-        :services-wrapper-list="SERVICES"
+      <lazy-admin-dashboard-reviews-list
+        :reviews-wrapper-list="REVIEWS"
       />
       <div class="is-admin__half-card__content-buttons">
         <nuxt-link
-          to="/admin/services"
+          to="/admin/reviews"
         >
-          <fai icon="stream" />
-          Все услуги
+          <fai icon="binoculars" />
+          Все отзывы
         </nuxt-link>
         <nuxt-link
           v-if="this.$auth.user.role.id === '6148cb5a15248f00ca3e882a' || this.$auth.user.role.id === '6148850e4c85a4001978318f'"
-          to="/admin/services/new"
+          to="/admin/reviews/new"
         >
           <fai icon="plus" />
-          Добавить услугу
+          Добавить отзыв
         </nuxt-link>
       </div>
     </div>
@@ -30,28 +30,25 @@
 import { mapActions, mapGetters } from 'vuex'
 
 export default {
-  name: 'AdminDashboardServices',
+  name: 'AdminDashboardReviews',
   data () {
     return {}
   },
   computed: {
     ...mapGetters([
-      'SERVICES',
-      'SERVICES_COUNT'
+      'REVIEWS',
+      'REVIEWS_COUNT'
     ])
   },
   mounted () {
-    this.GET_SERVICES()
-    this.GET_SERVICES_COUNT()
+    this.GET_REVIEWS()
+    this.GET_REVIEWS_COUNT()
   },
   methods: {
     ...mapActions([
-      'GET_SERVICES',
-      'GET_SERVICES_COUNT'
-    ]),
-    viewItem (id) {
-      this.$router.push('/admin/services/' + id)
-    },
+      'GET_REVIEWS',
+      'GET_REVIEWS_COUNT'
+    ])
   }
 }
 </script>

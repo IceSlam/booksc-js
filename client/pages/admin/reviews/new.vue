@@ -36,7 +36,7 @@
         </a>
         <button @click.prevent="itemCreate" class="btn save">
           <fai icon="save" />
-          Создать
+          Сохранить
         </button>
       </div>
     </div>
@@ -176,7 +176,7 @@ export default {
       'GET_CATEGORIES'
     ]),
     async itemCreate () {
-      await this.$axios.$post('/api/services/', this.itemData)
+      await this.$axios.$post('/api/services1/', this.itemData)
         .then((response) => {
           this.$toast.global.successful_created()
           this.$router.push('./' + response.id)

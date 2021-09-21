@@ -1,67 +1,40 @@
 <template>
-  <div class="col-lg-6 is-admin__half-card">
-    <div class="is-admin__half-card__content">
-      <h2 class="is-admin__half-card__content-title">
-        Список пользователей (Всего: {{ this.$store.state.usersCount.usersCount }})
-      </h2>
-      <ul class="is-admin__half-card__content-list">
-        <nuxt-link
-          to="/admin/users/view"
-          tag="li"
-          v-for="user in USERS.slice(0,3)"
-          :key="user.id"
-        >
-          <span class="name">
-            <div v-if="user.avatar" class="avatar" :style="'background: url(/api/' + user.avatar.url + ');'" />
-            <div v-else class="avatar" style="background: url(https://erastech.com/wp-content/uploads/2015/08/placeholder_male1.jpg);" />
-            {{ user.name }}
-          </span>
-          <span class="role">
-            {{ user.role.name }}
-          </span>
-          <span class="created">
-            <span class="title">Создан:</span> {{ $moment(user.createdAt).formatWithJDF("HH:mm dd.MM.yyyy") }}
-          </span>
-        </nuxt-link>
-      </ul>
-      <div class="is-admin__half-card__content-buttons">
-        <nuxt-link
-          to="/admin/users"
-        >
-          <fai icon="users" />
-          Все пользователи
-        </nuxt-link>
-        <nuxt-link
-          to="/admin/users/new"
-        >
-          <fai icon="plus" />
-          Добавить нового
-        </nuxt-link>
-      </div>
-    </div>
-  </div>
+  <li @click.prevent="viewItem()" class="row d-flex users_row">
+    <span class="name col-lg-4">
+      <div v-if="UsersWrapperListItem.avatar" class="avatar" :style="'background: url(/api/' + UsersWrapperListItem.avatar.url + ');'" />
+      <div v-else class="avatar" style="background: url(https://erastech.com/wp-content/uploads/2015/08/placeholder_male1.jpg);" />
+      {{ UsersWrapperListItem.name }}
+    </span>
+    <span
+      v-if="UsersWrapperListItem.role"
+      class="name col-lg-4"
+    >
+      {{ UsersWrapperListItem.role.name }}
+    </span>
+    <span class="name col-lg-4">
+      Создан: {{ $moment(UsersWrapperListItem.createdAt).formatWithJDF("HH:mm dd.MM.yyyy") }}
+    </span>
+  </li>
 </template>
 
 <script>
-import { mapActions, mapGetters } from 'vuex'
-
 export default {
-  name: 'AdminDashboardUsers',
+  name: 'AdminDashboardUsersWrapperItem',
+  props: {
+    UsersWrapperListItem: {
+      type: Object,
+      default: () => {
+        return {}
+      }
+    }
+  },
   data () {
     return {}
   },
-  computed: {
-    ...mapGetters([
-      'USERS'
-    ])
-  },
-  mounted () {
-    this.GET_USERS()
-  },
   methods: {
-    ...mapActions([
-      'GET_USERS'
-    ])
+    viewItem (id) {
+      this.$emit('viewItem', this.UsersWrapperListItem.id)
+    }
   }
 }
 </script>
@@ -69,16 +42,7 @@ export default {
 <style lang="scss">
 .is-admin {
   &__half-card {
-    padding: 1rem;
-    height: 100%;
-    display: flex;
     &__content {
-      height: 100%;
-      width: 100%;
-      padding: 1rem;
-      -webkit-box-shadow: 0 4px 15px 2px rgba(34,41,47,.1);
-      -moz-box-shadow: 0 4px 15px 2px rgba(34,41,47,.1);
-      box-shadow: 0 4px 15px 2px rgba(34,41,47,.1);
       &-title {
         font-family: 'Rubik', 'SansSerif', sans-serif;
         font-size: 1.5rem;
@@ -113,6 +77,9 @@ export default {
             font-weight: 600;
             font-family: 'Open Sans', sans-serif;
             color: #333;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
             .avatar {
               width: 48px;
               height: 48px;
@@ -127,16 +94,24 @@ export default {
               margin-right: .5rem;
             }
           }
-          .role {
-            font-family: 'Open Sans', sans-serif;
-            font-weight: 600;
-            color: #333;
-          }
-          .created {
-            .title {
-              font-family: 'Open Sans', sans-serif;
-              font-weight: 600;
-              color: #333;
+          &.users_row {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: .5rem;
+            .name {
+              -webkit-box-sizing: border-box;
+              -moz-box-sizing: border-box;
+              box-sizing: border-box;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              &:first-child {
+                justify-content: flex-start;
+              }
+              &:last-child {
+                justify-content: flex-end;
+              }
             }
           }
         }
