@@ -34,16 +34,21 @@
         <a @click="$router.go(-1)" class="btn cancel">
           <fai icon="times" />
         </a>
-        <a href="!#" class="btn delete">
+        <button @click.prevent="itemDelete" class="btn delete">
           <fai icon="trash" />
-        </a>
-        <a href="!#" class="btn save">
+        </button>
+        <a @click.prevent="itemUpdate" class="btn save">
           <fai icon="save" />
           Сохранить
         </a>
       </div>
     </div>
     <form class="is-services-item__form row">
+      <div class="col-lg-12">
+        <div class="is-services-item__form__title">
+          Основное
+        </div>
+      </div>
       <div class="col-lg-6">
         <div class="form-group">
           <label for="page-title">
@@ -115,12 +120,42 @@
           </div>
         </div>
       </div>
+      <div class="col-lg-12">
+        <div class="is-services-item__form__title">
+          SEO
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="form-group">
+          <label for="meta-title">
+            Meta-заголовок
+          </label>
+          <input id="meta-title" type="text" v-model="itemData.meta_title">
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="form-group">
+          <label for="meta-keywords">
+            Ключевые слова
+          </label>
+          <input id="meta-keywords" type="text" v-model="itemData.meta_keywords">
+        </div>
+      </div>
+      <div class="col-lg-12">
+        <div class="form-group">
+          <label for="meta-description">
+            Meta-описание
+          </label>
+          <textarea id="meta-description" type="text" v-model="itemData.meta_description" />
+        </div>
+      </div>
     </form>
   </section>
 </template>
 
 <script>
 import { mapActions, mapGetters } from 'vuex'
+const vm = this
 
 export default {
   name: 'AdminServicesItemPage',
@@ -157,7 +192,26 @@ export default {
     ...mapActions([
       'GET_SERVICES',
       'GET_CATEGORIES'
-    ])
+    ]),
+    async itemDelete () {
+      await this.$axios.$delete('/api/services/' + this.itemData.id, {})
+        .then((response) => {
+          this.$router.push('./')
+          this.$toast.global.successful_deletion()
+        }, (error) => {
+          console.log(error)
+          this.$toast.global.errored_deletion()
+        })
+    },
+    async itemUpdate () {
+      const vm = this;
+      await this.$axios.$put('/api/services/' + this.itemData.id, this.itemData)
+        .then((response) => {
+          this.$toast.global.successful_updated()
+        }, (error) => {
+          this.$toast.global.errored_update()
+        })
+    }
   },
   head () {
     return {
@@ -200,6 +254,7 @@ export default {
               padding: .75rem;
               color: $bsColor;
               font-size: 1rem;
+              cursor: pointer;
               &.cancel {
                 cursor: pointer;
                 &:hover {
@@ -210,6 +265,7 @@ export default {
               &.delete {
                 color: #fff;
                 background-color: $bsColor;
+                cursor: pointer;
                 &:hover {
                   background-color: transparent;
                   color: $bsColor;
@@ -238,6 +294,14 @@ export default {
         }
         &__form {
           margin-top: 1.5rem;
+          &__title {
+            font-family: 'Rubik', 'Open Sans', sans-serif;
+            font-size: 1.25rem;
+            color: $bsColor;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            margin-left: 1rem;
+          }
           .form-group {
             display: block;
             padding: 0 1rem 2rem;
@@ -281,6 +345,7 @@ export default {
               padding: 1rem;
               -moz-box-sizing: border-box;
               box-sizing: border-box;
+              font-weight: 600;
               &:focus {
                 border: 2px solid black;
               }
@@ -288,6 +353,12 @@ export default {
             select {
               border: 2px solid $bsColor;
               height: 64px;
+              padding: 1rem;
+              font-weight: 600;
+              option {
+                background-color: #fff;
+                padding: 1rem;
+              }
             }
             &.checkbox {
               position: relative;

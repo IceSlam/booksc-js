@@ -36,11 +36,13 @@ export default {
   name: 'AdminServicesPage',
   layout: 'admin',
   data () {
-    return {}
+    return {
+      title: 'Список услуг'
+    }
   },
   computed: {
     ...mapGetters([
-      'SERVICES'
+      'SERVICES',
     ])
   },
   mounted () {
@@ -50,6 +52,15 @@ export default {
     ...mapActions([
       'GET_SERVICES'
     ])
+  },
+  head () {
+    return {
+      title: this.title,
+      titleTemplate: (titleChunk) => {
+        // If undefined or blank then we don't need the hyphen
+        return titleChunk ? `Book-Service | ${titleChunk}` : 'Сеть сервисных центров Book-Service';
+      }
+    }
   }
 }
 </script>

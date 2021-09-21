@@ -36,7 +36,7 @@
     <div class="row">
       <div class="col-lg-12">
         <p class="is-services__list__count">
-          <span>Всего услуг: </span>{{ this.$store.state.servicesCount.servicesCount }}
+          <span>Всего услуг: </span>{{ this.SERVICES_COUNT }}
         </p>
       </div>
     </div>
@@ -64,16 +64,19 @@ export default {
       this.$router.push('/admin/services/' + id)
     },
     ...mapActions([
-      'GET_SERVICES'
+      'GET_SERVICES',
+      'GET_SERVICES_COUNT'
     ])
   },
   computed: {
     ...mapGetters([
-      'SERVICES'
+      'SERVICES',
+      'SERVICES_COUNT'
     ])
   },
   mounted () {
     this.GET_SERVICES()
+    this.GET_SERVICES_COUNT()
   }
 }
 </script>

@@ -200,6 +200,24 @@ export default {
           border-bottom: none;
         }
       }
+      font-family: 'Open Sans', sans-serif;
+      scrollbar-width: thin;
+      scrollbar-color: $bsColor #fff;
+      transition: all .3s;
+      &::-webkit-scrollbar {
+        width: 6px !important;
+        transition: all .3s;
+      }
+      &::-webkit-scrollbar-track {
+        background-color: #fff !important;
+        transition: all .3s;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: $bsColor !important;
+      }
+      * {
+        font-family: 'Open Sans', sans-serif;
+      }
     }
   }
 }

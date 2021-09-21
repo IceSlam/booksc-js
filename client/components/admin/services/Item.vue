@@ -25,7 +25,7 @@
     </div>
     <div class="col-lg-2">
       <h4 class="is-services__list__col-item date">
-        {{ servicesItem.createdAt }}
+        {{ $moment(servicesItem.createdAt).formatWithJDF("HH:mm dd.MM.yyyy") }}
       </h4>
     </div>
   </div>

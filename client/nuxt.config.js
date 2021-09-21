@@ -130,7 +130,15 @@ export default {
     '@nuxtjs/proxy',
     '@nuxtjs/auth-next',
     '@nuxtjs/toast',
+    '@nuxtjs/moment'
   ],
+
+  moment: {
+    defaultLocale: 'ru',
+    plugins: [
+      'moment-jdateformatparser'
+    ]
+  },
 
   recaptcha: {
     hideBadge: true, // Hide badge element (v3 & v2 via size=invisible)
@@ -188,6 +196,78 @@ export default {
           iconPack: 'fontawesome',
           icon : 'fingerprint',
           className: 'is-login',
+          action : {
+            onClick : (e, toastObject) => {
+              toastObject.goAway(0);
+            },
+            icon: 'times'
+          }
+        }
+      },
+      {
+        name: 'successful_deletion',
+        message: 'Успешно удалено!',
+        options: {
+          type: 'success',
+          duration: 3000,
+          position: 'bottom-right',
+          iconPack: 'fontawesome',
+          icon : 'check',
+          className: 'is-login',
+          action : {
+            onClick : (e, toastObject) => {
+              toastObject.goAway(0);
+            },
+            icon: 'times'
+          }
+        }
+      },
+      {
+        name: 'successful_updated',
+        message: 'Успешно обновлено!',
+        options: {
+          type: 'success',
+          duration: 3000,
+          position: 'bottom-right',
+          iconPack: 'fontawesome',
+          icon : 'check',
+          className: 'is-login',
+          action : {
+            onClick : (e, toastObject) => {
+              toastObject.goAway(0);
+            },
+            icon: 'times'
+          }
+        }
+      },
+      {
+        name: 'errored_deletion',
+        message: 'Ошибка удаления!',
+        options: {
+          type: 'error',
+          duration: 3000,
+          position: 'bottom-right',
+          iconPack: 'fontawesome',
+          icon : 'exclamation-triangle',
+          className: 'is-error',
+          action : {
+            onClick : (e, toastObject) => {
+              toastObject.goAway(0);
+            },
+            icon: 'times'
+          }
+        }
+      },
+      {
+        name: 'errored_update',
+        message: 'Ошибка обновления!',
+        options: {
+          type: 'error',
+          duration: 3000,
+          position: 'bottom-right',
+          iconPack: 'fontawesome',
+          icon : 'exclamation-triangle',
+          className: 'is-error',
           action : {
             onClick : (e, toastObject) => {
               toastObject.goAway(0);
