@@ -31,7 +31,6 @@
       </p>
       <li>
         <nuxt-link
-          exact
           to="/admin/services"
         >
           <fai icon="stream" />
@@ -40,7 +39,6 @@
       </li>
       <li>
         <nuxt-link
-          exact
           to="/admin/categories"
         >
           <fai icon="th-list" />
@@ -49,7 +47,6 @@
       </li>
       <li>
         <nuxt-link
-          exact
           to="/admin/reviews"
         >
           <fai icon="binoculars" />
@@ -180,6 +177,14 @@ export default {
             svg {
               color: $bsColor;
               margin-right: .5rem;
+            }
+            &.nuxt-link-active {
+              background-color: $bsColor;
+              color: #fff;
+              transition: all .3s;
+              svg {
+                color: #fff;
+              }
             }
           }
           &:hover {

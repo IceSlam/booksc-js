@@ -9,7 +9,7 @@
     <span
       class="name col-lg-1"
     >
-      {{ ReviewsWrapperListItem.review_rating }} <fai icon="star" />
+      {{ ReviewsWrapperListItem.review_rating }} <fai icon="star" class="ms-1" />
     </span>
     <span class="name col-lg-3">
       {{ $moment(ReviewsWrapperListItem.review_date).formatWithJDF("dd.MM.yyyy") }}

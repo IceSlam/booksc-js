@@ -12,22 +12,22 @@
         </li>
         <li>
           <nuxt-link
-            to="/admin/reviews"
+            to="/admin/categories"
           >
-            <fai icon="binoculars" />
-            Отзывы
+            <fai icon="th-list" />
+            Категории услуг
           </nuxt-link>
         </li>
         <li >
-          Отзыв от {{ reviewsItemData.reviewer_name }} <span class="category">[{{ reviewsItemData.branch_office }}]</span>
+          Категория: {{ categoriesItemData.category_name }}
         </li>
       </ul>
     </div>
     <div class="col-lg-12 is-services-item__header">
       <h2 class="is-admin__title">
-        Отзыв от {{ itemData.reviewer_name }}
-        <span>
-          Филиал: {{ itemData.branch_office }}
+        <i :class="itemData.category_icon + ' ms-2 me-1'" />{{ itemData.category_name }}
+        <span class="ms-2">
+          {{ categoriesItemData.category_longtitle }}
         </span>
       </h2>
       <div class="is-services-item__header-buttons">
@@ -51,112 +51,75 @@
       </div>
       <div class="col-lg-6">
         <div class="form-group">
-          <label for="reviewer-name">
-            Автор отзыва
+          <label for="category-name">
+            Название категории
           </label>
-          <input id="reviewer-name" type="text" v-model="itemData.reviewer_name">
-        </div>
-      </div>
-      <div class="col-lg-6">
-        <div
-          class="form-group"
-        >
-          <label
-            for="branch-office">
-            Филиал: {{ itemData.branch_office }}
-          </label>
-          <select
-            id="branch-office"
-            v-model="itemData.branch_office"
-          >
-            <option
-              disabled
-              selected
-              :value="itemData.branch_office"
-            >
-              Текущий филиал: {{ itemData.branch_office }}
-            </option>
-            <option
-              value="Book-Service Красноармейская"
-            >
-              Book-Service Красноармейская
-            </option>
-            <option
-              value="Book-Service ТД Весна"
-            >
-              Book-Service ТД Весна
-            </option>
-          </select>
+          <input id="category-name" type="text" v-model="itemData.category_name">
         </div>
       </div>
       <div class="col-lg-6">
         <div class="form-group">
-          <label for="review-info">
-            Текст отзыва
+          <label for="category-longtitle">
+            Расширенное название категории
           </label>
-          <textarea
-            id="review-info"
-            type="text"
-            v-model="itemData.review_info"
-          />
+          <input id="category-longtitle" type="text" v-model="itemData.category_longtitle">
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="form-group">
+          <label for="category-img">
+            Изображение (/api{{ itemData.category_image.url }})
+          </label>
+          <input id="category-img" type="file" >
         </div>
       </div>
       <div class="col-lg-6">
         <div
-          class="form-group"
+          class="form-group d-flex"
         >
-          <label
-            for="review-rating">
-            Рейтинг: {{ itemData.review_rating }} <fai icon="star" />
-          </label>
-          <select
-            id="review-rating"
-            v-model="itemData.review_rating"
-          >
-            <option
-              disabled
-              selected
-              :value="itemData.review_rating"
-            >
-              Текущий рейтинг: {{ itemData.review_rating }} <fai icon="star" />
-            </option>
-            <option
-              value="1"
-            >
-              1 <fai icon="star" />
-            </option>
-            <option
-              value="2"
-            >
-              2 <fai icon="star" />
-            </option>
-            <option
-              value="3"
-            >
-              3 <fai icon="star" />
-            </option>
-            <option
-              value="4"
-            >
-              4 <fai icon="star" />
-            </option>
-            <option
-              value="5"
-            >
-              5 <fai icon="star" />
-            </option>
-          </select>
+
+          <div class="form-group">
+            <label for="category-icon">
+              Иконка FontAwesome
+            </label>
+            <input id="category-icon" type="text" v-model="itemData.category_icon">
+          </div>
+          <div class="form-group">
+            <label for="category-slug">
+              Алиас
+            </label>
+            <input id="category-slug" type="text" v-model="itemData.category_slug">
+          </div>
         </div>
+      </div>
+
+      <div class="col-lg-12">
+        <div class="is-services-item__form__title">
+          SEO
+        </div>
+      </div>
+      <div class="col-lg-6">
         <div class="form-group">
-          <label
-            for="review-date">
-            Дата публикации: {{ $moment(itemData.review_date).formatWithJDF("dd. MM. yyyy") }}
+          <label for="meta-title">
+            Meta-заголовок
           </label>
-          <input
-            id="review-date"
-            type="date"
-            v-model:value="itemData.review_date"
-          >
+          <input id="meta-title" type="text" v-model="itemData.meta_title">
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="form-group">
+          <label for="meta-keywords">
+            Ключевые слова
+          </label>
+          <input id="meta-keywords" type="text" v-model="itemData.meta_keywords">
+        </div>
+      </div>
+      <div class="col-lg-12">
+        <div class="form-group">
+          <label for="meta-description">
+            Meta-описание
+          </label>
+          <textarea id="meta-description" type="text" v-model="itemData.meta_description" />
         </div>
       </div>
     </form>
@@ -177,30 +140,30 @@ export default {
   },
   computed: {
     ...mapGetters([
-      'REVIEWS'
+      'CATEGORIES'
     ]),
-    reviewsItemData () {
+    categoriesItemData () {
       let itemContent = {}
       const vm = this
-      this.REVIEWS.map(function (item) {
+      this.CATEGORIES.map(function (item) {
         if (item.id === vm.$route.params.id) {
           itemContent = item
           vm.itemData = item
-          vm.title = item.reviewer_name
+          vm.title = item.category_name
         }
       })
       return itemContent
     }
   },
   mounted () {
-    this.GET_REVIEWS()
+    this.GET_CATEGORIES()
   },
   methods: {
     ...mapActions([
-      'GET_REVIEWS',
+      'GET_CATEGORIES',
     ]),
     async itemDelete () {
-      await this.$axios.$delete('/api/reviews/' + this.itemData.id, {})
+      await this.$axios.$delete('/api/categories/' + this.itemData.id, {})
         .then((response) => {
           this.$router.push('./')
           this.$toast.global.successful_deletion()
@@ -211,7 +174,7 @@ export default {
     },
     async itemUpdate () {
       const vm = this;
-      await this.$axios.$put('/api/reviews/' + this.itemData.id, this.itemData)
+      await this.$axios.$put('/api/categories/' + this.itemData.id, this.itemData)
         .then((response) => {
           this.$toast.global.successful_updated()
         }, (error) => {
@@ -224,7 +187,7 @@ export default {
       title: this.title,
       titleTemplate: (titleChunk) => {
         // If undefined or blank then we don't need the hyphen
-        return titleChunk ? `Book-Service | Отзыв от ${titleChunk}` : 'Сеть сервисных центров Book-Service';
+        return titleChunk ? `Book-Service | Информация о категории ${titleChunk}` : 'Сеть сервисных центров Book-Service';
       }
     }
   }
@@ -323,6 +286,10 @@ export default {
               -webkit-box-sizing: border-box;
               -moz-box-sizing: border-box;
               box-sizing: border-box;
+              -webkit-user-select: none;
+              -moz-user-select: none;
+              -ms-user-select: none;
+              user-select: none;
             }
             label {
               font-family: 'Open Sans', sans-serif;

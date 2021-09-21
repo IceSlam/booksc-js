@@ -4,7 +4,7 @@
       {{ ServicesWrapperListItem.page_title.slice(0,25) }}...
     </span>
     <span class="name col-lg-1">
-      {{ ServicesWrapperListItem.min_price }} <fai icon="ruble-sign" />
+      {{ ServicesWrapperListItem.min_price }} <fai icon="ruble-sign" class="ms-1" />
     </span>
     <span
       v-if="ServicesWrapperListItem.services_cat"

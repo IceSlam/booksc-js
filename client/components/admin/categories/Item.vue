@@ -3,36 +3,38 @@
     class="row"
     @click.prevent="viewItem()"
   >
-    <div class="col-lg-1 is-reviews__list__col">
+    <div class="col-lg-1 is-reviews__list__col align-items-center d-flex px-2">
       <h4 class="is-reviews__list__col-item id">
-        {{ ReviewsItem.id.slice(0,10) }}
+        {{ CategoriesItem.id.slice(0,10) }}
       </h4>
     </div>
-    <div class="col-lg-2 is-reviews__list__col">
+    <div class="col-lg-3 is-reviews__list__col align-items-center d-flex px-2">
       <h4 class="is-reviews__list__col-item name">
-        <div v-if="ReviewsItem.reviewer_avatar" class="avatar" :style="'background: url(' + ReviewsItem.reviewer_avatar + ');'" />
-        <div v-else class="avatar" style="background: url(https://erastech.com/wp-content/uploads/2015/08/placeholder_male1.jpg);" />
-        {{ ReviewsItem.reviewer_name.slice(0,30) }}
-      </h4>
-    </div>
-    <div class="col-lg-4 is-reviews__list__col">
-      <h4 class="is-reviews__list__col-item info">
-        {{ ReviewsItem.review_info.slice(0,100) }}...
+        {{ CategoriesItem.category_name.slice(0,30) }}
       </h4>
     </div>
     <div class="col-lg-2 is-reviews__list__col">
+      <div
+        class="is-reviews__list__col-item cat-img"
+        :style="'background: url(/api' + CategoriesItem.category_image.url + ');'"
+      />
+    </div>
+    <div class="col-lg-1 is-reviews__list__col center" style="font-size: 2rem;">
+      <i :class="CategoriesItem.category_icon + ' is-reviews__list__col-item price'" />
+    </div>
+    <div class="col-lg-2 is-reviews__list__col center">
       <h4 class="is-reviews__list__col-item price">
-        {{ ReviewsItem.branch_office }}
+        {{ CategoriesItem.services.length }}
       </h4>
     </div>
     <div class="col-lg-1 is-reviews__list__col center">
       <h4 class="is-reviews__list__col-item category">
-        {{ ReviewsItem.review_rating }} <fai icon="star" class="ms-1" />
+        {{ CategoriesItem.category_slug }}
       </h4>
     </div>
     <div class="col-lg-2 is-reviews__list__col center">
       <h4 class="is-reviews__list__col-item date">
-        {{ $moment(ReviewsItem.review_date).formatWithJDF("dd.MM.yyyy") }}
+        {{ $moment(CategoriesItem.createdAt).formatWithJDF("dd.MM.yyyy") }}
       </h4>
     </div>
   </div>
@@ -40,12 +42,12 @@
 
 <script>
 export default {
-  name: 'AdminReviewsItem',
+  name: 'AdminCategoriesItem',
   data () {
     return {}
   },
   props: {
-    ReviewsItem: {
+    CategoriesItem: {
       type: Object,
       default: () => {
         return {}
@@ -54,7 +56,7 @@ export default {
   },
   methods: {
     viewItem (id) {
-      this.$emit('viewItem', this.ReviewsItem.id)
+      this.$emit('viewItem', this.CategoriesItem.id)
     }
   }
 }
@@ -107,6 +109,27 @@ export default {
               }
             }
           }
+        }
+      }
+    }
+  }
+}
+.is-reviews {
+  &__list {
+    &__col {
+      &-item {
+        &.cat-img {
+          display: block;
+          margin: .5rem auto;
+          width: 128px;
+          height: 128px;
+          background-position: center !important;
+          background-repeat: no-repeat !important;
+          -webkit-background-size: cover !important;
+          background-size: cover !important;
+          -webkit-border-radius: 5px;
+          -moz-border-radius: 5px;
+          border-radius: 5px;
         }
       }
     }

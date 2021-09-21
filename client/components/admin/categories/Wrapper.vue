@@ -6,24 +6,29 @@
           ID
         </h3>
       </div>
-      <div class="col-lg-2">
+      <div class="col-lg-3">
         <h3 class="is-services__list__col-title">
-          Автор отзыва
+          Название категории
         </h3>
       </div>
-      <div class="col-lg-4">
+      <div class="col-lg-2 is-reviews__list__col center">
         <h3 class="is-services__list__col-title">
-          Текст отзыва
-        </h3>
-      </div>
-      <div class="col-lg-2">
-        <h3 class="is-services__list__col-title">
-          Филиал
+          Изображение
         </h3>
       </div>
       <div class="col-lg-1 is-reviews__list__col center">
         <h3 class="is-services__list__col-title">
-          Оценка
+          Иконка FA
+        </h3>
+      </div>
+      <div class="col-lg-2 is-reviews__list__col center">
+        <h3 class="is-services__list__col-title">
+          Количество услуг
+        </h3>
+      </div>
+      <div class="col-lg-1 is-reviews__list__col center">
+        <h3 class="is-services__list__col-title">
+          Алиас
         </h3>
       </div>
       <div class="col-lg-2 is-reviews__list__col center">
@@ -32,16 +37,16 @@
         </h3>
       </div>
     </div>
-    <lazy-admin-reviews-item
-      v-for="review in ReviewsList"
+    <lazy-admin-categories-item
+      v-for="review in CategoriesList"
       :key="review.id"
-      :reviews-item="review"
+      :categories-item="review"
       @viewItem="viewItem"
     />
     <div class="row">
       <div class="col-lg-12">
         <p class="is-services__list__count">
-          <span>Всего отзывов: </span>{{ this.REVIEWS_COUNT }}
+          <span>Всего категорий: </span>{{ this.CATEGORIES_COUNT }}
         </p>
       </div>
     </div>
@@ -57,7 +62,7 @@ export default {
     return {}
   },
   props: {
-    ReviewsList: {
+    CategoriesList: {
       type: Array,
       default: () => {
         return []
@@ -66,22 +71,22 @@ export default {
   },
   methods: {
     viewItem (id) {
-      this.$router.push('/admin/reviews/' + id)
+      this.$router.push('/admin/categories/' + id)
     },
     ...mapActions([
-      'GET_REVIEWS',
-      'GET_REVIEWS_COUNT'
+      'GET_CATEGORIES',
+      'GET_CATEGORIES_COUNT'
     ])
   },
   computed: {
     ...mapGetters([
-      'REVIEWS',
-      'REVIEWS_COUNT'
+      'CATEGORIES',
+      'CATEGORIES_COUNT'
     ])
   },
   mounted () {
-    this.GET_REVIEWS()
-    this.GET_REVIEWS_COUNT()
+    this.GET_CATEGORIES()
+    this.GET_CATEGORIES_COUNT()
   }
 }
 </script>

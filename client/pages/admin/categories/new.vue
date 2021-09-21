@@ -19,7 +19,7 @@
           </nuxt-link>
         </li>
         <li >
-          Отзыв от {{ reviewsItemData.reviewer_name }} <span class="category">[{{ reviewsItemData.branch_office }}]</span>
+          Новый отзыв от {{ itemData.reviewer_name }} <span class="category">[{{ itemData.branch_office }}]</span>
         </li>
       </ul>
     </div>
@@ -34,12 +34,9 @@
         <a @click="$router.go(-1)" class="btn cancel">
           <fai icon="times" />
         </a>
-        <button @click.prevent="itemDelete" class="btn delete">
-          <fai icon="trash" />
-        </button>
-        <a @click.prevent="itemUpdate" class="btn save">
+        <a @click.prevent="itemCreate" class="btn save">
           <fai icon="save" />
-          Сохранить
+          Добавить
         </a>
       </div>
     </div>
@@ -167,30 +164,24 @@
 import { mapActions, mapGetters } from 'vuex'
 
 export default {
-  name: 'AdminServicesItemPage',
+  name: 'AdminServicesItemCreatePage',
   layout: 'admin',
   data () {
     return {
-      title: 'Информация об услуге',
-      itemData: ''
+      title: 'Новый отзыв',
+      itemData: {
+        reviewer_name: '',
+        branch_office: '',
+        review_info: '',
+        review_rating: '',
+        review_date: ''
+      }
     }
   },
   computed: {
     ...mapGetters([
       'REVIEWS'
-    ]),
-    reviewsItemData () {
-      let itemContent = {}
-      const vm = this
-      this.REVIEWS.map(function (item) {
-        if (item.id === vm.$route.params.id) {
-          itemContent = item
-          vm.itemData = item
-          vm.title = item.reviewer_name
-        }
-      })
-      return itemContent
-    }
+    ])
   },
   mounted () {
     this.GET_REVIEWS()
@@ -199,23 +190,14 @@ export default {
     ...mapActions([
       'GET_REVIEWS',
     ]),
-    async itemDelete () {
-      await this.$axios.$delete('/api/reviews/' + this.itemData.id, {})
+    async itemCreate () {
+      await this.$axios.$post('/api/reviews/', this.itemData)
         .then((response) => {
-          this.$router.push('./')
-          this.$toast.global.successful_deletion()
+          this.$toast.global.successful_created()
+          this.$router.push('./' + response.id)
+          console.log(response)
         }, (error) => {
-          console.log(error)
-          this.$toast.global.errored_deletion()
-        })
-    },
-    async itemUpdate () {
-      const vm = this;
-      await this.$axios.$put('/api/reviews/' + this.itemData.id, this.itemData)
-        .then((response) => {
-          this.$toast.global.successful_updated()
-        }, (error) => {
-          this.$toast.global.errored_update()
+          this.$toast.global.errored_creation()
         })
     }
   },
@@ -224,7 +206,7 @@ export default {
       title: this.title,
       titleTemplate: (titleChunk) => {
         // If undefined or blank then we don't need the hyphen
-        return titleChunk ? `Book-Service | Отзыв от ${titleChunk}` : 'Сеть сервисных центров Book-Service';
+        return titleChunk ? `Book-Service | ${titleChunk}` : 'Сеть сервисных центров Book-Service';
       }
     }
   }
