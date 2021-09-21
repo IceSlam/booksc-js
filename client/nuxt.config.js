@@ -92,6 +92,7 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     '@nuxtjs/google-fonts',
+    '@nuxtjs/moment'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -129,8 +130,7 @@ export default {
     'nuxt-ssr-cache',
     '@nuxtjs/proxy',
     '@nuxtjs/auth-next',
-    '@nuxtjs/toast',
-    '@nuxtjs/moment'
+    '@nuxtjs/toast'
   ],
 
   moment: {

@@ -8,7 +8,7 @@
           Book-Service
         </span>
           <span class="sub">
-          CliBase/0.1a Contorl Panel
+          CliBase/0.1a CP
         </span>
         </h1>
       </nuxt-link>
@@ -64,6 +64,7 @@ export default {
         align-items: center;
         justify-content: center;
         &__link {
+          display: flex;
           &-img {
             max-width: 48px;
             width: 100%;
@@ -120,6 +121,7 @@ export default {
           font-size: 1.25rem;
           font-weight: 600;
           margin: 0;
+          color: #fff;
         }
         &__exit {
           margin-left: .5rem;
