@@ -37,13 +37,13 @@
         <button @click.prevent="itemDelete" class="btn delete">
           <fai icon="trash" />
         </button>
-        <a @click.prevent="itemUpdate" class="btn save">
+        <a @click.prevent="uploadFiles" class="btn save">
           <fai icon="save" />
           Сохранить
         </a>
       </div>
     </div>
-    <form class="is-services-item__form row">
+    <form id="categories-form" class="is-services-item__form row">
       <div class="col-lg-12">
         <div class="is-services-item__form__title">
           Основное
@@ -54,7 +54,12 @@
           <label for="category-name">
             Название категории
           </label>
-          <input id="category-name" type="text" v-model="itemData.category_name">
+          <input
+            @input="slugTranslit()"
+            id="category-name"
+            type="text"
+            v-model="itemData.category_name"
+          >
         </div>
       </div>
       <div class="col-lg-6">
@@ -128,6 +133,7 @@
 
 <script>
 import { mapActions, mapGetters } from 'vuex'
+import yaTranslit from 'yandex.translit'
 
 export default {
   name: 'AdminServicesItemPage',
@@ -135,7 +141,8 @@ export default {
   data () {
     return {
       title: 'Информация об услуге',
-      itemData: ''
+      itemData: '',
+      file: ''
     }
   },
   computed: {
@@ -173,13 +180,16 @@ export default {
         })
     },
     async itemUpdate () {
-      const vm = this;
       await this.$axios.$put('/api/categories/' + this.itemData.id, this.itemData)
         .then((response) => {
           this.$toast.global.successful_updated()
         }, (error) => {
           this.$toast.global.errored_update()
         })
+    },
+    slugTranslit () {
+      let text = yaTranslit(this.itemData.category_name)
+      this.itemData.category_slug = text
     }
   },
   head () {
@@ -286,10 +296,6 @@ export default {
               -webkit-box-sizing: border-box;
               -moz-box-sizing: border-box;
               box-sizing: border-box;
-              -webkit-user-select: none;
-              -moz-user-select: none;
-              -ms-user-select: none;
-              user-select: none;
             }
             label {
               font-family: 'Open Sans', sans-serif;

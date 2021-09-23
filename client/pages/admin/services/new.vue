@@ -289,10 +289,6 @@ export default {
               -webkit-box-sizing: border-box;
               -moz-box-sizing: border-box;
               box-sizing: border-box;
-              -webkit-user-select: none;
-              -moz-user-select: none;
-              -ms-user-select: none;
-              user-select: none;
             }
             label {
               font-family: 'Open Sans', sans-serif;
