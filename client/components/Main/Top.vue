@@ -77,7 +77,6 @@ export default {
     color: #fff;
   }
   &__content-social {
-    background: red;
     position: absolute;
     right: 0;
     top: 50%;
