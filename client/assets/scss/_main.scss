@@ -3,7 +3,7 @@ html {
 }
 
 * {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'DMSans-Bold', sans-serif;
   scrollbar-width: thin;
   scrollbar-color: $bsColor #333;
   transition: all .3s;
@@ -22,7 +22,6 @@ html {
     font-family: 'Open Sans', sans-serif;
   }
 }
-
 
 .toasted-container {
   &.bottom-right {

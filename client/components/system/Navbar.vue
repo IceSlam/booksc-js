@@ -42,7 +42,7 @@
           <nuxt-link
             to="/about"
           >
-            О нас
+            О насddd
           </nuxt-link>
         </li>
         <li>

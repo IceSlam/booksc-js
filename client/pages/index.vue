@@ -1,7 +1,8 @@
 <template>
   <div class="content">
-    <lazy-home-choice />
-    <lazy-home-brands />
+    <lazy-main-top/>
+    <lazy-home-choice/>
+    <lazy-home-brands/>
   </div>
 </template>
 
@@ -9,12 +10,25 @@
 export default {
   name: 'HomePage',
   layout: 'home',
-  data () {
+  data() {
     return {}
   }
 }
 </script>
 
 <style lang="scss">
-.content {}
+.content {
+  transition: $transition;
+  margin-left: 80px;
+}
+.top {
+  &:hover {
+    & + .content {
+      transform: translateX(220px);
+      max-width: 100%;
+      opacity: 0.8;
+    }
+  }
+}
+
 </style>

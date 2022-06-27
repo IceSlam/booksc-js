@@ -1,6 +1,6 @@
 <template>
-  <header class="is-header home">
-    <div class="container">
+  <header class="is-header">
+    <div class="container-fluid">
       <div class="row d-flex align-items-center" style="height: 100%">
         <div class="col-lg-12 is-header__content">
           <img class="is-header__logo" src="@/assets/img/logotype-min.webp" alt="Book-Service">
