@@ -1,6 +1,9 @@
 <template>
-   <a class="is-button"
+   <component class="is-button"
       :class="className"
+      :is="to ? 'nuxt-link' : href ? 'a' : 'button'"
+      :to="to"
+      :href="href"
     @click="$emit('click')"
    >
      <slot>
@@ -11,7 +14,7 @@
        />
        {{text}}
      </slot>
-   </a>
+   </component>
 </template>
 
 <script>
@@ -29,7 +32,15 @@ export default {
     active: {
       type: Boolean,
       default: false
-    }
+    },
+    to: {
+      type: String,
+      default: null
+    },
+    href: {
+      type: String,
+      default: null
+    },
   },
   computed: {
     className() {
@@ -52,7 +63,7 @@ export default {
   font-weight: bold;
   letter-spacing: 2px;
   font-size: 14px;
-  border: 1px solid $bsColor;
+  border: none;
   cursor: pointer;
   &:hover {
     color: $bsColor;

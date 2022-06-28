@@ -1,6 +1,7 @@
 <template>
   <div class="content">
     <lazy-main-top/>
+    <lazy-main-choise/>
     <lazy-home-choice/>
     <lazy-home-brands/>
   </div>
