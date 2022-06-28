@@ -4,7 +4,7 @@
       :is="to ? 'nuxt-link' : href ? 'a' : 'button'"
       :to="to"
       :href="href"
-    @click="$emit('click')"
+      @click="$emit('click')"
    >
      <slot>
        <fai

@@ -1,6 +1,7 @@
 <template>
   <div class="is-choise-card col-lg-3 col-md-4 col-12">
     <div class="is-choise-card__inner">
+      <div class="is-choise-card__top">
       <div class="is-choise-card__img">
         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 64 64"
@@ -53,13 +54,17 @@
       </div>
       <p class="is-choise-card__title">7+</p>
       <p class="is-choise-card__subtitle">лет опыта </p>
-      <p class="is-choise-card__text">Доверили и не пожалели о своем правильном выборе</p>
+      </div>
+      <p class="is-choise-card__text">Уже более тысячи клиентов довольны нашим обслуживанием и рекомендуют нас своим
+        друзьям и знакомым </p>
     </div>
   </div>
 </template>
 <style scoped lang="scss">
 .is-choise-card {
   color: #fff;
+  font-size: 18px;
+  font-weight: 500;
   &__inner {
     background-image: url(./assets/img/top-bg.jpg);
     background-position: center;
@@ -83,7 +88,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      top: 180px;
+      top: 0;
       background: rgba(0, 0, 0, 0.6);
       z-index: -2;
       transition: all 0.5s ease-in-out;
@@ -113,27 +118,19 @@
       background: rgba(0, 0, 0, 0.8);
       top: 0;
     }
-    &:hover .is-choise-card__title {
-      transform: translateY(0);
-    }
-    &:hover .is-choise-card__subtitle {
-      transform: translateY(0);
-    }
-    &:hover .is-choise-card__img {
+    &:hover .is-choise-card__top {
       transform: translateY(0);
     }
   }
   &__img {
-    transform: translateY(170px);
     border-radius: 50%;
     border: 2px solid #fff;
     width: 80px;
     height: 80px;
     padding: 10px;
-    margin-bottom: 20px;
-    transition: all 0.5s ease-in-out;
+    margin-bottom: 0.25rem;
+    transition: $transition;
     svg {
-      // display: none;
       height: 100%;
       width: 100%;
     }
@@ -141,28 +138,23 @@
       fill: #fff;
     }
   }
+  &__top {
+    transform: translateY(50%);
+    margin-bottom: 1rem;
+
+  }
   &__title {
-    margin-bottom: 20px;
+    margin-bottom: 0.25rem;
     font-size: 18px;
     font-weight: 500;
-    color: #fff;
-    transform: translateY(155px);
-    transition: all 0.5s ease-in-out;
+    transition: $transition;
   }
   &__subtitle {
-    margin-bottom: 20px;
-    font-size: 18px;
-    font-weight: 500;
-    color: #fff;
-    transform: translateY(115px);
-    transition: all 0.5s ease-in-out;
+    transition: $transition;
   }
   &__text {
     opacity: 0;
-    transform: translateY(90px);
-    font-size: 14px;
-    color: #fff;
-    font-weight: 500;
+    font-size: 12px;
     text-transform: uppercase;
   }
 }

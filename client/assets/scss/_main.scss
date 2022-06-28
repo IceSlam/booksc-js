@@ -147,4 +147,25 @@ html {
     }
   }
 }
-
+.section{
+  padding: 50px 0 25px 0;
+}
+.title {
+  font-size: 2rem;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 2rem;
+  text-align: center;
+}
+.subtitle {
+  padding: 0 100px 0;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  color: #666;
+  font-weight: 400;
+  line-height: 1.5rem;
+}

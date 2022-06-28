@@ -1,5 +1,5 @@
 <template>
-  <section class="top">
+  <section class="top section">
     <div class="top__content">
       <div class="container top__container">
         <is-button
@@ -8,14 +8,14 @@
           @click="openMenu"
         />
         <div class="top__content-inner">
-          <h3 class="top__content-text">
+          <h3 class="top__content-subtitle">
             Сеть сервисных центров
           </h3>
           <h2 class="top__content-title">
             book-service
           </h2>
           <h3 class="top__content-text">
-            По ремонту цифровой техники и техники Apple
+            Ремонт телефонов, планшетов, ноутбуков и компьютеров, техники Apple и устройств IQOS
           </h3>
           <div class="top__content__buttons">
             <is-button/>
@@ -56,6 +56,7 @@ export default {
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
+  margin-bottom: 50px;
   &__content {
     min-height: 100vh;
     display: flex;
@@ -66,6 +67,7 @@ export default {
       min-width: 750px;
       width: 50%;
       height: 100%;
+      top: 0;
       left: 0;
       position: absolute;
       z-index: 1;
@@ -80,22 +82,27 @@ export default {
     flex-direction: column;
     justify-content: center;
   }
-  &__content-inner {
-  }
   &__content-title {
     font-size: 80px;
     line-height: 1.2;
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
     color: #fff;
     text-transform: uppercase;
   }
+  &__content-subtitle,
   &__content-text {
     font-size: 16px;
-    margin-bottom: 30px;
-    max-width: 400px;
+    max-width: 500px;
     letter-spacing: 2px;
     font-weight: 500;
     color: #fff;
+  }
+  &__content-text {
+    margin-bottom: 2rem;
+
+  }
+  &__content__buttons button:last-child{
+    margin-left: 1rem;
   }
   &__content-social {
     position: absolute;
