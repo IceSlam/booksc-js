@@ -1,8 +1,6 @@
 <template>
   <main class="layout home">
-    <Navigation
-      class="navigation"
-    />
+    <Navigation/>
     <nuxt/>
   </main>
 </template>
@@ -17,25 +15,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
-.navigation {
-  &:hover {
-    width: 300px;
-    & + .content {
-      transform: translateX(220px);
-      max-width: 100%;
-      opacity: 0.8;
-    }
-  }
-  &.active {
-    width: 300px;
-    & + .content {
-      transform: translateX(220px);
-      max-width: 100%;
-      opacity: 0.8;
-    }
-  }
-}
 
 
 </style>

@@ -21,6 +21,11 @@ export default {
 .content {
   transition: $transition;
   margin-left: 80px;
+  &.active {
+    transform: translateX(220px);
+    max-width: 100%;
+    opacity: 0.8;
+  }
 }
 .top {
   &:hover {
