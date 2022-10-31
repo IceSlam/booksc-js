@@ -1,12 +1,5 @@
 <template>
-  <ul class="social top__social">
-    <!--    <a v-for="(icon, index) in iconsData"-->
-    <!--       :key="index"-->
-    <!--       :href="icon.path"-->
-    <!--    >-->
-    <!--      <fai :icon="icon.iconName"-->
-    <!--      />-->
-    <!--    </a>-->
+  <ul class="social top__social">ddd
     <a class="social__odnoklassniki" href="">
       <svg width="10" height="16" viewBox="0 0 10 16"
            fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -47,25 +40,23 @@ export default {
       ]
     }
   }
-
 }
 </script>
 
 <style scoped lang="scss">
 .social {
   display: flex;
-  flex-direction: column;
   position: absolute;
   list-style: none;
   align-items: center;
   padding: 0;
   margin: 0;
   & a:not(:last-child) {
-    margin-bottom: 5px;
+    margin-right: 5px;
   }
   & a {
-    width: 40px;
-    height: 40px;
+    width: 25px;
+    height: 25px;
     border-radius: 50%;
     border: 1px solid transparent;
     text-align: center;

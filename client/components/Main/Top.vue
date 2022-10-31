@@ -2,11 +2,6 @@
   <section class="top section">
     <div class="top__content">
       <div class="container top__container">
-        <is-button
-          text=""
-          class="menu-btn"
-          @click="openMenu"
-        />
         <div class="top__content-inner">
           <h3 class="top__content-subtitle">
             Сеть сервисных центров
@@ -23,10 +18,62 @@
               :active=true
             />
           </div>
+          <div class="top__cards row">
+            <div class="top__card col-md-4">
+              <div class="top__card-img">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                     class="bi bi-card-checklist" viewBox="0 0 16 16">
+                  <path
+                    d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
+                  <path
+                    d="M7 5.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0zM7 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z"/>
+                </svg>
+              </div>
+              <div class="top__card-inner">
+                <p class="top__card-title">Гарантия</p>
+                <p class="top__card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab culpa delectus
+                  exercitationem nam provident quaerat temporibus ut.
+                </p>
+              </div>
+            </div>
+
+            <div class="top__card col-md-4">
+              <div class="top__card-img">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                     class="bi bi-card-checklist" viewBox="0 0 16 16">
+                  <path
+                    d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
+                  <path
+                    d="M7 5.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0zM7 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z"/>
+                </svg>
+              </div>
+              <div class="top__card-inner">
+                <p class="top__card-title">Гарантия</p>
+                <p class="top__card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab culpa delectus
+                  exercitationem nam provident quaerat temporibus ut.
+                </p>
+              </div>
+            </div>
+
+            <div class="top__card col-md-4">
+              <div class="top__card-img">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                     class="bi bi-card-checklist" viewBox="0 0 16 16">
+                  <path
+                    d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
+                  <path
+                    d="M7 5.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0zM7 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z"/>
+                </svg>
+              </div>
+              <div class="top__card-inner">
+                <p class="top__card-title">Гарантия</p>
+                <p class="top__card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab culpa delectus
+                  exercitationem nam provident quaerat temporibus ut.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-        <is-social-iist
-          class="top__content-social"
-        />
       </div>
     </div>
   </section>
@@ -34,24 +81,20 @@
 
 <script>
 import IsButton from "./isButton";
-import IsSocialIist from "./isSocialIist";
 
 export default {
   name: "top",
-  components: {IsSocialIist, IsButton},
+  components: {IsButton},
   data() {
 
   },
-  methods: {
-    openMenu() {
-
-    }
-  }
+  methods: {}
 }
 </script>
 <style scoped lang="scss">
 .top {
-  background-image: url(./assets/img/top-bg.jpg);
+  //background-image: url(./assets/img/top-bg.jpg);
+  background: $darkColor;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -99,9 +142,8 @@ export default {
   }
   &__content-text {
     margin-bottom: 2rem;
-
   }
-  &__content__buttons button:last-child{
+  &__content__buttons button:last-child {
     margin-left: 1rem;
   }
   &__content-social {
@@ -109,6 +151,30 @@ export default {
     right: 0;
     top: 50%;
     transform: translateY(-50%);
+  }
+  &__cards {
+
+  }
+  &__card {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid $bsColor;
+    &-img {
+      margin-right: 20px;
+      svg {
+        width: 50px;
+        height: 50px;
+      }
+    }
+    &-title {
+      font-size: 14px;
+      font-weight: 700;
+    }
+    &-text {
+      font-size: 12px;
+    }
   }
 }
 .menu-btn {

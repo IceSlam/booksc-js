@@ -7,11 +7,6 @@
       @click="$emit('click')"
    >
      <slot>
-       <fai
-         class="is-button__icon"
-         :icon="prefIcon"
-        v-if="prefIcon"
-       />
        {{text}}
      </slot>
    </component>
@@ -24,10 +19,6 @@ export default {
     text: {
       type: String,
       default: 'button'
-    },
-    prefIcon: {
-      type: String,
-      default: null
     },
     active: {
       type: Boolean,
@@ -55,7 +46,7 @@ export default {
 <style scoped lang="scss">
 .is-button {
   display: inline-block;
-  padding: 20px 40px;
+  padding: 16px 32px;
   text-transform: uppercase;
   background: $bsColor;
   color: #fff;
@@ -64,6 +55,7 @@ export default {
   letter-spacing: 2px;
   font-size: 14px;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
   &:hover {
     color: $bsColor;
@@ -76,15 +68,6 @@ export default {
       color: #fff;
       background: $bsColor;
     }
-  }
-  &__icon {
-    width: $wIcon;
-    height: $wIcon;
-    border-radius: 50%;
-    display: block;
-    background: #fff;
-    margin: 0 auto 10px;
-    overflow: hidden;
   }
 }
 

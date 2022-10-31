@@ -1,9 +1,8 @@
 $bsColor: #a8312d;
+$darkColor: #100916;
 $transition: all 500ms ease-in-out;
 $wIcon: 40px;
-html {
-  box-sizing: border-box;
-}
+
 *,
 *::after,
 *::before {
@@ -45,6 +44,8 @@ textarea,
 select {
   font: inherit;
 }
-
+a {
+  text-decoration: none;
+}
 
 

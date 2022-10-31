@@ -76,9 +76,11 @@ export default {
     '~/assets/scss/_main.scss',
     '~/assets/scss/_grid.scss'
   ],
-
+  script: [
+    { src: 'https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js' }
+  ],
   styleResources: {
-    scss: ["~/assets/scss/_vars.scss"]
+    scss: ["@/assets/scss/_vars.scss"]
   },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -92,7 +94,8 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     '@nuxtjs/google-fonts',
-    '@nuxtjs/moment'
+    '@nuxtjs/moment',
+
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -101,6 +104,7 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    'bootstrap-vue/nuxt',
     [
       '@naumstory/nuxtjs-yandex-metrika',
       {
