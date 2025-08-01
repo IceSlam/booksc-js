@@ -17,7 +17,7 @@ RUN apk add --no-cache \
 WORKDIR /app
 
 # Клонируем репозиторий и переходим в папку client
-RUN git clone https://github.com/IceSlam/booksc-js.git . 
+RUN git clone https://github.com/IceSlam/booksc-js.git .
 WORKDIR /app/client
 
 # Устанавливаем зависимости и собираем проект

@@ -17,8 +17,8 @@ RUN apk add --no-cache \
 WORKDIR /app
 
 # Клонируем репозиторий и переходим в папку client
-RUN git clone https://github.com/IceSlam/booksc-js.git . 
-WORKDIR /app/client
+RUN git clone https://github.com/IceSlam/booksc-js.git .
+WORKDIR /app/frontend
 
 # Устанавливаем зависимости и собираем проект
 RUN npm install
@@ -31,13 +31,13 @@ FROM node:14-alpine
 WORKDIR /app
 
 # Копируем из билдера только артефакты для запуска
-COPY --from=builder /app/client/.nuxt ./.nuxt
-COPY --from=builder /app/client/static ./static
-COPY --from=builder /app/client/package.json ./package.json
-COPY --from=builder /app/client/nuxt.config.js ./nuxt.config.js
-COPY --from=builder /app/client/node_modules ./node_modules
+COPY --from=builder /app/frontend/.nuxt ./.nuxt
+COPY --from=builder /app/frontend/static ./static
+COPY --from=builder /app/frontend/package.json ./package.json
+COPY --from=builder /app/frontend/nuxt.config.js ./nuxt.config.js
+COPY --from=builder /app/frontend/node_modules ./node_modules
 
 # Открываем порт, объявляем production-режим и запускаем
 EXPOSE 3000
-ENV NODE_ENV=production
-CMD ["npm", "run", "start"]
+ENV NODE_ENV=development
+CMD ["npm", "run", "dev"]
