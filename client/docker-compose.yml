@@ -1,0 +1,16 @@
+services:
+  booksc-admin:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5735:3111"      # Пробрасываем порт для доступа извне
+    restart: always
+    env_file:
+      - .env
+    environment:
+      - NODE_ENV=production
+    # (опционально) если нужно подключить bash для отладки:
+    tty: true
+    stdin_open: true
+

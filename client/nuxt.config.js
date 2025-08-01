@@ -13,7 +13,7 @@ export default {
   },
 
   server: {
-    host: process.env.APP_IP || '127.0.0.1',
+    host: process.env.APP_IP || '0.0.0.0',
     port: process.env.APP_PORT || 3111
   },
 
