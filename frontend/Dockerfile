@@ -22,7 +22,7 @@ WORKDIR /app/frontend
 
 # Устанавливаем зависимости и собираем проект
 RUN npm install
-RUN npm run build
+#RUN npm run build
 
 
 # 2. Стадия рантайма
