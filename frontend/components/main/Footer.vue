@@ -88,7 +88,7 @@
     </b-container>
     <div class="footer-copyright text-center py-3">
       <p class="is_main-footer-copy mb-2">
-        © 2014 - 2021 Copyright
+        © 2014 - 2025 Copyright
         <a href="https://booksc.ru"> Сеть сервисных центров Book-Service</a> <br>
         ИП Моисеенко К.А. ИНН: 323307422295 ОГРНИП: 314325624800051 <br>
         Цены, указанные на сайте, не являются публичной офертой. Для уточнения цен необходимо обратиться в офис компании.
@@ -111,7 +111,7 @@
           href="https://strapi.io/"
           target="_blank"
         >
-          Strapi.js
+          Strapi.js v3
         </a>
         <br>
         Powered by
@@ -121,9 +121,7 @@
         >
           NetAngels - Professional hosting
         </a>
-        <br>
-        Сайт может некорректно отображаться в браузере Internet Explorer. Используйте современные браузеры: Chrome, Firefox, Opera, Safari и др.
-      </p>
+        <br></p>
     </div>
     <script type='text/javascript'>
       (function () {

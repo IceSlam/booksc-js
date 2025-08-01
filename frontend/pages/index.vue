@@ -8,10 +8,6 @@
     />
     <TopServices />
     <ReviewsHome />
-    <NewGoods
-      :new-goods-data="HOMEPAGE"
-    />
-    <SocialWidgets />
   </article>
 </template>
 

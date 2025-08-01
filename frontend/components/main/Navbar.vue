@@ -58,12 +58,6 @@
               Услуги и цены
             </b-nav-item>
             <b-nav-item
-              href="https://bookparts.ru/"
-              target="_blank"
-            >
-              Магазин
-            </b-nav-item>
-            <b-nav-item
               to="/reviews"
             >
               Отзывы
@@ -110,12 +104,6 @@
             to="/services"
           >
             Услуги и цены
-          </b-nav-item>
-          <b-nav-item
-            href="https://bookparts.ru/"
-            target="_blank"
-          >
-            Магазин
           </b-nav-item>
           <b-nav-item
             to="/reviews"
