@@ -40,4 +40,4 @@ COPY --from=builder /app/frontend/node_modules ./node_modules
 # Открываем порт, объявляем production-режим и запускаем
 EXPOSE 3000
 ENV NODE_ENV=development
-CMD ["npm", "run", "dev"]
+CMD ["npm", "run", "start"]
