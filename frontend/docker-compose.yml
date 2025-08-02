@@ -7,6 +7,8 @@ services:
     ports:
       - "5736:3000"      # Пробрасываем порт для доступа извне
     restart: always
+    volumes:
+      - ./test:/app/dist
     env_file:
       - .env
     environment:

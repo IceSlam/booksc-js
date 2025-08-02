@@ -10,4 +10,4 @@ ADD . ${APP_ROOT}
 
 RUN npm install
 
-CMD ["npm", "run", "dev"]
+CMD ["npm", "run", "generate"]
